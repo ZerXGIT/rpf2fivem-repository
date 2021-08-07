@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GTA5_RPF_FiveM_Convertor
+namespace rpf2fivem
 {
     static class Program
     {

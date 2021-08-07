@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GTA5Mods RPF to FiveM AddOn Convertor")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("rpf2fivem")]
+[assembly: AssemblyDescription("A tool for automatically converting dlc.rpf files to FiveM compatible resources.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("https://github.com/vscorpio")]
-[assembly: AssemblyProduct("GTA5 RPF FiveM Convertor")]
-[assembly: AssemblyCopyright("Copyright © vscorpio 2020")]
+[assembly: AssemblyCompany("https://github.com/Avenze")]
+[assembly: AssemblyProduct("rpf2fivem")]
+[assembly: AssemblyCopyright("Copyright © Avenze 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.8.0.0")]
-[assembly: AssemblyFileVersion("1.8.0.0")]
+[assembly: AssemblyVersion("2.0.0.0")]
+[assembly: AssemblyFileVersion("2.0.0.0")]

@@ -22,8 +22,10 @@ using System.Reflection;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using CodeWalker.GameFiles;
+using CodeWalker.Utils;
 
-namespace GTA5_RPF_FiveM_Convertor
+namespace rpf2fivem
 {
 
     public partial class Main : Form
@@ -36,8 +38,18 @@ namespace GTA5_RPF_FiveM_Convertor
         Random rnd = new Random();
         bool vmenuhelper = true;
         bool servercfghelper = true;
+        bool compression = true;
         string xmlTemplate;
         int convertFromFolder_resname;
+        static string latestModelName = "";
+
+        static Dictionary<string, string[]> extensions = new Dictionary<string, string[]>()
+        {
+            { "meta",  new string[]{ ".meta", "clip_sets.xml" } },
+            { "stream", new string[]{".ytd", ".yft", ".ydr" } }
+        };
+
+        static Dictionary<string, string> modelNames = new Dictionary<string, string>();
 
         public Main()
         {
@@ -177,10 +189,8 @@ namespace GTA5_RPF_FiveM_Convertor
 
         }
 
-
-
         /// UNPACKING
-        /// 
+        
         private void universalCacheUnpack()
         {
             string rarfileExtension = "*.rar";
@@ -215,8 +225,16 @@ namespace GTA5_RPF_FiveM_Convertor
             string[] rpfFiles = Directory.GetFiles("cache", rpfExtension, SearchOption.AllDirectories);
             foreach (var item in rpfFiles)
             {
-                LogAppend("[GTAUtil] Unpacking " + item + "......");
-                hideshellcmd(@"lib\gtautil\GTAUtil.exe extractarchive -i " + item + " -o " + @"cache\rpfunpack");
+                RpfFile rpf = new RpfFile(item, item);
+                LogAppend("[CodeWalker] Unpacking " + item + "......");
+                
+                if (rpf.ScanStructure(null, null))
+                {
+                    ExtractFilesInRPF(rpf, @".\cache\rpfunpack\");
+
+                }
+
+                //hideshellcmd(@"lib\gtautil\GTAUtil.exe extractarchive -i " + item + " -o " + @"cache\rpfunpack");
             }
         }
 
@@ -358,19 +376,17 @@ namespace GTA5_RPF_FiveM_Convertor
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Random rnd = new Random();
-            int cachebust = rnd.Next(555);
-            AutoUpdater.Start("https://gist.githubusercontent.com/vscorpio/e9f5b4e8fea80d323a665a12d12032d9/raw/autoupdater.xml?cachebust=" + cachebust);
             this.ActiveControl = label1; // prevent random textbox focus
-            LogAppend("CFG Helpers switched on");
             fivemresname_tb.Text = rnd.Next(2147483647).ToString();
-            LogAppend("Elysium: GTA5 RPF to FiveM Addon Converter");
+
+            LogAppend("rpf2fivem");
             LogAppend("---------------");
-            LogAppend("Developed by king^vickynescu");
+            LogAppend("Developed by Avenzey#6184 (thanks to https://github.com/vscorpio for developing the original version!)");
+            LogAppend("GitHub repository: https://github.com/Avenze/rpf2fivem-repository");
             LogAppend("Discord support: https://discord.gg/C4e4q6g");
             LogAppend("---------------");
 
-            LogAppend("GTA5Mods links must look like this: ");
+            LogAppend("GTA5-Mods links must look like this: ");
             LogAppend("https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip");
             LogAppend("Links must be DIRECT link else they won't download!");
 
@@ -416,9 +432,173 @@ namespace GTA5_RPF_FiveM_Convertor
             }
         }
 
+        private void ExtractFilesInRPF(RpfFile rpf, string directoryOffset)
+        {
+                using (BinaryReader br = new BinaryReader(File.OpenRead(rpf.GetPhysicalFilePath())))
+                {
+                    foreach (RpfEntry entry in rpf.AllEntries)
+                    {
+                        if (!entry.NameLower.EndsWith(".rpf")) //don't try to extract rpf's, they will be done separately..
+                        {
+                            if (entry is RpfBinaryFileEntry)
+                            {
+                                RpfBinaryFileEntry binentry = entry as RpfBinaryFileEntry;
+                                byte[] data = rpf.ExtractFileBinary(binentry, br);
+                                if (data == null)
+                                {
+                                    if (binentry.FileSize == 0)
+                                    {
+                                        LogAppend("[CodeWalker] Invalid binary filesize!");
+                                    }
+                                    else
+                                    {
+                                        LogAppend("[CodeWalker] Binary data is null");
+                                    }
+                                }
+                                else if (data.Length == 0)
+                                {
+                                    LogAppend("[CodeWalker] Decompressed output " + entry.Path + " was empty!");
+                                }
+                                else
+                                {
+                                    File.WriteAllBytes(directoryOffset + entry.NameLower, data);
+                                }
+                            }
+                            else if (entry is RpfResourceFileEntry)
+                            {
+                                RpfResourceFileEntry resentry = entry as RpfResourceFileEntry;
+                                byte[] data = rpf.ExtractFileResource(resentry, br);
+                                data = ResourceBuilder.Compress(data); //not completely ideal to recompress it...
+                                data = ResourceBuilder.AddResourceHeader(resentry, data);
+                                if (data == null)
+                                {
+                                    if (resentry.FileSize == 0)
+                                    {
+                                        LogAppend("[CodeWalker] Resource (" + entry.Path + ") filesize was empty!");
+                                    }
+                                }
+                                else if (data.Length == 0)
+                                {
+                                    LogAppend("[CodeWalker] Decompressed output (" + entry.Path + ") was empty!");
+                                }
+                                else
+                                {
+                                    foreach (KeyValuePair<string, string[]> extensionMap in extensions)
+                                    {
+                                        foreach (string extension in extensionMap.Value)
+                                        {
+                                            if (entry.NameLower.EndsWith(extension))
+                                            {
 
+                                                if (extension.Equals(".ytd"))
+                                                {
+                                                    RpfFileEntry rpfent = entry as RpfFileEntry;
 
+                                                    byte[] ytddata = rpfent.File.ExtractFile(rpfent);
 
+                                                    YtdFile ytd = new YtdFile();
+                                                    ytd.Load(ytddata, rpfent);
+
+                                                    Dictionary<uint, Texture> Dicts = new Dictionary<uint, Texture>();
+
+                                                    bool somethingResized = false;
+                                                    foreach (KeyValuePair<uint, Texture> texture in ytd.TextureDict.Dict)
+                                                    {
+                                                        if (texture.Value.Width > 512) // Only resize if it is greater than 1440p
+                                                        {
+                                                            byte[] dds = DDSIO.GetDDSFile(texture.Value);
+                                                            File.WriteAllBytes("./NConvert/" + texture.Value.Name + ".dds", dds);
+
+                                                            Process p = new Process();
+                                                            p.StartInfo.FileName = @"./NConvert/nconvert.exe";
+                                                            p.StartInfo.Arguments = $"-out dds -resize 50% 50% -overwrite ./NConvert/{texture.Value.Name}.dds";
+                                                            p.StartInfo.UseShellExecute = false;
+                                                            p.StartInfo.RedirectStandardOutput = true;
+                                                            p.Start();
+
+                                                            p.WaitForExit();
+
+                                                            File.Move("./NConvert/" + texture.Value.Name + ".dds", directoryOffset + texture.Value.Name + ".dds");
+
+                                                            byte[] resizedData = File.ReadAllBytes(directoryOffset + texture.Value.Name + ".dds");
+                                                            Texture resizedTex = DDSIO.GetTexture(resizedData);
+                                                            resizedTex.Name = texture.Value.Name;
+                                                            Dicts.Add(texture.Key, resizedTex);
+
+                                                            File.Delete(directoryOffset + texture.Value.Name + ".dds");
+                                                            somethingResized = true;
+                                                        }
+                                                        else
+                                                        {
+                                                            Dicts.Add(texture.Key, texture.Value);
+                                                        }
+                                                    }
+
+                                                    if (!somethingResized)
+                                                    {
+                                                        LogAppend("[CodeWalker] No textures were resized, skipping .ytd recreation.");
+                                                        break;
+                                                    }
+
+                                                    TextureDictionary dictionary = new TextureDictionary();
+                                                    dictionary.Textures = new ResourcePointerList64<Texture>();
+                                                    dictionary.TextureNameHashes = new ResourceSimpleList64_uint();
+                                                    dictionary.Textures.data_items = Dicts.Values.ToArray();
+                                                    dictionary.TextureNameHashes.data_items = Dicts.Keys.ToArray();
+
+                                                    dictionary.BuildDict();
+                                                    ytd.TextureDict = dictionary;
+
+                                                    byte[] resizedYtdData = ytd.Save();
+                                                    File.WriteAllBytes(directoryOffset + entry.NameLower, resizedYtdData);
+
+                                                    LogAppend("[CodeWalker] Resized texture dictionary (ytd) " + entry.NameLower + ".");
+                                                    break;
+                                                }
+
+                                                File.WriteAllBytes(directoryOffset + entry.NameLower, data);
+                                                break;
+                                            }
+                                        }
+                                    }
+
+                                    if (entry.NameLower.EndsWith(".ytd"))
+                                    {
+                                        latestModelName = entry.NameLower.Remove(entry.NameLower.Length - 4);
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            RpfBinaryFileEntry binaryentry = entry as RpfBinaryFileEntry;
+                            byte[] data = rpf.ExtractFileBinary(binaryentry, br);
+                            File.WriteAllBytes(directoryOffset + entry.NameLower, data);
+
+                            RpfFile subRPF = new RpfFile(directoryOffset + entry.NameLower, directoryOffset + entry.NameLower);
+
+                            if (subRPF.ScanStructure(null, null))
+                            {
+                                ExtractFilesInRPF(subRPF, directoryOffset);
+                            }
+                            File.Delete(directoryOffset + entry.NameLower);
+                        }
+                    }
+                }
+            
+        }
+
+        private bool checkGtaFolder()
+        {
+            if (gtaFolder_tb.Text.Contains(@"\Grand Theft Auto V") || gtaFolder_tb.Text.Contains(@"\GTAV") && !gtaFolder_tb.Text.Contains(@"GTA5.exe"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         private async void btnStart_Click(object sender, EventArgs e)
         {
@@ -432,20 +612,10 @@ namespace GTA5_RPF_FiveM_Convertor
                 Regex rx = new Regex(@"<(.*?)>");
                 await startConvertFromLink(currentItem, rx.Match(currentItem).Groups[1].Value);
 
-
             }
 
 
             //startConvert(gta5mods_tb.Text);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Close the cmd window and re-open application after correctly setting path and prompted for input!");
-            LogAppend("Launching GTAUtil.exe with no arguments");
-            shellcmd(@"lib\gtautil\GTAUtil.exe extractarchive test.rpf");
-            Environment.Exit(0);
-
         }
 
         private void statusHandler(string status)
@@ -453,11 +623,6 @@ namespace GTA5_RPF_FiveM_Convertor
             tsStatus.Text = "Status: " + status;
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            shellcmd(@"move .\cache\unpack\* .\cache\unpack\nospace");
-        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -471,13 +636,13 @@ namespace GTA5_RPF_FiveM_Convertor
             {
                 servercfghelper = true;
                 vmenuhelper = true;
-                LogAppend("CFG Helpers switched on");
+                LogAppend("[InputHandler] Config Helpers switched on");
             }
             else
             {
                 servercfghelper = false;
                 vmenuhelper = false;
-                LogAppend("CFG Helpers switched off");
+                LogAppend("[InputHandler] Config Helpers switched off");
             }
         }
 
@@ -488,32 +653,19 @@ namespace GTA5_RPF_FiveM_Convertor
 
         private void placeHolderTextBox1_TextChanged(object sender, EventArgs e) //!gta5mods_tb.Text.Contains("7z")
         {
-            if (gta5mods_tb.Text.Contains("https://files.gta5-mods.com/") && !gta5mods_tb.Text.Contains("XXXCARNAMEXXXX"))
-            {
-                gta5mods_status.ForeColor = Color.Green;
-                gta5mods_status.Text = "OK";
-                btnAddQueue.Enabled = true;
-
-            }
-            else
-            {
-                gta5mods_status.ForeColor = Color.Red;
-                gta5mods_status.Text = "ERROR";
-                btnAddQueue.Enabled = false;
-
-            }
+            
         }
 
         private void btnAddQueue_Click(object sender, EventArgs e)
         {
             LogAppend("Job added!");
-            queueList.Items.Add($"<{fivemresname_tb.Text}>" + gta5mods_tb.Text);
+            queueList.Items.Add($"<{fivemresname_tb.Text}>" + placeHolderTextBox1.Text);
             btnStart.Enabled = true;
             queueHandler(0, queueList.Items.Count);
-            gta5mods_tb.Clear();
-            gta5mods_tb.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zipp";
+            placeHolderTextBox1.Clear();
             this.ActiveControl = label1;
             fivemresname_tb.Text = rnd.Next(2147483647).ToString();
+            placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
         }
 
         public async Task startConvertFromLink(string link, string resname)
@@ -526,19 +678,34 @@ namespace GTA5_RPF_FiveM_Convertor
             LogAppend("[WORKER] Started resConvert async task...");
             LogAppend("[WORKER] Cleaning cache...");
             cleanUp();
+
             if (vmenucheck.Checked == true)
             {
-
-
-                string archive = gta5mods_tb.Text.ToString();
+                string archive = placeHolderTextBox1.Text.ToString();
                 LogAppend("[WORKER] Setting up environment...");
-                Directory.CreateDirectory("cache");
-                //Directory.CreateDirectory((rx.Match(resname).Groups[1].Value));
-                Directory.CreateDirectory(@"cache\unpack");
-                File.WriteAllText(@"cache\unpack\delspace.bat", delspace.Text);
+
+                if (!Directory.Exists("./cache"))
+                {
+                    Directory.CreateDirectory("cache");
+                    Directory.CreateDirectory(@"cache\unpack");
+                    File.WriteAllText(@"cache\unpack\delspace.bat", delspace.Text);
+                }
+
+                if (!Directory.Exists("./cache/rpfunpack"))
+                {
+                    Directory.CreateDirectory(@"cache\rpfunpack");
+                }
+
+                if (!Directory.Exists("./resources"))
+                {
+                    Directory.CreateDirectory("resources");
+                }
+
                 cfgHelper(filteredresname);
+
                 LogAppend("[WORKER] Created " + filteredresname + " FiveM resource directory...");
                 hideshellcmd("mkdir " + filteredresname + @"\stream");
+
                 await Task.Delay(500);
                 File.WriteAllText(filteredresname + @"\__resource.lua", reslua.Text, utf8WithoutBom);
                 try
@@ -546,28 +713,40 @@ namespace GTA5_RPF_FiveM_Convertor
                     LogAppend("[WORKER] Checking link...OK");
                     LogAppend("[ASYNCDL] Downloading archive...");
                     await asyncfileDownload(link.Replace($"<{resname}>", ""));
+
                     LogAppend("[ASYNCDL] Successfully fetched archive!");
                     hideshellcmd(@"move *.rar cache");
                     hideshellcmd(@"move *.zip cache");
                     hideshellcmd(@"move *.7z cache");
+
                     LogAppend("[SharpCompress] Decompressing...");
                     await Task.Delay(500);
                     universalCacheUnpack();
                     await Task.Delay(2500);
+
                     LogAppend("[SharpCompress] Unpack finished!");
                     delReplacementLeftover(filteredresname, "yft");
                     delReplacementLeftover(filteredresname, "ytd");
                     delReplacementLeftover(filteredresname, "meta");
-                    LogAppend("[DELSPACE] Stripping space in resource name (gtalib bug) ...");
-                    hideshellcmd(@"cache\unpack\delspace.bat");
-                    await Task.Delay(2000);
+
+                    //LogAppend("[DELSPACE] Stripping space in resource name (gtalib bug) ...");
+                    //hideshellcmd(@"cache\unpack\delspace.bat"); removed, as GTAutil is no longer needed
+                    //await Task.Delay(2000);
+
                     LogAppend("[WORKER] Searching for dlc.rpf...");
                     rpfUnpack();
-                    LogAppend("[GTAUtil] Unpacking RPF...");
+
+                    LogAppend("[CodeWalker] Unpacking RPF...");
                     await Task.Delay(5000);
                     inflateFromCache(filteredresname, "meta", false, false);
                     inflateFromCache(filteredresname, "yft", false, true);
                     inflateFromCache(filteredresname, "ytd", true, false);
+
+                    LogAppend("[CodeWalker] Downsizing textures...");
+
+                    LogAppend("[WORKER] Moving resource into resources folder...");
+                    hideshellcmd(@"move filteredresname resources");
+
                     LogAppend("[WORKER] Cleaning up...");
                     currentQueue += 1;
                     cleanUp();
@@ -598,7 +777,7 @@ namespace GTA5_RPF_FiveM_Convertor
             if (vmenucheck.Checked == true)
             {
 
-                string archive = gta5mods_tb.Text.ToString();
+                string archive = placeHolderTextBox1.Text.ToString();
                 LogAppend("[WORKER] Setting up environment...");
                 Directory.CreateDirectory("cache");
                 //Directory.CreateDirectory((rx.Match(resname).Groups[1].Value));
@@ -726,18 +905,6 @@ namespace GTA5_RPF_FiveM_Convertor
 
         }
 
-        private bool checkGtaFolder()
-        {
-            if (gtaFolder_tb.Text.Contains(@"\Grand Theft Auto V") || gtaFolder_tb.Text.Contains(@"\GTAV") && !gtaFolder_tb.Text.Contains(@"GTA5.exe"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         private async void button2_Click_1(object sender, EventArgs e)
         {
             Random rnd = new Random();
@@ -776,14 +943,52 @@ namespace GTA5_RPF_FiveM_Convertor
             Task.Delay(1000);
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (compresscheck.Checked == true)
+            {
+                compression = true;
+                LogAppend("[InputHandler] Enabled texture compression/downsizing.");
+            }
+            else
+            {
+                compression = false;
+                LogAppend("[InputHandler] Disabled texture compression/downsizing.");
+            }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void placeHolderTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            if (placeHolderTextBox1.Text.Contains("https://files.gta5-mods.com/") && !placeHolderTextBox1.Text.Contains("XXXCARNAMEXXXX"))
+            {
+                gta5mods_status.ForeColor = Color.Green;
+                gta5mods_status.Text = "OK";
+                btnAddQueue.Enabled = true;
+
+            }
+            else
+            {
+                gta5mods_status.ForeColor = Color.Red;
+                gta5mods_status.Text = "ERROR";
+                btnAddQueue.Enabled = false;
+
+            }
         }
     }
 }
