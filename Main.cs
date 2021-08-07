@@ -492,68 +492,71 @@ namespace rpf2fivem
 
                                                 if (extension.Equals(".ytd"))
                                                 {
-                                                    RpfFileEntry rpfent = entry as RpfFileEntry;
-
-                                                    byte[] ytddata = rpfent.File.ExtractFile(rpfent);
-
-                                                    YtdFile ytd = new YtdFile();
-                                                    ytd.Load(ytddata, rpfent);
-
-                                                    Dictionary<uint, Texture> Dicts = new Dictionary<uint, Texture>();
-
-                                                    bool somethingResized = false;
-                                                    foreach (KeyValuePair<uint, Texture> texture in ytd.TextureDict.Dict)
+                                                    if (compresscheck.Checked == true)
                                                     {
-                                                        if (texture.Value.Width > 512) // Only resize if it is greater than 1440p
+                                                        RpfFileEntry rpfent = entry as RpfFileEntry;
+
+                                                        byte[] ytddata = rpfent.File.ExtractFile(rpfent);
+
+                                                        YtdFile ytd = new YtdFile();
+                                                        ytd.Load(ytddata, rpfent);
+
+                                                        Dictionary<uint, Texture> Dicts = new Dictionary<uint, Texture>();
+
+                                                        bool somethingResized = false;
+                                                        foreach (KeyValuePair<uint, Texture> texture in ytd.TextureDict.Dict)
                                                         {
-                                                            byte[] dds = DDSIO.GetDDSFile(texture.Value);
-                                                            File.WriteAllBytes("./NConvert/" + texture.Value.Name + ".dds", dds);
+                                                            if (texture.Value.Width > 512) // Only resize if it is greater than 1440p
+                                                            {
+                                                                byte[] dds = DDSIO.GetDDSFile(texture.Value);
+                                                                File.WriteAllBytes("./NConvert/" + texture.Value.Name + ".dds", dds);
 
-                                                            Process p = new Process();
-                                                            p.StartInfo.FileName = @"./NConvert/nconvert.exe";
-                                                            p.StartInfo.Arguments = $"-out dds -resize 50% 50% -overwrite ./NConvert/{texture.Value.Name}.dds";
-                                                            p.StartInfo.UseShellExecute = false;
-                                                            p.StartInfo.RedirectStandardOutput = true;
-                                                            p.Start();
+                                                                Process p = new Process();
+                                                                p.StartInfo.FileName = @"./NConvert/nconvert.exe";
+                                                                p.StartInfo.Arguments = $"-out dds -resize 50% 50% -overwrite ./NConvert/{texture.Value.Name}.dds";
+                                                                p.StartInfo.UseShellExecute = false;
+                                                                p.StartInfo.RedirectStandardOutput = true;
+                                                                p.Start();
 
-                                                            p.WaitForExit();
+                                                                p.WaitForExit();
 
-                                                            File.Move("./NConvert/" + texture.Value.Name + ".dds", directoryOffset + texture.Value.Name + ".dds");
+                                                                File.Move("./NConvert/" + texture.Value.Name + ".dds", directoryOffset + texture.Value.Name + ".dds");
 
-                                                            byte[] resizedData = File.ReadAllBytes(directoryOffset + texture.Value.Name + ".dds");
-                                                            Texture resizedTex = DDSIO.GetTexture(resizedData);
-                                                            resizedTex.Name = texture.Value.Name;
-                                                            Dicts.Add(texture.Key, resizedTex);
+                                                                byte[] resizedData = File.ReadAllBytes(directoryOffset + texture.Value.Name + ".dds");
+                                                                Texture resizedTex = DDSIO.GetTexture(resizedData);
+                                                                resizedTex.Name = texture.Value.Name;
+                                                                Dicts.Add(texture.Key, resizedTex);
 
-                                                            File.Delete(directoryOffset + texture.Value.Name + ".dds");
-                                                            somethingResized = true;
+                                                                File.Delete(directoryOffset + texture.Value.Name + ".dds");
+                                                                somethingResized = true;
+                                                            }
+                                                            else
+                                                            {
+                                                                Dicts.Add(texture.Key, texture.Value);
+                                                            }
                                                         }
-                                                        else
+
+                                                        if (!somethingResized)
                                                         {
-                                                            Dicts.Add(texture.Key, texture.Value);
+                                                            LogAppend("[CodeWalker] No textures were resized, skipping .ytd recreation.");
+                                                            break;
                                                         }
-                                                    }
 
-                                                    if (!somethingResized)
-                                                    {
-                                                        LogAppend("[CodeWalker] No textures were resized, skipping .ytd recreation.");
+                                                        TextureDictionary dictionary = new TextureDictionary();
+                                                        dictionary.Textures = new ResourcePointerList64<Texture>();
+                                                        dictionary.TextureNameHashes = new ResourceSimpleList64_uint();
+                                                        dictionary.Textures.data_items = Dicts.Values.ToArray();
+                                                        dictionary.TextureNameHashes.data_items = Dicts.Keys.ToArray();
+
+                                                        dictionary.BuildDict();
+                                                        ytd.TextureDict = dictionary;
+
+                                                        byte[] resizedYtdData = ytd.Save();
+                                                        File.WriteAllBytes(directoryOffset + entry.NameLower, resizedYtdData);
+
+                                                        LogAppend("[CodeWalker] Resized texture dictionary (ytd) " + entry.NameLower + ".");
                                                         break;
                                                     }
-
-                                                    TextureDictionary dictionary = new TextureDictionary();
-                                                    dictionary.Textures = new ResourcePointerList64<Texture>();
-                                                    dictionary.TextureNameHashes = new ResourceSimpleList64_uint();
-                                                    dictionary.Textures.data_items = Dicts.Values.ToArray();
-                                                    dictionary.TextureNameHashes.data_items = Dicts.Keys.ToArray();
-
-                                                    dictionary.BuildDict();
-                                                    ytd.TextureDict = dictionary;
-
-                                                    byte[] resizedYtdData = ytd.Save();
-                                                    File.WriteAllBytes(directoryOffset + entry.NameLower, resizedYtdData);
-
-                                                    LogAppend("[CodeWalker] Resized texture dictionary (ytd) " + entry.NameLower + ".");
-                                                    break;
                                                 }
 
                                                 File.WriteAllBytes(directoryOffset + entry.NameLower, data);
