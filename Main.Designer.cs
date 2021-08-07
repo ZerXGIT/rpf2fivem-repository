@@ -33,6 +33,7 @@ namespace rpf2fivem
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.placeHolderTextBox1 = new GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnAddQueue = new System.Windows.Forms.Button();
             this.queueList = new System.Windows.Forms.ListBox();
@@ -40,8 +41,6 @@ namespace rpf2fivem
             this.label6 = new System.Windows.Forms.Label();
             this.gta5mods_status = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.gta5path_status = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.log = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,17 +62,11 @@ namespace rpf2fivem
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsQueue = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBar = new System.Windows.Forms.ToolStripProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.gtaFolder_tb = new System.Windows.Forms.TextBox();
             this.btnConvertFromFolder = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.placeHolderTextBox1 = new GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -86,12 +79,24 @@ namespace rpf2fivem
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.gta5mods_status);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 115);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(458, 240);
+            this.groupBox1.Size = new System.Drawing.Size(458, 234);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RPF Selector";
+            // 
+            // placeHolderTextBox1
+            // 
+            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
+            this.placeHolderTextBox1.Location = new System.Drawing.Point(6, 40);
+            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
+            this.placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+            this.placeHolderTextBox1.Size = new System.Drawing.Size(446, 20);
+            this.placeHolderTextBox1.TabIndex = 20;
+            this.placeHolderTextBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+            this.placeHolderTextBox1.TextChanged += new System.EventHandler(this.placeHolderTextBox1_TextChanged_1);
             // 
             // button4
             // 
@@ -162,34 +167,13 @@ namespace rpf2fivem
             this.label1.TabIndex = 0;
             this.label1.Text = "Add to queue";
             // 
-            // gta5path_status
-            // 
-            this.gta5path_status.AutoSize = true;
-            this.gta5path_status.BackColor = System.Drawing.SystemColors.Control;
-            this.gta5path_status.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gta5path_status.ForeColor = System.Drawing.Color.Crimson;
-            this.gta5path_status.Location = new System.Drawing.Point(374, 19);
-            this.gta5path_status.Name = "gta5path_status";
-            this.gta5path_status.Size = new System.Drawing.Size(74, 16);
-            this.gta5path_status.TabIndex = 9;
-            this.gta5path_status.Text = "NOT SET";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "GTA folder path";
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.log);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(476, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(603, 536);
+            this.groupBox2.Size = new System.Drawing.Size(603, 425);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Log";
@@ -200,7 +184,7 @@ namespace rpf2fivem
             this.log.Multiline = true;
             this.log.Name = "log";
             this.log.ReadOnly = true;
-            this.log.Size = new System.Drawing.Size(591, 514);
+            this.log.Size = new System.Drawing.Size(591, 402);
             this.log.TabIndex = 0;
             // 
             // label7
@@ -223,9 +207,9 @@ namespace rpf2fivem
             this.groupBox3.Controls.Add(this.vmenucheck);
             this.groupBox3.Controls.Add(this.fivemresname_tb);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(12, 361);
+            this.groupBox3.Location = new System.Drawing.Point(12, 252);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(458, 153);
+            this.groupBox3.Size = new System.Drawing.Size(458, 149);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resource";
@@ -306,7 +290,7 @@ namespace rpf2fivem
             // btnStart
             // 
             this.btnStart.Enabled = false;
-            this.btnStart.Location = new System.Drawing.Point(12, 520);
+            this.btnStart.Location = new System.Drawing.Point(12, 407);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 3;
@@ -347,7 +331,7 @@ namespace rpf2fivem
             this.toolStripStatusLabel1,
             this.tsQueue,
             this.tsBar});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 554);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 435);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1088, 22);
             this.statusStrip1.TabIndex = 14;
@@ -383,28 +367,10 @@ namespace rpf2fivem
             this.tsBar.Name = "tsBar";
             this.tsBar.Size = new System.Drawing.Size(100, 16);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(377, 66);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Set";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // gtaFolder_tb
-            // 
-            this.gtaFolder_tb.Location = new System.Drawing.Point(6, 38);
-            this.gtaFolder_tb.Name = "gtaFolder_tb";
-            this.gtaFolder_tb.ReadOnly = true;
-            this.gtaFolder_tb.Size = new System.Drawing.Size(446, 22);
-            this.gtaFolder_tb.TabIndex = 22;
-            // 
             // btnConvertFromFolder
             // 
             this.btnConvertFromFolder.Enabled = false;
-            this.btnConvertFromFolder.Location = new System.Drawing.Point(93, 520);
+            this.btnConvertFromFolder.Location = new System.Drawing.Point(93, 407);
             this.btnConvertFromFolder.Name = "btnConvertFromFolder";
             this.btnConvertFromFolder.Size = new System.Drawing.Size(146, 23);
             this.btnConvertFromFolder.TabIndex = 20;
@@ -412,49 +378,12 @@ namespace rpf2fivem
             this.btnConvertFromFolder.UseVisualStyleBackColor = true;
             this.btnConvertFromFolder.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.gtaFolder_tb);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.gta5path_status);
-            this.groupBox4.Location = new System.Drawing.Point(12, 13);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(458, 96);
-            this.groupBox4.TabIndex = 20;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Game Folder Selector";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(9, 132);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 13);
-            this.label9.TabIndex = 12;
-            // 
-            // placeHolderTextBox1
-            // 
-            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.placeHolderTextBox1.Location = new System.Drawing.Point(6, 40);
-            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
-            this.placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.Size = new System.Drawing.Size(446, 20);
-            this.placeHolderTextBox1.TabIndex = 20;
-            this.placeHolderTextBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.TextChanged += new System.EventHandler(this.placeHolderTextBox1_TextChanged_1);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1088, 576);
-            this.Controls.Add(this.groupBox4);
+            this.ClientSize = new System.Drawing.Size(1088, 457);
             this.Controls.Add(this.btnConvertFromFolder);
             this.Controls.Add(this.reslua);
             this.Controls.Add(this.statusStrip1);
@@ -478,8 +407,6 @@ namespace rpf2fivem
             this.groupBox3.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,8 +416,6 @@ namespace rpf2fivem
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label gta5mods_status;
-        private System.Windows.Forms.Label gta5path_status;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox log;
@@ -518,12 +443,8 @@ namespace rpf2fivem
         private System.Windows.Forms.ToolStripProgressBar tsBar;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ToolStripStatusLabel jobTime;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox gtaFolder_tb;
         private System.Windows.Forms.Button btnConvertFromFolder;
         private System.Windows.Forms.CheckBox compresscheck;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label9;
         private GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox placeHolderTextBox1;
     }
 }

@@ -591,18 +591,6 @@ namespace rpf2fivem
             
         }
 
-        private bool checkGtaFolder()
-        {
-            if (gtaFolder_tb.Text.Contains(@"\Grand Theft Auto V") || gtaFolder_tb.Text.Contains(@"\GTAV") && !gtaFolder_tb.Text.Contains(@"GTA5.exe"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         private async void btnStart_Click(object sender, EventArgs e)
         {
             tsBar.Maximum = queueList.Items.Count;
@@ -874,37 +862,6 @@ namespace rpf2fivem
                 //error handling
             }
 
-
-        }
-
-
-
-
-        private async void button1_Click_1(object sender, EventArgs e)
-        {
-            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
-            dialog.InitialDirectory = "C:\\Users";
-            dialog.IsFolderPicker = true;
-            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
-            {
-                gtaFolder_tb.Text = dialog.FileName;
-                if (checkGtaFolder())
-                {
-                    await makeGtautilFolder(GetExeLocalAppDataUserConfigPath(Path.Combine(Directory.GetCurrentDirectory(), @"lib\gtautil\GTAUtil.exe")), dialog.FileName);
-                    await makeGtautilFolder(GetExeLocalAppDataUserConfigPath(Path.Combine(Directory.GetCurrentDirectory(), @"lib\gtautil\GTAUtil.exe")), dialog.FileName);
-                    btnConvertFromFolder.Enabled = true;
-                    btnAddQueue.Enabled = true;
-                    gta5path_status.Text = "OK";
-                    gta5path_status.ForeColor = Color.Green;
-                }
-                else
-                {
-                    btnConvertFromFolder.Enabled = false;
-                    btnAddQueue.Enabled = false;
-                    gta5path_status.Text = "NOT SET";
-                    gta5path_status.ForeColor = Color.Red;
-                }
-            }
 
         }
 
