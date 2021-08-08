@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore rpf2fivem
+      run: dotnet restore rpf2fivem.sln
     - name: Build
-      run: dotnet build rpf2fivem --no-restore
+      run: dotnet build rpf2fivem.sln --no-restore
     - name: Test
-      run: dotnet test rpf2fivem --no-build --verbosity normal
+      run: dotnet test rpf2fivem.sln --no-build --verbosity normal
