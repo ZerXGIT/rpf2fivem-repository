@@ -33,6 +33,7 @@ namespace rpf2fivem
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.placeHolderTextBox1 = new GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox();
             this.btnClearQueue = new System.Windows.Forms.Button();
             this.btnAddQueue = new System.Windows.Forms.Button();
             this.queueList = new System.Windows.Forms.ListBox();
@@ -62,7 +63,6 @@ namespace rpf2fivem
             this.tsQueue = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBar = new System.Windows.Forms.ToolStripProgressBar();
             this.btnConvertFromFolder = new System.Windows.Forms.Button();
-            this.placeHolderTextBox1 = new GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -85,6 +85,18 @@ namespace rpf2fivem
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RPF Selector";
+            // 
+            // placeHolderTextBox1
+            // 
+            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
+            this.placeHolderTextBox1.Location = new System.Drawing.Point(6, 40);
+            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
+            this.placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+            this.placeHolderTextBox1.Size = new System.Drawing.Size(446, 20);
+            this.placeHolderTextBox1.TabIndex = 20;
+            this.placeHolderTextBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+            this.placeHolderTextBox1.TextChanged += new System.EventHandler(this.placeHolderTextBox1_TextChanged_1);
             // 
             // btnClearQueue
             // 
@@ -354,7 +366,6 @@ namespace rpf2fivem
             // 
             // btnConvertFromFolder
             // 
-            this.btnConvertFromFolder.Enabled = false;
             this.btnConvertFromFolder.Location = new System.Drawing.Point(93, 407);
             this.btnConvertFromFolder.Name = "btnConvertFromFolder";
             this.btnConvertFromFolder.Size = new System.Drawing.Size(146, 23);
@@ -362,18 +373,6 @@ namespace rpf2fivem
             this.btnConvertFromFolder.Text = "Convert from folder";
             this.btnConvertFromFolder.UseVisualStyleBackColor = true;
             this.btnConvertFromFolder.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // placeHolderTextBox1
-            // 
-            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.placeHolderTextBox1.Location = new System.Drawing.Point(6, 40);
-            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
-            this.placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.Size = new System.Drawing.Size(446, 20);
-            this.placeHolderTextBox1.TabIndex = 20;
-            this.placeHolderTextBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.TextChanged += new System.EventHandler(this.placeHolderTextBox1_TextChanged_1);
             // 
             // Main
             // 
