@@ -33,8 +33,7 @@ namespace rpf2fivem
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.placeHolderTextBox1 = new GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnClearQueue = new System.Windows.Forms.Button();
             this.btnAddQueue = new System.Windows.Forms.Button();
             this.queueList = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -45,11 +44,11 @@ namespace rpf2fivem
             this.log = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.compresscheck = new System.Windows.Forms.CheckBox();
+            this.CompressCheck = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.vmenucheck = new System.Windows.Forms.CheckBox();
+            this.VmenuCheck = new System.Windows.Forms.CheckBox();
             this.fivemresname_tb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
@@ -63,6 +62,7 @@ namespace rpf2fivem
             this.tsQueue = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBar = new System.Windows.Forms.ToolStripProgressBar();
             this.btnConvertFromFolder = new System.Windows.Forms.Button();
+            this.placeHolderTextBox1 = new GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,7 +72,7 @@ namespace rpf2fivem
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.placeHolderTextBox1);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btnClearQueue);
             this.groupBox1.Controls.Add(this.btnAddQueue);
             this.groupBox1.Controls.Add(this.queueList);
             this.groupBox1.Controls.Add(this.label8);
@@ -86,27 +86,15 @@ namespace rpf2fivem
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RPF Selector";
             // 
-            // placeHolderTextBox1
+            // btnClearQueue
             // 
-            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.placeHolderTextBox1.Location = new System.Drawing.Point(6, 40);
-            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
-            this.placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.Size = new System.Drawing.Size(446, 20);
-            this.placeHolderTextBox1.TabIndex = 20;
-            this.placeHolderTextBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.TextChanged += new System.EventHandler(this.placeHolderTextBox1_TextChanged_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(114, 68);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 23);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Clear queue";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnClearQueue.Location = new System.Drawing.Point(114, 68);
+            this.btnClearQueue.Name = "btnClearQueue";
+            this.btnClearQueue.Size = new System.Drawing.Size(102, 23);
+            this.btnClearQueue.TabIndex = 19;
+            this.btnClearQueue.Text = "Clear queue";
+            this.btnClearQueue.UseVisualStyleBackColor = true;
+            this.btnClearQueue.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnAddQueue
             // 
@@ -196,15 +184,14 @@ namespace rpf2fivem
             this.label7.Size = new System.Drawing.Size(393, 16);
             this.label7.TabIndex = 13;
             this.label7.Text = "buildname texture_downsizer | developed by: github.com/Avenze";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.compresscheck);
+            this.groupBox3.Controls.Add(this.CompressCheck);
             this.groupBox3.Controls.Add(this.checkBox2);
             this.groupBox3.Controls.Add(this.textBox6);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.vmenucheck);
+            this.groupBox3.Controls.Add(this.VmenuCheck);
             this.groupBox3.Controls.Add(this.fivemresname_tb);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(12, 252);
@@ -213,20 +200,19 @@ namespace rpf2fivem
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resource";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
-            // compresscheck
+            // CompressCheck
             // 
-            this.compresscheck.AutoSize = true;
-            this.compresscheck.Checked = true;
-            this.compresscheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.compresscheck.Location = new System.Drawing.Point(9, 122);
-            this.compresscheck.Name = "compresscheck";
-            this.compresscheck.Size = new System.Drawing.Size(326, 20);
-            this.compresscheck.TabIndex = 18;
-            this.compresscheck.Text = "compress/downsize textures (might reduce quality)";
-            this.compresscheck.UseVisualStyleBackColor = true;
-            this.compresscheck.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            this.CompressCheck.AutoSize = true;
+            this.CompressCheck.Checked = true;
+            this.CompressCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.CompressCheck.Location = new System.Drawing.Point(9, 122);
+            this.CompressCheck.Name = "CompressCheck";
+            this.CompressCheck.Size = new System.Drawing.Size(326, 20);
+            this.CompressCheck.TabIndex = 18;
+            this.CompressCheck.Text = "compress/downsize textures (might reduce quality)";
+            this.CompressCheck.UseVisualStyleBackColor = true;
+            this.CompressCheck.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
             // 
             // checkBox2
             // 
@@ -256,19 +242,19 @@ namespace rpf2fivem
             this.label5.TabIndex = 15;
             this.label5.Text = "Custom vehicle in-game name";
             // 
-            // vmenucheck
+            // VmenuCheck
             // 
-            this.vmenucheck.AutoSize = true;
-            this.vmenucheck.Checked = true;
-            this.vmenucheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.vmenucheck.Enabled = false;
-            this.vmenucheck.Location = new System.Drawing.Point(9, 96);
-            this.vmenucheck.Name = "vmenucheck";
-            this.vmenucheck.Size = new System.Drawing.Size(373, 20);
-            this.vmenucheck.TabIndex = 14;
-            this.vmenucheck.Text = "vMenu / server.cfg helper (check directory after converting)\r\n";
-            this.vmenucheck.UseVisualStyleBackColor = true;
-            this.vmenucheck.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.VmenuCheck.AutoSize = true;
+            this.VmenuCheck.Checked = true;
+            this.VmenuCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.VmenuCheck.Enabled = false;
+            this.VmenuCheck.Location = new System.Drawing.Point(9, 96);
+            this.VmenuCheck.Name = "VmenuCheck";
+            this.VmenuCheck.Size = new System.Drawing.Size(373, 20);
+            this.VmenuCheck.TabIndex = 14;
+            this.VmenuCheck.Text = "vMenu / server.cfg helper (check directory after converting)\r\n";
+            this.VmenuCheck.UseVisualStyleBackColor = true;
+            this.VmenuCheck.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // fivemresname_tb
             // 
@@ -342,7 +328,6 @@ namespace rpf2fivem
             this.tsStatus.Name = "tsStatus";
             this.tsStatus.Size = new System.Drawing.Size(67, 17);
             this.tsStatus.Text = "Status:  Idle";
-            this.tsStatus.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // jobTime
             // 
@@ -377,6 +362,18 @@ namespace rpf2fivem
             this.btnConvertFromFolder.Text = "Convert from folder";
             this.btnConvertFromFolder.UseVisualStyleBackColor = true;
             this.btnConvertFromFolder.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // placeHolderTextBox1
+            // 
+            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
+            this.placeHolderTextBox1.Location = new System.Drawing.Point(6, 40);
+            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
+            this.placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+            this.placeHolderTextBox1.Size = new System.Drawing.Size(446, 20);
+            this.placeHolderTextBox1.TabIndex = 20;
+            this.placeHolderTextBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+            this.placeHolderTextBox1.TextChanged += new System.EventHandler(this.placeHolderTextBox1_TextChanged_1);
             // 
             // Main
             // 
@@ -423,7 +420,7 @@ namespace rpf2fivem
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox vmenucheck;
+        private System.Windows.Forms.CheckBox VmenuCheck;
         private System.Windows.Forms.TextBox fivemresname_tb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnStart;
@@ -441,10 +438,10 @@ namespace rpf2fivem
         private System.Windows.Forms.ListBox queueList;
         private System.Windows.Forms.Button btnAddQueue;
         private System.Windows.Forms.ToolStripProgressBar tsBar;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClearQueue;
         private System.Windows.Forms.ToolStripStatusLabel jobTime;
         private System.Windows.Forms.Button btnConvertFromFolder;
-        private System.Windows.Forms.CheckBox compresscheck;
+        private System.Windows.Forms.CheckBox CompressCheck;
         private GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox placeHolderTextBox1;
     }
 }
