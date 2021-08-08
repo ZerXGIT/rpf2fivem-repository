@@ -544,6 +544,8 @@ namespace rpf2fivem
                     watch.Stop();
                     var elapsedMs = watch.ElapsedMilliseconds;
                     jobTime.Text = "| Last job took: " + elapsedMs + " ms";
+
+                    LogAppend("[WORKER] Finished converting vehicle " + filteredresname);
                 }
                 catch (Exception ex)
                 {
