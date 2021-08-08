@@ -1,6 +1,4 @@
-﻿using rpf2fivem;
-
-namespace rpf2fivem
+﻿namespace rpf2fivem
 {
     partial class Main
     {
@@ -33,7 +31,6 @@ namespace rpf2fivem
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.placeHolderTextBox1 = new GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox();
             this.btnClearQueue = new System.Windows.Forms.Button();
             this.btnAddQueue = new System.Windows.Forms.Button();
             this.queueList = new System.Windows.Forms.ListBox();
@@ -63,6 +60,7 @@ namespace rpf2fivem
             this.tsQueue = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBar = new System.Windows.Forms.ToolStripProgressBar();
             this.btnConvertFromFolder = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,7 +69,7 @@ namespace rpf2fivem
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.placeHolderTextBox1);
+            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.btnClearQueue);
             this.groupBox1.Controls.Add(this.btnAddQueue);
             this.groupBox1.Controls.Add(this.queueList);
@@ -86,18 +84,6 @@ namespace rpf2fivem
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RPF Selector";
             // 
-            // placeHolderTextBox1
-            // 
-            this.placeHolderTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.placeHolderTextBox1.Location = new System.Drawing.Point(6, 40);
-            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
-            this.placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.Size = new System.Drawing.Size(446, 20);
-            this.placeHolderTextBox1.TabIndex = 20;
-            this.placeHolderTextBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
-            this.placeHolderTextBox1.TextChanged += new System.EventHandler(this.placeHolderTextBox1_TextChanged_1);
-            // 
             // btnClearQueue
             // 
             this.btnClearQueue.Location = new System.Drawing.Point(114, 68);
@@ -111,9 +97,9 @@ namespace rpf2fivem
             // btnAddQueue
             // 
             this.btnAddQueue.Enabled = false;
-            this.btnAddQueue.Location = new System.Drawing.Point(6, 68);
+            this.btnAddQueue.Location = new System.Drawing.Point(9, 68);
             this.btnAddQueue.Name = "btnAddQueue";
-            this.btnAddQueue.Size = new System.Drawing.Size(102, 23);
+            this.btnAddQueue.Size = new System.Drawing.Size(99, 23);
             this.btnAddQueue.TabIndex = 18;
             this.btnAddQueue.Text = "Add to queue";
             this.btnAddQueue.UseVisualStyleBackColor = true;
@@ -123,9 +109,9 @@ namespace rpf2fivem
             // 
             this.queueList.FormattingEnabled = true;
             this.queueList.ItemHeight = 16;
-            this.queueList.Location = new System.Drawing.Point(6, 113);
+            this.queueList.Location = new System.Drawing.Point(9, 113);
             this.queueList.Name = "queueList";
-            this.queueList.Size = new System.Drawing.Size(446, 116);
+            this.queueList.Size = new System.Drawing.Size(443, 116);
             this.queueList.TabIndex = 17;
             // 
             // label8
@@ -270,16 +256,16 @@ namespace rpf2fivem
             // 
             // fivemresname_tb
             // 
-            this.fivemresname_tb.Location = new System.Drawing.Point(12, 37);
+            this.fivemresname_tb.Location = new System.Drawing.Point(9, 37);
             this.fivemresname_tb.Name = "fivemresname_tb";
-            this.fivemresname_tb.Size = new System.Drawing.Size(246, 22);
+            this.fivemresname_tb.Size = new System.Drawing.Size(249, 22);
             this.fivemresname_tb.TabIndex = 13;
             this.fivemresname_tb.Text = "default";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 18);
+            this.label4.Location = new System.Drawing.Point(6, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 16);
             this.label4.TabIndex = 12;
@@ -374,6 +360,14 @@ namespace rpf2fivem
             this.btnConvertFromFolder.UseVisualStyleBackColor = true;
             this.btnConvertFromFolder.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(443, 22);
+            this.textBox1.TabIndex = 20;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -441,6 +435,7 @@ namespace rpf2fivem
         private System.Windows.Forms.ToolStripStatusLabel jobTime;
         private System.Windows.Forms.Button btnConvertFromFolder;
         private System.Windows.Forms.CheckBox CompressCheck;
-        private GTA5_RPF_FiveM_Convertor.PlaceHolderTextBox placeHolderTextBox1;
+        private rpf2fivem.PlaceHolderTextBox placeHolderTextBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

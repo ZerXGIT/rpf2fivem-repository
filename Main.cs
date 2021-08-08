@@ -321,6 +321,7 @@ namespace rpf2fivem
 
                                                             p.WaitForExit();
 
+                                                            LogAppend("[NConvert] Sucessfully resized texture (" + texture.Value.Name + ") to 50%!");
                                                             File.Move("./NConvert/" + texture.Value.Name + ".dds", directoryOffset + texture.Value.Name + ".dds");
 
                                                             byte[] resizedData = File.ReadAllBytes(directoryOffset + texture.Value.Name + ".dds");
@@ -455,6 +456,12 @@ namespace rpf2fivem
             }
             fivemresname_tb.Text = rnd.Next(2147483647).ToString();
             StatusHandler("Idle");
+        }
+
+        // Setup functions
+        private void setUpEnviroment()
+        {
+
         }
 
         // Conversion Functions
@@ -639,23 +646,6 @@ namespace rpf2fivem
         }
 
         // Events
-        private void placeHolderTextBox1_TextChanged_1(object sender, EventArgs e)
-        {
-            if (placeHolderTextBox1.Text.Contains("https://files.gta5-mods.com/") && !placeHolderTextBox1.Text.Contains("XXXCARNAMEXXXX"))
-            {
-                gta5mods_status.ForeColor = Color.Green;
-                gta5mods_status.Text = "OK";
-                btnAddQueue.Enabled = true;
-
-            }
-            else
-            {
-                gta5mods_status.ForeColor = Color.Red;
-                gta5mods_status.Text = "ERROR";
-                btnAddQueue.Enabled = false;
-
-            }
-        }
 
         private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -763,13 +753,31 @@ namespace rpf2fivem
         private void btnAddQueue_Click(object sender, EventArgs e)
         {
             LogAppend("Job added!");
-            queueList.Items.Add($"<{fivemresname_tb.Text}>" + placeHolderTextBox1.Text);
+            queueList.Items.Add($"<{fivemresname_tb.Text}>" + textBox1.Text);
             btnStart.Enabled = true;
             QueueHandler(0, queueList.Items.Count);
-            placeHolderTextBox1.Clear();
+            textBox1.Clear();
             this.ActiveControl = label1;
             fivemresname_tb.Text = rnd.Next(2147483647).ToString();
-            placeHolderTextBox1.PlaceHolderText = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+            textBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Contains("https://files.gta5-mods.com/") && !textBox1.Text.Contains("XXXCARNAMEXXXX"))
+            {
+                gta5mods_status.ForeColor = Color.Green;
+                gta5mods_status.Text = "OK";
+                btnAddQueue.Enabled = true;
+
+            }
+            else
+            {
+                gta5mods_status.ForeColor = Color.Red;
+                gta5mods_status.Text = "ERROR";
+                btnAddQueue.Enabled = false;
+
+            }
         }
     }
 }
