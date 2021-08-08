@@ -659,12 +659,10 @@ namespace rpf2fivem
         {
             if (CompressCheck.Checked == true)
             {
-                compression = true;
                 LogAppend("[InputHandler] Enabled texture compression/downsizing.");
             }
             else
             {
-                compression = false;
                 LogAppend("[InputHandler] Disabled texture compression/downsizing.");
             }
         }
