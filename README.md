@@ -20,6 +20,10 @@ https://dotnet.microsoft.com/download/dotnet/5.0/runtime
   <li>Extract the rpf2fivem.zip archive onto your desktop desktop</li>
   <li>If you downloaded the NConvert.zip archive, extract it into the rpf2fivem folder.</li>
   <li>And voíla, you're done with the installation!</li>
+  <li>The finished directory should look like this:</li>
+  
+  ![bild](https://user-images.githubusercontent.com/38162785/128943774-0da58efa-baed-4b85-a354-6501a956e07b.png)
+
 </ul>
   
   
