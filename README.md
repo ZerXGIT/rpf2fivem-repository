@@ -7,10 +7,10 @@ We've all been through this, you started working on your FiveM server and starte
 
 
 <b>System Requirements</b>
-- Microsoft .NET Framework 4.8 Runtime
+- Microsoft .NET Framework 4.8 Runtime (most often already installed on Windows 10.)
 https://dotnet.microsoft.com/download/dotnet-framework/net48
-- Microsoft .NET Core 3.1 Runtime (***Desktop***)
-https://dotnet.microsoft.com/download/dotnet/3.1/runtime
+- Microsoft .NET 5.0 Runtime (***Desktop***)
+https://dotnet.microsoft.com/download/dotnet/5.0/runtime
 
 
 <b>Installation Guide</b>
