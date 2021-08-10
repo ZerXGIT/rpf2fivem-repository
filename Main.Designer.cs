@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnClearQueue = new System.Windows.Forms.Button();
             this.btnAddQueue = new System.Windows.Forms.Button();
             this.queueList = new System.Windows.Forms.ListBox();
@@ -60,7 +61,6 @@
             this.tsQueue = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBar = new System.Windows.Forms.ToolStripProgressBar();
             this.btnConvertFromFolder = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -83,6 +83,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RPF Selector";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(443, 22);
+            this.textBox1.TabIndex = 20;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnClearQueue
             // 
@@ -324,6 +332,7 @@
             // tsStatus
             // 
             this.tsStatus.Name = "tsStatus";
+            this.tsStatus.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
             this.tsStatus.Size = new System.Drawing.Size(67, 17);
             this.tsStatus.Text = "Status:  Idle";
             // 
@@ -336,7 +345,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(730, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(699, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // tsQueue
@@ -359,14 +368,6 @@
             this.btnConvertFromFolder.Text = "Convert from folder";
             this.btnConvertFromFolder.UseVisualStyleBackColor = true;
             this.btnConvertFromFolder.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(443, 22);
-            this.textBox1.TabIndex = 20;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Main
             // 
@@ -426,7 +427,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel tsStatus;
         private System.Windows.Forms.ToolStripStatusLabel tsQueue;
-        //private PlaceHolderTextBox gta5mods_tb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox queueList;
         private System.Windows.Forms.Button btnAddQueue;
@@ -435,7 +435,6 @@
         private System.Windows.Forms.ToolStripStatusLabel jobTime;
         private System.Windows.Forms.Button btnConvertFromFolder;
         private System.Windows.Forms.CheckBox CompressCheck;
-        private rpf2fivem.PlaceHolderTextBox placeHolderTextBox1;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

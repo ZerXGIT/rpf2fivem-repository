@@ -46,8 +46,18 @@ namespace rpf2fivem
         public Main()
         {
             InitializeComponent();
-            Directory.CreateDirectory("cache");
-
+            if (!Directory.Exists("./logs"))
+            {
+                Directory.CreateDirectory("logs");
+            }
+            if (!Directory.Exists("./cache"))
+            {
+                Directory.CreateDirectory("cache");
+            }
+            if (!File.Exists(@"./logs/latest.log"))
+            {
+                FileStream fs = File.Create(@"./logs/latest.log");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -66,6 +76,8 @@ namespace rpf2fivem
             LogAppend("https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip");
             LogAppend("Links must be DIRECT link else they won't download!");
 
+            //LogAppend("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor. Sit amet nisl purus in mollis nunc sed id. Facilisis gravida neque convallis a cras semper auctor neque vitae. Faucibus interdum posuere lorem ipsum dolor. Lacinia quis vel eros donec ac odio. Bibendum at varius vel pharetra vel turpis nunc eget. Pulvinar pellentesque habitant morbi tristique senectus. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Quis vel eros donec ac. Elit pellentesque habitant morbi tristique. Blandit massa enim nec dui nunc mattis enim ut tellus. Vitae nunc sed velit dignissim sodales ut eu sem integer. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Ut diam quam nulla porttitor massa id. Iaculis eu non diam phasellus vestibulum lorem. Pharetra magna ac placerat vestibulum lectus mauris. Orci nulla pellentesque dignissim enim sit amet venenatis. Vestibulum sed arcu non odio euismod lacinia at quis.Sit amet consectetur adipiscing elit pellentesque.Amet volutpat consequat mauris nunc congue nisi vitae suscipit.Odio ut sem nulla pharetra diam sit amet.Rhoncus urna neque viverra justo nec ultrices dui sapien.Tristique senectus et netus et.Fames ac turpis egestas maecenas pharetra convallis.Morbi blandit cursus risus at.Libero volutpat sed cras ornare arcu dui vivamus arcu.Est ultricies integer quis auctor elit.Adipiscing enim eu turpis egestas.Cursus vitae congue mauris rhoncus aenean vel.Augue neque gravida in fermentum et sollicitudin ac.Aliquet enim tortor at auctor urna nunc id cursus metus.Pharetra vel turpis nunc eget lorem dolor sed viverra.Etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum.Vel pharetra vel turpis nunc eget.Adipiscing elit ut aliquam purus sit amet luctus venenatis.At in tellus integer feugiat scelerisque varius morbi.Volutpat maecenas volutpat blandit aliquam etiam erat.Urna cursus eget nunc scelerisque viverra mauris.Elit ut aliquam purus sit amet luctus venenatis lectus magna.Phasellus egestas tellus rutrum tellus pellentesque.Id interdum velit laoreet id donec ultrices.Sit amet consectetur adipiscing elit ut aliquam purus sit.Placerat in egestas erat imperdiet sed euismod nisi porta lorem.Eget egestas purus viverra accumsan in nisl nisi scelerisque.Aliquet lectus proin nibh nisl condimentum id venenatis a condimentum.Et pharetra pharetra massa massa ultricies mi quis.Mi in nulla posuere sollicitudin aliquam ultrices sagittis.Amet nisl purus in mollis nunc.Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices.Ornare arcu dui vivamus arcu felis bibendum ut.Cursus turpis massa tincidunt dui ut ornare lectus.Sit amet massa vitae tortor condimentum.Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam.Congue quisque egestas diam in arcu.Metus aliquam eleifend mi in nulla posuere sollicitudin.In nisl nisi scelerisque eu ultrices vitae auctor eu augue.Aliquam id diam maecenas ultricies mi eget.Non blandit massa enim nec dui nunc mattis enim ut.Aenean vel elit scelerisque mauris.Arcu non odio euismod lacinia at quis risus sed vulputate.Enim neque volutpat ac tincidunt vitae semper quis lectus nulla.Turpis egestas pretium aenean pharetra magna ac placerat.Placerat vestibulum lectus mauris ultrices eros in cursus.Nulla facilisi nullam vehicula ipsum.Proin fermentum leo vel orci porta non pulvinar neque laoreet.Consectetur adipiscing elit ut aliquam purus sit amet luctus.Ullamcorper sit amet risus nullam eget felis eget.Magna fringilla urna porttitor rhoncus dolor purus.Tellus at urna condimentum mattis pellentesque id nibh tortor id.Lacus laoreet non curabitur gravida arcu ac tortor.Blandit massa enim nec dui nunc mattis.Metus vulputate eu scelerisque felis imperdiet.Aliquet nec ullamcorper sit amet risus nullam eget felis eget.Semper auctor neque vitae tempus.Cras fermentum odio eu feugiat.");
+
         }
 
         // Helper Functions
@@ -74,6 +86,33 @@ namespace rpf2fivem
         {
             log.AppendText(text + Environment.NewLine);
             StatusHandler(text);
+            LogFile("[INFO] " + text);
+        }
+
+        public void WarningAppend(string text)
+        {
+            log.AppendText(text + Environment.NewLine);
+            StatusHandler(text);
+            LogFile("[WARNING] " + text);
+        }
+
+        public void ErrorAppend(string text)
+        {
+            log.AppendText("[Error] An error occoured during execution, stacktrace has been logged to /logs/latest.log, please submit to GitHub Issues page.");
+            LogFile("[ERROR] " + text);
+        }
+
+        public void LogFile(string text)
+        {
+            try
+            {
+                string currentDate = DateTime.Now.ToString(@"MM\/dd\/yyyy\ hh\:mm\:ss");
+                File.AppendAllText(@"./logs/latest.log", "[" + currentDate + "] " + text + Environment.NewLine);
+            }
+            catch (Exception ex)
+            {
+                LogAppend("[Worker] Failed to write log to file.");
+            }
         }
 
         private void StatusHandler(string status)
@@ -396,7 +435,7 @@ namespace rpf2fivem
         // Cleanup Functions
         private void fixTextureFile(string filePath)
         {
-            LogAppend("[FIX4BYTE] Fixing " + filePath + "...");
+            LogAppend("[Worker] Fixing " + filePath + "...");
             string content = File.ReadAllText(filePath, Encoding.Default);
             char[] array = content.ToCharArray();
             array[3] = '7';
@@ -413,7 +452,7 @@ namespace rpf2fivem
 
             foreach (var item in txtFiles)
             {
-                LogAppend("[MOVE] Inflating " + resname + @"\" + item);
+                LogAppend("[Worker] Inflating " + resname + @"\" + item);
                 if (isYtd)
                 {
                     fixTextureFile(item);
@@ -439,7 +478,7 @@ namespace rpf2fivem
             string[] txtFiles = Directory.GetFiles("cache", fileExtension, SearchOption.AllDirectories);
             foreach (var item in txtFiles)
             {
-                LogAppend("[DEL] Deleting " + resname + @"\" + item + " ...");
+                LogAppend("[Worker] Deleting " + resname + @"\" + item + " ...");
                 File.Delete(item);
             }
         }
@@ -472,13 +511,13 @@ namespace rpf2fivem
             Regex rx = new Regex(@"<(.*?)>");
             string filteredresname = rx.Match(link).Groups[1].Value;
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            LogAppend("[WORKER] Started resConvert async task...");
-            LogAppend("[WORKER] Cleaning cache...");
+            LogAppend("[Worker] Started resConvert async task...");
+            LogAppend("[Worker] Cleaning cache...");
             cleanUp();
 
             if (VmenuCheck.Checked == true)
             {
-                LogAppend("[WORKER] Setting up environment...");
+                LogAppend("[Worker] Setting up environment...");
                 if (!Directory.Exists("./cache"))
                 {
                     Directory.CreateDirectory("cache");
@@ -496,23 +535,23 @@ namespace rpf2fivem
                     Directory.CreateDirectory("resources");
                 }
 
-                LogAppend("[WORKER] Writing config helpers...");
+                LogAppend("[Worker] Writing config helpers...");
                 CfgHelper(filteredresname);
 
-                LogAppend("[WORKER] Created " + filteredresname + " FiveM resource directory...");
+                LogAppend("[Worker] Created " + filteredresname + " FiveM resource directory...");
                 HideShellCmd("mkdir " + filteredresname + @"\stream");
                 await Task.Delay(500);
 
-                LogAppend("[WORKER] Writing resouce manifest...");
+                LogAppend("[Worker] Writing resouce manifest...");
                 File.WriteAllText(filteredresname + @"\__resource.lua", reslua.Text, utf8WithoutBom);
 
                 try
                 {
-                    LogAppend("[WORKER] Checking link...OK");
-                    LogAppend("[ASYNCDL] Downloading archive...");
+                    LogAppend("[Worker] Checking link...OK");
+                    LogAppend("[AsyncDownload] Downloading archive...");
                     await AsyncFileDownload(link.Replace($"<{resname}>", ""));
 
-                    LogAppend("[ASYNCDL] Successfully fetched archive!");
+                    LogAppend("[AsyncDownload] Successfully fetched archive!");
                     HideShellCmd(@"move *.rar cache");
                     HideShellCmd(@"move *.zip cache");
                     HideShellCmd(@"move *.7z cache");
@@ -531,7 +570,7 @@ namespace rpf2fivem
                     //hideshellcmd(@"cache\unpack\delspace.bat"); removed, as GTAutil is no longer needed
                     //await Task.Delay(2000);
 
-                    LogAppend("[WORKER] Searching for dlc.rpf...");
+                    LogAppend("[Worker] Searching for dlc.rpf...");
                     RpfUnpack();
 
                     LogAppend("[CodeWalker] Unpacking RPF...");
@@ -540,11 +579,11 @@ namespace rpf2fivem
                     inflateFromCache(filteredresname, "yft", false, true);
                     inflateFromCache(filteredresname, "ytd", true, false);
 
-                    LogAppend("[WORKER] Moving resource into resources folder...");
+                    LogAppend("[Worker] Moving resource into resources folder...");
                     HideShellCmd(@"move " + filteredresname + "resources");
                     HideShellCmd(@"move " + filteredresname + "resources");
 
-                    LogAppend("[WORKER] Cleaning up...");
+                    LogAppend("[Worker] Cleaning up...");
                     currentQueue += 1;
                     currentQueue += 1;
                     cleanUp();
@@ -552,12 +591,11 @@ namespace rpf2fivem
                     var elapsedMs = watch.ElapsedMilliseconds;
                     jobTime.Text = "| Last job took: " + elapsedMs + " ms";
 
-                    LogAppend("[WORKER] Finished converting vehicle " + filteredresname);
+                    LogAppend("[Worker] Finished converting vehicle " + filteredresname);
                 }
                 catch (Exception ex)
                 {
-                    LogAppend("[ERROR] An error occured. Stacktrace:");
-                    LogAppend(ex.ToString());
+                    ErrorAppend(ex.ToString());
                 }
 
 
@@ -570,10 +608,10 @@ namespace rpf2fivem
             Encoding utf8WithoutBom = new UTF8Encoding(false);
 
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            LogAppend("[WORKER] Started resConvert async task...");
+            LogAppend("[Worker] Started resConvert async task...");
             if (VmenuCheck.Checked == true)
             {
-                LogAppend("[WORKER] Setting up environment...");
+                LogAppend("[Worker] Setting up environment...");
                 if (!Directory.Exists("./cache"))
                 {
                     Directory.CreateDirectory("cache");
@@ -591,14 +629,14 @@ namespace rpf2fivem
                     Directory.CreateDirectory("resources");
                 }
 
-                LogAppend("[WORKER] Writing config helpers...");
+                LogAppend("[Worker] Writing config helpers...");
                 CfgHelper(filteredresname);
 
-                LogAppend("[WORKER] Created " + filteredresname + " FiveM resource directory...");
+                LogAppend("[Worker] Created " + filteredresname + " FiveM resource directory...");
                 HideShellCmd("mkdir " + filteredresname + @"\stream");
                 await Task.Delay(500);
 
-                LogAppend("[WORKER] Writing resouce manifest...");
+                LogAppend("[Worker] Writing resouce manifest...");
                 File.WriteAllText(filteredresname + @"\__resource.lua", reslua.Text, utf8WithoutBom);
                 try
                 {
@@ -612,7 +650,7 @@ namespace rpf2fivem
                     delReplacementLeftover(filteredresname, "ytd");
                     delReplacementLeftover(filteredresname, "meta");
 
-                    LogAppend("[WORKER] Searching for dlc.rpf...");
+                    LogAppend("[Worker] Searching for dlc.rpf...");
                     RpfUnpack();
 
                     LogAppend("[CodeWalker] Unpacking RPF...");
@@ -621,24 +659,22 @@ namespace rpf2fivem
                     inflateFromCache(filteredresname, "yft", false, true);
                     inflateFromCache(filteredresname, "ytd", true, false);
 
-                    LogAppend("[WORKER] Moving resource into resources folder...");
+                    LogAppend("[Worker] Moving resource into resources folder...");
                     HideShellCmd(@"move " + filteredresname + "resources");
 
-                    LogAppend("[WORKER] Cleaning up...");
+                    LogAppend("[Worker] Cleaning up...");
                     currentQueue += 1;
                     cleanUp();
                     watch.Stop();
                     var elapsedMs = watch.ElapsedMilliseconds;
                     jobTime.Text = "| Last job took: " + elapsedMs + " ms";
 
-                    LogAppend("[WORKER] Finished converting vehicle " + filteredresname);
-
-
+                    LogAppend("[Worker] Finished converting vehicle " + filteredresname);
+                    return;
                 }
                 catch (Exception ex)
                 {
-                    LogAppend("[ERROR] An error occured. Stacktrace:");
-                    LogAppend(ex.ToString());
+                    ErrorAppend(ex.ToString());
                 }
 
 
@@ -715,7 +751,7 @@ namespace rpf2fivem
                 }
 
             }
-            Task.Delay(1000);
+            await Task.Delay(1000);
         }
 
         private void button4_Click(object sender, EventArgs e)
