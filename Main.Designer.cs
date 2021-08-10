@@ -61,6 +61,7 @@
             this.tsQueue = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBar = new System.Windows.Forms.ToolStripProgressBar();
             this.btnConvertFromFolder = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -167,7 +168,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(476, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(603, 425);
+            this.groupBox2.Size = new System.Drawing.Size(603, 448);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Log";
@@ -178,7 +179,7 @@
             this.log.Multiline = true;
             this.log.Name = "log";
             this.log.ReadOnly = true;
-            this.log.Size = new System.Drawing.Size(591, 402);
+            this.log.Size = new System.Drawing.Size(591, 425);
             this.log.TabIndex = 0;
             // 
             // label7
@@ -193,6 +194,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.checkBox1);
             this.groupBox3.Controls.Add(this.CompressCheck);
             this.groupBox3.Controls.Add(this.checkBox2);
             this.groupBox3.Controls.Add(this.textBox6);
@@ -202,7 +204,7 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Location = new System.Drawing.Point(12, 252);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(458, 149);
+            this.groupBox3.Size = new System.Drawing.Size(458, 179);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resource";
@@ -282,7 +284,7 @@
             // btnStart
             // 
             this.btnStart.Enabled = false;
-            this.btnStart.Location = new System.Drawing.Point(12, 407);
+            this.btnStart.Location = new System.Drawing.Point(12, 437);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 3;
@@ -292,13 +294,14 @@
             // 
             // reslua
             // 
-            this.reslua.Location = new System.Drawing.Point(554, 599);
+            this.reslua.Location = new System.Drawing.Point(554, 515);
             this.reslua.Multiline = true;
             this.reslua.Name = "reslua";
             this.reslua.Size = new System.Drawing.Size(525, 123);
             this.reslua.TabIndex = 10;
             this.reslua.Text = resources.GetString("reslua.Text");
             this.reslua.Visible = false;
+            this.reslua.TextChanged += new System.EventHandler(this.reslua_TextChanged);
             // 
             // timer1
             // 
@@ -307,7 +310,7 @@
             // 
             // delspace
             // 
-            this.delspace.Location = new System.Drawing.Point(12, 599);
+            this.delspace.Location = new System.Drawing.Point(12, 515);
             this.delspace.Multiline = true;
             this.delspace.Name = "delspace";
             this.delspace.Size = new System.Drawing.Size(536, 123);
@@ -323,7 +326,7 @@
             this.toolStripStatusLabel1,
             this.tsQueue,
             this.tsBar});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 435);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 465);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1088, 22);
             this.statusStrip1.TabIndex = 14;
@@ -345,7 +348,7 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(699, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(730, 17);
             this.toolStripStatusLabel1.Spring = true;
             // 
             // tsQueue
@@ -361,7 +364,7 @@
             // 
             // btnConvertFromFolder
             // 
-            this.btnConvertFromFolder.Location = new System.Drawing.Point(93, 407);
+            this.btnConvertFromFolder.Location = new System.Drawing.Point(93, 437);
             this.btnConvertFromFolder.Name = "btnConvertFromFolder";
             this.btnConvertFromFolder.Size = new System.Drawing.Size(146, 23);
             this.btnConvertFromFolder.TabIndex = 20;
@@ -369,12 +372,25 @@
             this.btnConvertFromFolder.UseVisualStyleBackColor = true;
             this.btnConvertFromFolder.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Enabled = false;
+            this.checkBox1.Location = new System.Drawing.Point(9, 148);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(268, 20);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "store converted vehicles in one resource";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1088, 457);
+            this.ClientSize = new System.Drawing.Size(1088, 487);
             this.Controls.Add(this.btnConvertFromFolder);
             this.Controls.Add(this.reslua);
             this.Controls.Add(this.statusStrip1);
@@ -436,5 +452,6 @@
         private System.Windows.Forms.Button btnConvertFromFolder;
         private System.Windows.Forms.CheckBox CompressCheck;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
