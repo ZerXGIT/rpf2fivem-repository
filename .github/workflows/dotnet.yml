@@ -19,8 +19,8 @@ jobs:
       with:
         dotnet-version: 3.1.x
         
-    - name: Setup MSBuild Path
-      uses: warrenbuckley/Setup-MSBuild@v1
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1
        
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2    
