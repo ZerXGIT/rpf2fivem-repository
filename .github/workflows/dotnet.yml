@@ -19,7 +19,7 @@ jobs:
       with:
         dotnet-version: 3.1.x
         
-    - name: setup-msbuild
+    - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.0.2
        
     - name: Setup NuGet
@@ -28,7 +28,7 @@ jobs:
     - name: Restore dependencies
       run: nuget restore rpf2fivem.sln
       
-    - name: Build and Publish Web App
+    - name: Build App
       run: msbuild rpf2fivem.sln /p:Configuration=Release
       
     - name: Test
