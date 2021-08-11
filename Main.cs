@@ -592,7 +592,7 @@ client_script 'vehicle_names.lua'";
                 await Task.Delay(500);
 
                 LogAppend("[Worker] Writing resouce manifest...");
-                File.WriteAllText(filteredresname + @"\__resource.lua", reslua.Text, utf8WithoutBom);
+                File.WriteAllText(filteredresname + @"\fxmanifest.lua", reslua.Text, utf8WithoutBom);
 
                 try
                 {
@@ -686,7 +686,7 @@ client_script 'vehicle_names.lua'";
                 await Task.Delay(500);
 
                 LogAppend("[Worker] Writing resouce manifest...");
-                File.WriteAllText(filteredresname + @"\__resource.lua", reslua.Text, utf8WithoutBom);
+                File.WriteAllText(filteredresname + @"\fxmanifest.lua", reslua.Text, utf8WithoutBom);
                 try
                 {
                     LogAppend("[SharpCompress] Decompressing...");
