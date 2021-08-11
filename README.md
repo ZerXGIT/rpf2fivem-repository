@@ -1,6 +1,6 @@
 <h1>rpf2fivem</h1>
 
-PLEASE VIEW THIS FIRST: https://forum.cfx.re/t/gta5-mods-to-fivem-addon-converter/1142154/21
+PLEASE VIEW THIS FIRST: https://forum.cfx.re/t/release-rpf2fivem-tool-for-automatically-converting-gta5-mods-to-fivem-resouces/4415684
 
 <b>Info</b>\
 We've all been through this, you started working on your FiveM server and started adding vehicles, but, you got tired of switching back and forth between OpenIV and 100 notepads open. I made this tool for you.

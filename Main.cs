@@ -72,8 +72,15 @@ namespace rpf2fivem
             LogAppend("https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip");
             LogAppend("Links must be DIRECT link else they won't download!");
 
-            //LogAppend("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida neque convallis a cras semper auctor. Sit amet nisl purus in mollis nunc sed id. Facilisis gravida neque convallis a cras semper auctor neque vitae. Faucibus interdum posuere lorem ipsum dolor. Lacinia quis vel eros donec ac odio. Bibendum at varius vel pharetra vel turpis nunc eget. Pulvinar pellentesque habitant morbi tristique senectus. Nulla facilisi cras fermentum odio eu feugiat pretium nibh. Quis vel eros donec ac. Elit pellentesque habitant morbi tristique. Blandit massa enim nec dui nunc mattis enim ut tellus. Vitae nunc sed velit dignissim sodales ut eu sem integer. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Ut diam quam nulla porttitor massa id. Iaculis eu non diam phasellus vestibulum lorem. Pharetra magna ac placerat vestibulum lectus mauris. Orci nulla pellentesque dignissim enim sit amet venenatis. Vestibulum sed arcu non odio euismod lacinia at quis.Sit amet consectetur adipiscing elit pellentesque.Amet volutpat consequat mauris nunc congue nisi vitae suscipit.Odio ut sem nulla pharetra diam sit amet.Rhoncus urna neque viverra justo nec ultrices dui sapien.Tristique senectus et netus et.Fames ac turpis egestas maecenas pharetra convallis.Morbi blandit cursus risus at.Libero volutpat sed cras ornare arcu dui vivamus arcu.Est ultricies integer quis auctor elit.Adipiscing enim eu turpis egestas.Cursus vitae congue mauris rhoncus aenean vel.Augue neque gravida in fermentum et sollicitudin ac.Aliquet enim tortor at auctor urna nunc id cursus metus.Pharetra vel turpis nunc eget lorem dolor sed viverra.Etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum.Vel pharetra vel turpis nunc eget.Adipiscing elit ut aliquam purus sit amet luctus venenatis.At in tellus integer feugiat scelerisque varius morbi.Volutpat maecenas volutpat blandit aliquam etiam erat.Urna cursus eget nunc scelerisque viverra mauris.Elit ut aliquam purus sit amet luctus venenatis lectus magna.Phasellus egestas tellus rutrum tellus pellentesque.Id interdum velit laoreet id donec ultrices.Sit amet consectetur adipiscing elit ut aliquam purus sit.Placerat in egestas erat imperdiet sed euismod nisi porta lorem.Eget egestas purus viverra accumsan in nisl nisi scelerisque.Aliquet lectus proin nibh nisl condimentum id venenatis a condimentum.Et pharetra pharetra massa massa ultricies mi quis.Mi in nulla posuere sollicitudin aliquam ultrices sagittis.Amet nisl purus in mollis nunc.Felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices.Ornare arcu dui vivamus arcu felis bibendum ut.Cursus turpis massa tincidunt dui ut ornare lectus.Sit amet massa vitae tortor condimentum.Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam.Congue quisque egestas diam in arcu.Metus aliquam eleifend mi in nulla posuere sollicitudin.In nisl nisi scelerisque eu ultrices vitae auctor eu augue.Aliquam id diam maecenas ultricies mi eget.Non blandit massa enim nec dui nunc mattis enim ut.Aenean vel elit scelerisque mauris.Arcu non odio euismod lacinia at quis risus sed vulputate.Enim neque volutpat ac tincidunt vitae semper quis lectus nulla.Turpis egestas pretium aenean pharetra magna ac placerat.Placerat vestibulum lectus mauris ultrices eros in cursus.Nulla facilisi nullam vehicula ipsum.Proin fermentum leo vel orci porta non pulvinar neque laoreet.Consectetur adipiscing elit ut aliquam purus sit amet luctus.Ullamcorper sit amet risus nullam eget felis eget.Magna fringilla urna porttitor rhoncus dolor purus.Tellus at urna condimentum mattis pellentesque id nibh tortor id.Lacus laoreet non curabitur gravida arcu ac tortor.Blandit massa enim nec dui nunc mattis.Metus vulputate eu scelerisque felis imperdiet.Aliquet nec ullamcorper sit amet risus nullam eget felis eget.Semper auctor neque vitae tempus.Cras fermentum odio eu feugiat.");
+            if (!Directory.Exists("./NConvert"))
+            {
+                // add warning if the user hasn't installed NConvert properly
+                WarningAppend("[NConvert] It seems like you haven't installed NConvert, please follow");
+                WarningAppend("[NConvert] the installation instructions on the GitHub Repository or the forum thread.");
 
+                CompressCheck.Checked = false;
+                CompressCheck.Enabled = false;
+            }
         }
 
         // Helper Functions
@@ -103,7 +110,11 @@ namespace rpf2fivem
             try
             {
                 string currentDate = DateTime.Now.ToString(@"MM\/dd\/yyyy\ hh\:mm\:ss");
-                File.AppendAllText(@"./logs/latest.log", "[" + currentDate + "] " + text + Environment.NewLine);
+                using (TextWriter tw = new StreamWriter(@"./logs/latest.log", append: true))
+                {
+                    tw.WriteLine("[" + currentDate + "] " + text + Environment.NewLine);
+                    tw.Close();
+                }
             }
             catch (Exception ex)
             {
@@ -249,22 +260,24 @@ namespace rpf2fivem
         }
 
         // Unpacking Functions
-        private void RpfUnpack()
+        private void RpfUnpack(string resname)
         {
             string rpfExtension = "*.rpf";
             string[] rpfFiles = Directory.GetFiles("cache", rpfExtension, SearchOption.AllDirectories);
             foreach (var item in rpfFiles)
             {
                 RpfFile rpf = new RpfFile(item, item);
-                LogAppend("[CodeWalker] Unpacking " + item + "......");
+                LogAppend("[CodeWalker] Unpacking " + item + "...");
 
                 if (rpf.ScanStructure(null, null))
                 {
                     ExtractFilesInRPF(rpf, @".\cache\rpfunpack\");
-
                 }
+            }
 
-                //hideshellcmd(@"lib\gtautil\GTAUtil.exe extractarchive -i " + item + " -o " + @"cache\rpfunpack");
+            if (rpfFiles.Length == 0)
+            {
+                WarningAppend("[CodeWalker] Vehicle (" + resname + ") is incompatible, no .rpf file was found.");
             }
         }
 
@@ -463,7 +476,7 @@ namespace rpf2fivem
                 }
                 else
                 {
-                    File.Move(item, Path.Combine(resname, Path.GetFileName(item)));
+                    File.Move(item, Path.Combine(resname + "\\data", Path.GetFileName(item)));
                 }
             }
         }
@@ -494,25 +507,8 @@ namespace rpf2fivem
         }
 
         // Setup functions
-        string fxmanifest = @"fx_version 'cerulean'
-
-game { 'gta5' }
-
-description 'Vehicle generated by '
-
-files {
-    'data/**/*.meta'
-}
-
-data_file 'HANDLING_FILE' 'data/**/handling.meta'
-data_file 'VEHICLE_LAYOUTS_FILE' 'data/**/vehiclelayouts.meta'
-data_file 'VEHICLE_METADATA_FILE' 'data/**/vehicles.meta'
-data_file 'CARCOLS_FILE' 'data/**/carcols.meta'
-data_file 'VEHICLE_VARIATION_FILE' 'data/**/carvariations.meta'
--- data_file 'DLCTEXT_FILE' 'data/**/dlctext.meta'
--- data_file 'CARCONTENTUNLOCKS_FILE' 'data/**/carcontentunlocks.meta'
-
-client_script 'vehicle_names.lua'";
+        string fxmanifest_single = Properties.Resources.fxmanifest_false;
+        string fxmanifest_combined = Properties.Resources.fxmanifest_true;
 
         public async Task setUpSingleEnviroment(string filteredresname)
         {
@@ -521,7 +517,6 @@ client_script 'vehicle_names.lua'";
             {
                 Directory.CreateDirectory("cache");
                 Directory.CreateDirectory(@"cache\unpack");
-                File.WriteAllText(@"cache\unpack\delspace.bat", delspace.Text);
             }
 
             if (!Directory.Exists("./cache/rpfunpack"))
@@ -542,7 +537,7 @@ client_script 'vehicle_names.lua'";
             Directory.CreateDirectory(@"./" + filteredresname + "/data/");
 
             Encoding utf8WithoutBom = new UTF8Encoding(false);
-            File.WriteAllText(filteredresname + @"\fxmanifest.lua", fxmanifest, utf8WithoutBom);
+            File.WriteAllText(filteredresname + @"\fxmanifest.lua", fxmanifest_single, utf8WithoutBom);
 
             await Task.Delay(500);
         }
@@ -571,7 +566,6 @@ client_script 'vehicle_names.lua'";
                 {
                     Directory.CreateDirectory("cache");
                     Directory.CreateDirectory(@"cache\unpack");
-                    File.WriteAllText(@"cache\unpack\delspace.bat", delspace.Text);
                 }
 
                 if (!Directory.Exists("./cache/rpfunpack"))
@@ -589,6 +583,7 @@ client_script 'vehicle_names.lua'";
 
                 LogAppend("[Worker] Created " + filteredresname + " FiveM resource directory...");
                 HideShellCmd("mkdir " + filteredresname + @"\stream");
+                HideShellCmd("mkdir " + filteredresname + @"\data");
                 await Task.Delay(500);
 
                 LogAppend("[Worker] Writing resouce manifest...");
@@ -615,14 +610,10 @@ client_script 'vehicle_names.lua'";
                     delReplacementLeftover(filteredresname, "ytd");
                     delReplacementLeftover(filteredresname, "meta");
 
-                    //LogAppend("[DELSPACE] Stripping space in resource name (gtalib bug) ...");
-                    //hideshellcmd(@"cache\unpack\delspace.bat"); removed, as GTAutil is no longer needed
-                    //await Task.Delay(2000);
-
                     LogAppend("[Worker] Searching for dlc.rpf...");
-                    RpfUnpack();
+                    RpfUnpack(filteredresname);
 
-                    LogAppend("[CodeWalker] Unpacking RPF...");
+                    LogAppend("[Worker] Removing unnessecary items from cache...");
                     await Task.Delay(5000);
                     inflateFromCache(filteredresname, "meta", false, false);
                     inflateFromCache(filteredresname, "yft", false, true);
@@ -665,7 +656,6 @@ client_script 'vehicle_names.lua'";
                 {
                     Directory.CreateDirectory("cache");
                     Directory.CreateDirectory(@"cache\unpack");
-                    File.WriteAllText(@"cache\unpack\delspace.bat", delspace.Text);
                 }
 
                 if (!Directory.Exists("./cache/rpfunpack"))
@@ -700,7 +690,7 @@ client_script 'vehicle_names.lua'";
                     delReplacementLeftover(filteredresname, "meta");
 
                     LogAppend("[Worker] Searching for dlc.rpf...");
-                    RpfUnpack();
+                    RpfUnpack(filteredresname);
 
                     LogAppend("[CodeWalker] Unpacking RPF...");
                     await Task.Delay(5000);

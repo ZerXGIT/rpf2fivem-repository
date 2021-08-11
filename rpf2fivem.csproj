@@ -233,7 +233,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Resources\delspace.bat" />
-    <None Include="Resources\packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -244,8 +243,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Resources\fxmanifest_true.lua" />
+    <EmbeddedResource Include="Resources\fxmanifest_false.lua" />
     <None Include="Resources\magic.dat" />
-    <None Include="Resources\__resource.lua" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\App.config" />

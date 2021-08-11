@@ -43,6 +43,7 @@
             this.log = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.CompressCheck = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.reslua = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.delspace = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.jobTime = new System.Windows.Forms.ToolStripStatusLabel();
@@ -61,7 +61,6 @@
             this.tsQueue = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsBar = new System.Windows.Forms.ToolStripProgressBar();
             this.btnConvertFromFolder = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -168,7 +167,7 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(476, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(603, 448);
+            this.groupBox2.Size = new System.Drawing.Size(603, 456);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Log";
@@ -179,7 +178,7 @@
             this.log.Multiline = true;
             this.log.Name = "log";
             this.log.ReadOnly = true;
-            this.log.Size = new System.Drawing.Size(591, 425);
+            this.log.Size = new System.Drawing.Size(591, 433);
             this.log.TabIndex = 0;
             // 
             // label7
@@ -188,9 +187,9 @@
             this.label7.Enabled = false;
             this.label7.Location = new System.Drawing.Point(196, -3);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(393, 16);
+            this.label7.Size = new System.Drawing.Size(398, 16);
             this.label7.TabIndex = 13;
-            this.label7.Text = "buildname texture_downsizer | developed by: github.com/Avenze";
+            this.label7.Text = "buildname fxmanifest_support | developed by: github.com/Avenze";
             // 
             // groupBox3
             // 
@@ -208,6 +207,19 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resource";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Enabled = false;
+            this.checkBox1.Location = new System.Drawing.Point(9, 148);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(268, 20);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "store converted vehicles in one resource";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // CompressCheck
             // 
@@ -294,10 +306,10 @@
             // 
             // reslua
             // 
-            this.reslua.Location = new System.Drawing.Point(554, 515);
+            this.reslua.Location = new System.Drawing.Point(482, 499);
             this.reslua.Multiline = true;
             this.reslua.Name = "reslua";
-            this.reslua.Size = new System.Drawing.Size(525, 123);
+            this.reslua.Size = new System.Drawing.Size(525, 274);
             this.reslua.TabIndex = 10;
             this.reslua.Text = resources.GetString("reslua.Text");
             this.reslua.Visible = false;
@@ -308,16 +320,6 @@
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // delspace
-            // 
-            this.delspace.Location = new System.Drawing.Point(12, 515);
-            this.delspace.Multiline = true;
-            this.delspace.Name = "delspace";
-            this.delspace.Size = new System.Drawing.Size(536, 123);
-            this.delspace.TabIndex = 12;
-            this.delspace.Text = "@Echo Off\r\nCD cache\\unpack\r\nFOR /D /r %%G in (\"*\") DO move \"%%~nxG\" nospace";
-            this.delspace.Visible = false;
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -326,7 +328,7 @@
             this.toolStripStatusLabel1,
             this.tsQueue,
             this.tsBar});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 465);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 466);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1088, 22);
             this.statusStrip1.TabIndex = 14;
@@ -372,29 +374,15 @@
             this.btnConvertFromFolder.UseVisualStyleBackColor = true;
             this.btnConvertFromFolder.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Enabled = false;
-            this.checkBox1.Location = new System.Drawing.Point(9, 148);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(268, 20);
-            this.checkBox1.TabIndex = 19;
-            this.checkBox1.Text = "store converted vehicles in one resource";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1088, 487);
+            this.ClientSize = new System.Drawing.Size(1088, 488);
             this.Controls.Add(this.btnConvertFromFolder);
             this.Controls.Add(this.reslua);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.delspace);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -437,7 +425,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox reslua;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox delspace;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
