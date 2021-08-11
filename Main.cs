@@ -118,7 +118,7 @@ namespace rpf2fivem
             }
             catch (Exception ex)
             {
-                LogAppend("[Worker] Failed to write log to file.");
+                ErrorAppend("[Worker] Failed to write log to file. Stacktrace: " + ex);
             }
         }
 
