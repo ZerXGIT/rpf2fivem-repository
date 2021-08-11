@@ -50,7 +50,7 @@ https://dotnet.microsoft.com/download/dotnet/5.0/runtime
   
 <b>Information:</b>
 <ul>
-  <li>If any of the outputted folders are empty, just a __resource.lua file and the stream folder, the program was unable to find a .rpf file and the vehicle is    incompatible with this tool.</li>
+  <li>If any of the outputted folders are empty, just a fxmanifest.lua file and the stream folder, the program was unable to find a .rpf file and the vehicle is    incompatible with this tool.</li>
   <li>The speed of the conversion process depends on your hardware and your network connection.</li>
 </ul>
 
