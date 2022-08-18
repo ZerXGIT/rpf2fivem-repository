@@ -18,6 +18,7 @@ using System.Text.RegularExpressions;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using CodeWalker.GameFiles;
 using CodeWalker.Utils;
+using rpf2fivem.GameFiles.Utils;
 
 namespace rpf2fivem
 {
@@ -34,6 +35,7 @@ namespace rpf2fivem
         bool servercfghelper = true;
         int convertFromFolder_resname;
         static string latestModelName = "";
+        private List<QueueItem> intQueue = new List<QueueItem>();
 
         static Dictionary<string, string[]> extensions = new Dictionary<string, string[]>()
         {
@@ -58,15 +60,15 @@ namespace rpf2fivem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = label1; // prevent random textbox focus
+           // this.ActiveControl = label1; // prevent random textbox focus
             fivemresname_tb.Text = rnd.Next(2147483647).ToString();
 
             LogAppend("rpf2fivem");
-            LogAppend("---------------");
+        /*    LogAppend("---------------");
             LogAppend("Developed by Avenzey#6184 (thanks to https://github.com/vscorpio for developing the original version!)");
             LogAppend("GitHub repository: https://github.com/Avenze/rpf2fivem-repository");
             LogAppend("Discord support: https://discord.gg/C4e4q6g");
-            LogAppend("---------------");
+            LogAppend("---------------");*/
 
             LogAppend("GTA5-Mods links must look like this: ");
             LogAppend("https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip");
@@ -364,6 +366,7 @@ namespace rpf2fivem
                                                             p.StartInfo.FileName = @"./NConvert/nconvert.exe";
                                                             p.StartInfo.Arguments = $"-out dds -resize 50% 50% -overwrite ./NConvert/{texture.Value.Name}.dds";
                                                             p.StartInfo.UseShellExecute = false;
+                                                            p.StartInfo.CreateNoWindow = true;
                                                             p.StartInfo.RedirectStandardOutput = true;
                                                             p.Start();
 
@@ -452,6 +455,11 @@ namespace rpf2fivem
             File.WriteAllText(filePath, content, Encoding.Default);
         }
 
+        private void deleteFileIfExist(String path)
+        {
+
+        }
+
         private void inflateFromCache(string resname, string type, bool isYtd, bool isYtf)
         {
             //Assume user types .txt into textbox
@@ -460,23 +468,26 @@ namespace rpf2fivem
             string[] txtFiles = Directory.GetFiles("cache", fileExtension, SearchOption.AllDirectories);
 
             foreach (var item in txtFiles)
-            {
+            {   
                 LogAppend("[Worker] Inflating " + resname + @"\" + item);
                 if (isYtd)
                 {
                     fixTextureFile(item);
-                    File.Move(item, Path.Combine(resname + "\\stream", Path.GetFileName(item))); // put into stream folder inside resource name
+                    string filePath = Path.Combine(resname + "\\stream", Path.GetFileName(item));
+                    File.Move(item, filePath); // put into stream folder inside resource name
                     VmenuHelper(Path.GetFileName(item));
 
                 }
                 else if (isYtf)
                 {
                     fixTextureFile(item);
-                    File.Move(item, Path.Combine(resname + "\\stream", Path.GetFileName(item))); // put into stream folder inside resource name
+                    string filePath = Path.Combine(resname + "\\stream", Path.GetFileName(item));
+                    File.Move(item, filePath); // put into stream folder inside resource name
                 }
                 else
                 {
-                    File.Move(item, Path.Combine(resname + "\\data", Path.GetFileName(item)));
+                    string filePath = Path.Combine(resname + "\\data", Path.GetFileName(item));
+                    File.Move(item, filePath);
                 }
             }
         }
@@ -750,10 +761,7 @@ namespace rpf2fivem
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            timer1.Stop();
-        }
+
 
         private async void button2_Click_1(object sender, EventArgs e)
         {
@@ -828,11 +836,16 @@ namespace rpf2fivem
         private void btnAddQueue_Click(object sender, EventArgs e)
         {
             LogAppend("Job added!");
+            var queueItem = new QueueItem();
+            queueItem.name = fivemresname_tb.Text;
+            queueItem.link = textBox1.Text;
+            queueItem.shouldBeCompressed = CompressCheck.Checked;
+            intQueue.Add(queueItem);
             queueList.Items.Add($"<{fivemresname_tb.Text}>" + textBox1.Text);
             btnStart.Enabled = true;
             QueueHandler(0, queueList.Items.Count);
             textBox1.Clear();
-            this.ActiveControl = label1;
+         //   this.ActiveControl = label1;
             fivemresname_tb.Text = rnd.Next(2147483647).ToString();
             textBox1.Text = "https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip";
         }
@@ -859,6 +872,205 @@ namespace rpf2fivem
         {
 
         }
+
+        private void comp_folder_Click(object sender, EventArgs e)
+        {
+
+            CommonOpenFileDialog dialog = new CommonOpenFileDialog();
+            dialog.InitialDirectory = "D:\\test";
+            dialog.IsFolderPicker = true;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                string directoryOffset = dialog.FileName + "\\";
+                LogAppend(directoryOffset);
+                DirectoryInfo d = new DirectoryInfo(dialog.FileName);
+                var watch = System.Diagnostics.Stopwatch.StartNew();
+                tsBar.Maximum = d.GetFiles("*.ytd").Length;
+                tsBar.Value = 0;
+                foreach (var file in d.GetFiles("*.ytd"))
+                {
+                    Byte[] data = File.ReadAllBytes(directoryOffset + file);
+
+                    YtdFile ytd = new YtdFile();
+                    ytd.Load(data);
+
+                    Dictionary<uint, Texture> Dicts = new Dictionary<uint, Texture>();
+
+                    bool somethingResized = false;
+                    foreach (KeyValuePair<uint, Texture> texture in ytd.TextureDict.Dict)
+                    {
+
+                        if (texture.Value.Name.Contains("script_rt"))
+                        {
+
+                            /**                  Yea :D
+                                                Texture resizedTex = texture.Value;
+                                                 resizedTex.Format = TextureFormat.D3DFMT_DXT3;
+                                                 Dicts.Add(texture.Key, resizedTex);
+                                                 somethingResized = true;**/
+                            continue;
+                        }
+
+                        if (texture.Value.Width > 512) // Only resize if it is greater than 1440p
+                        {
+                            try
+                            {
+                                byte[] dds = DDSIO.GetDDSFile(texture.Value);
+                                File.WriteAllBytes("./NConvert/" + texture.Value.Name + ".dds", dds);
+
+                                Process p = new Process();
+                                p.StartInfo.FileName = @"./NConvert/nconvert.exe";
+                                p.StartInfo.Arguments =  $"-out dds -ratio -rtype linear -resize 50% 50% -overwrite ./NConvert/{texture.Value.Name}.dds";
+                                p.StartInfo.UseShellExecute = false;
+                                p.StartInfo.CreateNoWindow = true;
+                                p.StartInfo.RedirectStandardOutput = true;
+                                p.Start();
+
+                                p.WaitForExit();
+
+                                LogAppend("[NConvert] Sucessfully resized texture (" + texture.Value.Name + ") to 50%!");
+                                File.Move("./NConvert/" + texture.Value.Name + ".dds", directoryOffset + texture.Value.Name + ".dds");
+
+                                byte[] resizedData = File.ReadAllBytes(directoryOffset + texture.Value.Name + ".dds");
+                                Texture resizedTex = DDSIO.GetTexture(resizedData);
+                                resizedTex.Name = texture.Value.Name;
+                                Dicts.Add(texture.Key, resizedTex);
+
+                                File.Delete(directoryOffset + texture.Value.Name + ".dds");
+                                somethingResized = true;
+                            } catch (Exception)
+                            {
+                                Dicts.Add(texture.Key, texture.Value);
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            Dicts.Add(texture.Key, texture.Value);
+                        }
+                    }
+
+                    if (!somethingResized)
+                    {
+                        LogAppend("[CodeWalker] No textures were resized, skipping .ytd recreation.");
+                        tsBar.Value++;
+                        continue;
+                    }
+
+                    TextureDictionary dictionary = new TextureDictionary();
+                    dictionary.Textures = new ResourcePointerList64<Texture>();
+                    dictionary.TextureNameHashes = new ResourceSimpleList64_uint();
+                    dictionary.Textures.data_items = Dicts.Values.ToArray();
+                    dictionary.TextureNameHashes.data_items = Dicts.Keys.ToArray();
+
+                    dictionary.BuildDict();
+                    ytd.TextureDict = dictionary;
+
+                    byte[] resizedYtdData = ytd.Save();
+                    File.WriteAllBytes(directoryOffset + file.Name, resizedYtdData);
+
+                    LogAppend("[CodeWalker] Resized texture dictionary (ytd) " + file.Name + ".");
+                    tsBar.Value++;
+                    continue;
+                }
+                watch.Stop();
+                var elapsedMs = watch.ElapsedMilliseconds;
+                jobTime.Text = "| Last job took: " + elapsedMs + " ms";
+                LogAppend("All done!");
+            }
+        }
+
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void tsQueue_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fivemresname_tb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void queueList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jobTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsStatus_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jobTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
 
