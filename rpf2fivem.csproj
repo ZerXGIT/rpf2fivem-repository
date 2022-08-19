@@ -253,6 +253,9 @@
     <None Include="Resources\App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Properties\.gitignore">
+      <Generator>ResXFileCodeGenerator</Generator>
+    </Content>
     <Content Include="Resources\iconfinder_Jupiter_1715797.ico" />
   </ItemGroup>
   <ItemGroup>

@@ -1,2159 +1,885 @@
-[08/16/2022 11:27:26] [INFO] rpf2fivem
+[08/19/2022 05:28:02] [INFO] rpf2fivem
 
-[08/16/2022 11:27:26] [INFO] GTA5-Mods links must look like this: 
+[08/19/2022 05:28:02] [INFO] GTA5-Mods links must look like this: 
 
-[08/16/2022 11:27:26] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
+[08/19/2022 05:28:02] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/16/2022 11:27:26] [INFO] Links must be DIRECT link else they won't download!
+[08/19/2022 05:28:02] [INFO] Links must be DIRECT link else they won't download!
 
-[08/16/2022 11:27:33] [INFO] All done!
+[08/19/2022 05:28:08] [INFO] [InputHandler] Disabled texture compression/downsizing.
 
-[08/16/2022 11:30:55] [INFO] All done!
+[08/19/2022 05:28:09] [INFO] Job added!
 
-[08/16/2022 11:31:16] [INFO] All done!
+[08/19/2022 05:28:10] [INFO] [Worker] Started resConvert async task...
 
-[08/16/2022 11:31:27] [INFO] All done!
+[08/19/2022 05:28:10] [INFO] [Worker] Cleaning cache...
 
-[08/16/2022 11:32:22] [INFO] All done!
+[08/19/2022 05:28:10] [INFO] [Worker] Setting up environment...
 
-[08/16/2022 11:33:16] [INFO] rpf2fivem
+[08/19/2022 05:28:10] [INFO] [Worker] Writing config helpers...
 
-[08/16/2022 11:33:16] [INFO] GTA5-Mods links must look like this: 
+[08/19/2022 05:28:10] [INFO] [Worker] Created 362765098 FiveM resource directory...
 
-[08/16/2022 11:33:16] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
+[08/19/2022 05:28:11] [INFO] [Worker] Writing resouce manifest...
 
-[08/16/2022 11:33:16] [INFO] Links must be DIRECT link else they won't download!
+[08/19/2022 05:28:11] [INFO] [Worker] Checking link...OK
 
-[08/16/2022 11:33:21] [INFO] D:\test\
+[08/19/2022 05:28:11] [INFO] [AsyncDownload] Downloading archive...
 
-[08/16/2022 11:33:21] [INFO] All done!
+[08/19/2022 05:28:12] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/17/2022 02:26:16] [INFO] rpf2fivem
+[08/19/2022 05:28:12] [INFO] [SharpCompress] Decompressing...
 
-[08/17/2022 02:26:16] [INFO] GTA5-Mods links must look like this: 
+[08/19/2022 05:28:15] [INFO] [SharpCompress] Unpack finished!
 
-[08/17/2022 02:26:16] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
+[08/19/2022 05:28:15] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/17/2022 02:26:16] [INFO] Links must be DIRECT link else they won't download!
+[08/19/2022 05:28:15] [ERROR] System.ArgumentException: File does not exist: D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.zip
+   bei SharpCompress.Archives.AbstractArchive`2..ctor(ArchiveType type, FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive..ctor(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive.Open(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei rpf2fivem.Main.unZip(String target) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 187.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 235.
+   bei rpf2fivem.Main.RpfUnpack(String resname) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 253.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 578.
 
-[08/17/2022 02:26:40] [INFO] D:\Development\Go\FiveMCarsMerger\merged-cars\stream\
+[08/19/2022 05:35:02] [INFO] rpf2fivem
 
-[08/17/2022 02:26:46] [INFO] [NConvert] Sucessfully resized texture (760_text_16-n) to 50%!
+[08/19/2022 05:35:02] [INFO] GTA5-Mods links must look like this: 
 
-[08/17/2022 02:26:47] [INFO] [NConvert] Sucessfully resized texture (760_text_15) to 50%!
+[08/19/2022 05:35:02] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/17/2022 02:26:47] [INFO] [NConvert] Sucessfully resized texture (760_text_05) to 50%!
+[08/19/2022 05:35:02] [INFO] Links must be DIRECT link else they won't download!
 
-[08/17/2022 02:26:47] [INFO] [NConvert] Sucessfully resized texture (760_text_04) to 50%!
+[08/19/2022 05:40:30] [INFO] rpf2fivem
 
-[08/17/2022 02:26:55] [INFO] [NConvert] Sucessfully resized texture (dzd) to 50%!
+[08/19/2022 05:40:30] [INFO] GTA5-Mods links must look like this: 
 
-[08/17/2022 02:26:56] [INFO] [NConvert] Sucessfully resized texture (760_text_03) to 50%!
+[08/19/2022 05:40:30] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/17/2022 02:26:58] [INFO] [NConvert] Sucessfully resized texture (dztp-n) to 50%!
+[08/19/2022 05:40:30] [INFO] Links must be DIRECT link else they won't download!
 
-[08/17/2022 02:26:59] [INFO] [NConvert] Sucessfully resized texture (760_text_02) to 50%!
+[08/19/2022 05:40:42] [INFO] Job added!
 
-[08/17/2022 02:26:59] [INFO] [NConvert] Sucessfully resized texture (Alcantara_DFS) to 50%!
+[08/19/2022 05:40:44] [INFO] [Worker] Started resConvert async task...
 
-[08/17/2022 02:27:07] [INFO] [NConvert] Sucessfully resized texture (dzd-m) to 50%!
+[08/19/2022 05:40:44] [INFO] [Worker] Cleaning cache...
 
-[08/17/2022 02:27:08] [INFO] [NConvert] Sucessfully resized texture (760_text_01) to 50%!
+[08/19/2022 05:40:44] [INFO] [Worker] Setting up environment...
 
-[08/17/2022 02:27:12] [INFO] [NConvert] Sucessfully resized texture (760_text_11-n) to 50%!
+[08/19/2022 05:40:44] [INFO] [Worker] Writing config helpers...
 
-[08/17/2022 02:27:14] [INFO] [NConvert] Sucessfully resized texture (760_text_15-n) to 50%!
+[08/19/2022 05:40:44] [INFO] [Worker] Created 891511423 FiveM resource directory...
 
-[08/17/2022 02:27:15] [INFO] [NConvert] Sucessfully resized texture (Logo_BMW_M-n) to 50%!
+[08/19/2022 05:40:45] [INFO] [Worker] Writing resouce manifest...
 
-[08/17/2022 02:27:21] [INFO] [NConvert] Sucessfully resized texture (Carpet_DFS) to 50%!
+[08/19/2022 05:40:45] [INFO] [Worker] Checking link...OK
 
-[08/17/2022 02:27:26] [INFO] [NConvert] Sucessfully resized texture (760_text_11) to 50%!
+[08/19/2022 05:40:45] [INFO] [AsyncDownload] Downloading archive...
 
-[08/17/2022 02:27:27] [INFO] [NConvert] Sucessfully resized texture (760_text_07-n) to 50%!
+[08/19/2022 05:40:45] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/17/2022 02:27:29] [INFO] [NConvert] Sucessfully resized texture (lbsp-n) to 50%!
+[08/19/2022 05:40:45] [INFO] [SharpCompress] Decompressing...
 
-[08/17/2022 02:27:29] [INFO] [NConvert] Sucessfully resized texture (Logo_BMW_M) to 50%!
+[08/19/2022 05:40:49] [INFO] [SharpCompress] Unpack finished!
 
-[08/17/2022 02:27:30] [INFO] [NConvert] Sucessfully resized texture (760_text_09) to 50%!
+[08/19/2022 05:40:49] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/17/2022 02:27:34] [INFO] [NConvert] Sucessfully resized texture (Carpet_DFS-n) to 50%!
+[08/19/2022 05:40:49] [WARNING] [CodeWalker] Vehicle (891511423) is incompatible, no .rpf file was found.
 
-[08/17/2022 02:27:40] [INFO] [NConvert] Sucessfully resized texture (Alcantara_DFS-n) to 50%!
+[08/19/2022 05:40:49] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/17/2022 02:27:40] [INFO] [NConvert] Sucessfully resized texture (760_text_07) to 50%!
+[08/19/2022 05:40:54] [INFO] [Worker] Moving resource into resources folder...
 
-[08/17/2022 02:27:44] [INFO] [NConvert] Sucessfully resized texture (760_text_09-n) to 50%!
+[08/19/2022 05:40:54] [INFO] [Worker] Cleaning up...
 
-[08/17/2022 02:27:45] [INFO] [NConvert] Sucessfully resized texture (760_text_16) to 50%!
+[08/19/2022 05:40:54] [INFO] [Worker] Finished converting vehicle 891511423
 
-[08/17/2022 02:27:46] [INFO] [NConvert] Sucessfully resized texture (dztp) to 50%!
+[08/19/2022 05:41:28] [INFO] [Worker] Started resConvert async task...
 
-[08/17/2022 02:27:48] [INFO] [NConvert] Sucessfully resized texture (Belt_BMP) to 50%!
+[08/19/2022 05:41:28] [INFO] [Worker] Cleaning cache...
 
-[08/17/2022 02:27:49] [INFO] [NConvert] Sucessfully resized texture (lbsp) to 50%!
+[08/19/2022 05:41:28] [INFO] [Worker] Setting up environment...
 
-[08/17/2022 02:27:49] [INFO] [CodeWalker] Resized texture dictionary (ytd) 17m760i.ytd.
+[08/19/2022 05:41:28] [INFO] [Worker] Writing config helpers...
 
-[08/17/2022 02:27:51] [INFO] [NConvert] Sucessfully resized texture (sidewall_n) to 50%!
+[08/19/2022 05:41:28] [INFO] [Worker] Created 891511423 FiveM resource directory...
 
-[08/17/2022 02:27:51] [INFO] [NConvert] Sucessfully resized texture (stitch_014_nrml) to 50%!
+[08/19/2022 05:41:28] [INFO] [Worker] Writing resouce manifest...
 
-[08/17/2022 02:27:55] [INFO] [NConvert] Sucessfully resized texture (machinescratches_b_nrml) to 50%!
+[08/19/2022 05:41:28] [INFO] [Worker] Checking link...OK
 
-[08/17/2022 02:27:56] [INFO] [NConvert] Sucessfully resized texture (digitalgaugecapture) to 50%!
+[08/19/2022 05:41:28] [INFO] [AsyncDownload] Downloading archive...
 
-[08/17/2022 02:27:57] [INFO] [NConvert] Sucessfully resized texture (sidewall_dirt) to 50%!
+[08/19/2022 05:41:29] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/17/2022 02:27:57] [INFO] [NConvert] Sucessfully resized texture (sidewall) to 50%!
+[08/19/2022 05:41:29] [INFO] [SharpCompress] Decompressing...
 
-[08/17/2022 02:27:58] [INFO] [NConvert] Sucessfully resized texture (centerconsoledisplay) to 50%!
+[08/19/2022 05:41:32] [INFO] [SharpCompress] Unpack finished!
 
-[08/17/2022 02:27:59] [INFO] [CodeWalker] Resized texture dictionary (ytd) 17r35.ytd.
+[08/19/2022 05:41:32] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/17/2022 02:28:05] [INFO] [NConvert] Sucessfully resized texture (LeatherDotsBMP) to 50%!
+[08/19/2022 05:41:32] [WARNING] [CodeWalker] Vehicle (891511423) is incompatible, no .rpf file was found.
 
-[08/17/2022 02:28:08] [INFO] [NConvert] Sucessfully resized texture (WheelDFS) to 50%!
+[08/19/2022 05:41:32] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/17/2022 02:28:13] [INFO] [NConvert] Sucessfully resized texture (WheelBMP) to 50%!
+[08/19/2022 05:41:37] [INFO] [Worker] Moving resource into resources folder...
 
-[08/17/2022 02:28:18] [INFO] [NConvert] Sucessfully resized texture (InteriorDFS) to 50%!
+[08/19/2022 05:41:37] [INFO] [Worker] Cleaning up...
 
-[08/17/2022 02:28:22] [INFO] [NConvert] Sucessfully resized texture (LeatherBMP) to 50%!
+[08/19/2022 05:41:37] [INFO] [Worker] Finished converting vehicle 891511423
 
-[08/17/2022 02:28:25] [INFO] [NConvert] Sucessfully resized texture (InteriorLightDFS) to 50%!
+[08/19/2022 05:42:24] [INFO] rpf2fivem
 
-[08/17/2022 02:28:26] [INFO] [NConvert] Sucessfully resized texture (19sclass_hud) to 50%!
+[08/19/2022 05:42:24] [INFO] GTA5-Mods links must look like this: 
 
-[08/17/2022 02:28:37] [INFO] [NConvert] Sucessfully resized texture (FabricDFS) to 50%!
+[08/19/2022 05:42:24] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/17/2022 02:28:39] [INFO] [NConvert] Sucessfully resized texture (Mercedes_plateguard) to 50%!
+[08/19/2022 05:42:24] [INFO] Links must be DIRECT link else they won't download!
 
-[08/17/2022 02:28:41] [INFO] [NConvert] Sucessfully resized texture (LeatherQuadsDotsBMP) to 50%!
+[08/19/2022 05:42:40] [INFO] [InputHandler] Disabled texture compression/downsizing.
 
-[08/17/2022 02:28:48] [INFO] [NConvert] Sucessfully resized texture (SpeakerBMP) to 50%!
+[08/19/2022 05:42:41] [INFO] Job added!
 
-[08/17/2022 02:28:52] [INFO] [NConvert] Sucessfully resized texture (CarpetDFS) to 50%!
+[08/19/2022 05:42:43] [INFO] [Worker] Started resConvert async task...
 
-[08/17/2022 02:28:59] [INFO] [NConvert] Sucessfully resized texture (LogoMaybachLeatherBMP) to 50%!
+[08/19/2022 05:42:43] [INFO] [Worker] Cleaning cache...
 
-[08/17/2022 02:29:00] [INFO] [NConvert] Sucessfully resized texture (InteriorBMP) to 50%!
+[08/19/2022 05:42:43] [INFO] [Worker] Setting up environment...
 
-[08/17/2022 02:29:05] [INFO] [NConvert] Sucessfully resized texture (19sclass_inv) to 50%!
+[08/19/2022 05:42:43] [INFO] [Worker] Writing config helpers...
 
-[08/17/2022 02:29:09] [INFO] [NConvert] Sucessfully resized texture (BeltBMP) to 50%!
+[08/19/2022 05:42:43] [INFO] [Worker] Created test FiveM resource directory...
 
-[08/17/2022 02:29:10] [INFO] [NConvert] Sucessfully resized texture (LogoMaybachDFS) to 50%!
+[08/19/2022 05:42:44] [INFO] [Worker] Writing resouce manifest...
 
-[08/17/2022 02:29:11] [INFO] [NConvert] Sucessfully resized texture (TaillightDFS) to 50%!
+[08/19/2022 05:42:44] [INFO] [Worker] Checking link...OK
 
-[08/17/2022 02:29:19] [INFO] [NConvert] Sucessfully resized texture (SpeakerDFS) to 50%!
+[08/19/2022 05:42:44] [INFO] [AsyncDownload] Downloading archive...
 
-[08/17/2022 02:29:25] [INFO] [NConvert] Sucessfully resized texture (19sclass_detail) to 50%!
+[08/19/2022 05:42:45] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/17/2022 02:29:30] [INFO] [NConvert] Sucessfully resized texture (FabricBMP) to 50%!
+[08/19/2022 05:42:45] [INFO] [SharpCompress] Decompressing...
 
-[08/17/2022 02:29:35] [INFO] [NConvert] Sucessfully resized texture (MBWoodDFS) to 50%!
+[08/19/2022 05:42:48] [INFO] [SharpCompress] Unpack finished!
 
-[08/17/2022 02:29:45] [INFO] [NConvert] Sucessfully resized texture (CarpetBMP) to 50%!
+[08/19/2022 05:42:48] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/17/2022 02:29:47] [INFO] [NConvert] Sucessfully resized texture (LeatherQuadsBMP) to 50%!
+[08/19/2022 05:42:48] [WARNING] [CodeWalker] Vehicle (test) is incompatible, no .rpf file was found.
 
-[08/17/2022 02:29:48] [INFO] [NConvert] Sucessfully resized texture (LogoMaybachBMP) to 50%!
+[08/19/2022 05:42:48] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/17/2022 02:29:49] [INFO] [CodeWalker] Resized texture dictionary (ytd) 19sclassl.ytd.
+[08/19/2022 05:42:53] [INFO] [Worker] Moving resource into resources folder...
 
-[08/17/2022 02:29:58] [INFO] [NConvert] Sucessfully resized texture (main) to 50%!
+[08/19/2022 05:42:53] [INFO] [Worker] Cleaning up...
 
-[08/17/2022 02:30:00] [INFO] [NConvert] Sucessfully resized texture (lights_lod0) to 50%!
+[08/19/2022 05:42:53] [INFO] [Worker] Finished converting vehicle test
 
-[08/17/2022 02:30:00] [INFO] [NConvert] Sucessfully resized texture (remap2) to 50%!
+[08/19/2022 05:44:20] [INFO] rpf2fivem
 
-[08/17/2022 02:30:01] [INFO] [CodeWalker] Resized texture dictionary (ytd) 2f2fmk4.ytd.
+[08/19/2022 05:44:20] [INFO] GTA5-Mods links must look like this: 
 
-[08/17/2022 02:30:03] [INFO] [NConvert] Sucessfully resized texture (engine) to 50%!
+[08/19/2022 05:44:20] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/17/2022 02:30:03] [INFO] [NConvert] Sucessfully resized texture (evo_sign2) to 50%!
+[08/19/2022 05:44:20] [INFO] Links must be DIRECT link else they won't download!
 
-[08/17/2022 02:30:08] [INFO] [NConvert] Sucessfully resized texture (lightsbump) to 50%!
+[08/19/2022 05:45:14] [INFO] [InputHandler] Disabled texture compression/downsizing.
 
-[08/17/2022 02:30:10] [INFO] [NConvert] Sucessfully resized texture (misc2) to 50%!
+[08/19/2022 05:45:15] [INFO] Job added!
 
-[08/17/2022 02:30:11] [INFO] [NConvert] Sucessfully resized texture (enginebump) to 50%!
+[08/19/2022 05:45:18] [INFO] [Worker] Started resConvert async task...
 
-[08/17/2022 02:30:13] [INFO] [NConvert] Sucessfully resized texture (lights) to 50%!
+[08/19/2022 05:45:18] [INFO] [Worker] Cleaning cache...
 
-[08/17/2022 02:30:16] [INFO] [NConvert] Sucessfully resized texture (misc2bump) to 50%!
+[08/19/2022 05:45:18] [INFO] [Worker] Setting up environment...
 
-[08/17/2022 02:30:17] [INFO] [CodeWalker] Resized texture dictionary (ytd) 2f2fmle7.ytd.
+[08/19/2022 05:45:18] [INFO] [Worker] Writing config helpers...
 
-[08/17/2022 02:30:18] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12) to 50%!
+[08/19/2022 05:45:18] [INFO] [Worker] Created 950085920 FiveM resource directory...
 
-[08/17/2022 02:30:18] [INFO] [NConvert] Sucessfully resized texture (tonirovka) to 50%!
+[08/19/2022 05:45:19] [INFO] [Worker] Writing resouce manifest...
 
-[08/17/2022 02:30:21] [INFO] [NConvert] Sucessfully resized texture (intss1s) to 50%!
+[08/19/2022 05:45:19] [INFO] [Worker] Checking link...OK
 
-[08/17/2022 02:30:21] [INFO] [NConvert] Sucessfully resized texture (pedal_022_lcao_template1) to 50%!
+[08/19/2022 05:45:19] [INFO] [AsyncDownload] Downloading archive...
 
-[08/17/2022 02:30:23] [INFO] [NConvert] Sucessfully resized texture (tyre_d1z12) to 50%!
+[08/19/2022 05:45:20] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/17/2022 02:30:23] [INFO] [NConvert] Sucessfully resized texture (xxx32j1) to 50%!
+[08/19/2022 05:45:20] [INFO] [SharpCompress] Decompressing...
 
-[08/17/2022 02:30:23] [INFO] [NConvert] Sucessfully resized texture (32312ss) to 50%!
+[08/19/2022 05:45:23] [INFO] [SharpCompress] Unpack finished!
 
-[08/17/2022 02:30:24] [INFO] [NConvert] Sucessfully resized texture (speaker_018_oNM) to 50%!
+[08/19/2022 05:45:23] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/17/2022 02:30:24] [INFO] [NConvert] Sucessfully resized texture (camera) to 50%!
+[08/19/2022 05:45:23] [WARNING] [CodeWalker] Vehicle (950085920) is incompatible, no .rpf file was found.
 
-[08/17/2022 02:30:24] [INFO] [NConvert] Sucessfully resized texture (tyre_d1z123) to 50%!
+[08/19/2022 05:45:23] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/17/2022 02:30:27] [INFO] [NConvert] Sucessfully resized texture (xxxDERDD) to 50%!
+[08/19/2022 05:45:28] [INFO] [Worker] Moving resource into resources folder...
 
-[08/17/2022 02:30:27] [INFO] [NConvert] Sucessfully resized texture (pedal_022_lcao_template) to 50%!
+[08/19/2022 05:45:28] [INFO] [Worker] Cleaning up...
 
-[08/17/2022 02:30:28] [INFO] [NConvert] Sucessfully resized texture (glassHLS) to 50%!
+[08/19/2022 05:45:28] [INFO] [Worker] Finished converting vehicle 950085920
 
-[08/17/2022 02:30:28] [INFO] [NConvert] Sucessfully resized texture (GDDG2s) to 50%!
+[08/19/2022 05:46:16] [INFO] rpf2fivem
 
-[08/17/2022 02:30:29] [INFO] [NConvert] Sucessfully resized texture (232) to 50%!
+[08/19/2022 05:46:16] [INFO] GTA5-Mods links must look like this: 
 
-[08/17/2022 02:30:29] [INFO] [NConvert] Sucessfully resized texture (img_fonts32) to 50%!
+[08/19/2022 05:46:16] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/17/2022 02:30:29] [INFO] [NConvert] Sucessfully resized texture (amg_logo1) to 50%!
+[08/19/2022 05:46:16] [INFO] Links must be DIRECT link else they won't download!
 
-[08/17/2022 02:30:34] [INFO] [NConvert] Sucessfully resized texture (leather_brown2) to 50%!
+[08/19/2022 05:46:34] [INFO] [InputHandler] Disabled texture compression/downsizing.
 
-[08/17/2022 02:30:37] [INFO] [NConvert] Sucessfully resized texture (xxx323) to 50%!
+[08/19/2022 05:46:36] [INFO] Job added!
 
-[08/17/2022 02:30:39] [INFO] [NConvert] Sucessfully resized texture (radiator1) to 50%!
+[08/19/2022 05:46:50] [INFO] [Worker] Started resConvert async task...
 
-[08/17/2022 02:30:39] [INFO] [NConvert] Sucessfully resized texture (img_fonts32NR) to 50%!
+[08/19/2022 05:46:50] [INFO] [Worker] Cleaning cache...
 
-[08/17/2022 02:30:39] [INFO] [NConvert] Sucessfully resized texture (amg_carbonceramic_002_opac_template41) to 50%!
+[08/19/2022 05:46:50] [INFO] [Worker] Setting up environment...
 
-[08/17/2022 02:30:40] [INFO] [NConvert] Sucessfully resized texture (m3_lights_lod0) to 50%!
+[08/19/2022 05:46:50] [INFO] [Worker] Writing config helpers...
 
-[08/17/2022 02:30:41] [INFO] [NConvert] Sucessfully resized texture (car_disk_d) to 50%!
+[08/19/2022 05:46:50] [INFO] [Worker] Created 1515588869 FiveM resource directory...
 
-[08/17/2022 02:30:41] [INFO] [NConvert] Sucessfully resized texture (xxx32j1s1) to 50%!
+[08/19/2022 05:46:51] [INFO] [Worker] Writing resouce manifest...
 
-[08/17/2022 02:30:41] [INFO] [NConvert] Sucessfully resized texture (MERCEDES-BENZ) to 50%!
+[08/19/2022 05:46:51] [INFO] [Worker] Checking link...OK
 
-[08/17/2022 02:30:41] [INFO] [NConvert] Sucessfully resized texture (glassHLS34) to 50%!
+[08/19/2022 05:46:51] [INFO] [AsyncDownload] Downloading archive...
 
-[08/17/2022 02:30:41] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12NR12) to 50%!
+[08/19/2022 05:46:52] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/17/2022 02:30:42] [INFO] [NConvert] Sucessfully resized texture (mer_e63amg_13_symbols_diff_template) to 50%!
+[08/19/2022 05:46:52] [INFO] [SharpCompress] Decompressing...
 
-[08/17/2022 02:30:43] [INFO] [NConvert] Sucessfully resized texture (MERCEDES-BENZ2) to 50%!
+[08/19/2022 05:46:53] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.oiv
 
-[08/17/2022 02:30:43] [INFO] [NConvert] Sucessfully resized texture (amg_logo1_SPEC) to 50%!
+[08/19/2022 05:46:53] [ERROR] System.ArgumentException: File does not exist: D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.oiv
+   bei SharpCompress.Archives.AbstractArchive`2..ctor(ArchiveType type, FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive..ctor(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive.Open(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei rpf2fivem.Main.unZip(String target) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 187.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 246.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 573.
 
-[08/17/2022 02:30:43] [INFO] [NConvert] Sucessfully resized texture (amg_logo) to 50%!
+[08/19/2022 05:50:26] [INFO] rpf2fivem
 
-[08/17/2022 02:30:44] [INFO] [NConvert] Sucessfully resized texture (amg_logo1_NRM) to 50%!
+[08/19/2022 05:50:26] [INFO] GTA5-Mods links must look like this: 
 
-[08/17/2022 02:30:44] [INFO] [NConvert] Sucessfully resized texture (speaker_018_opDDD1) to 50%!
+[08/19/2022 05:50:26] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/17/2022 02:30:44] [INFO] [NConvert] Sucessfully resized texture (sver12z) to 50%!
+[08/19/2022 05:50:26] [INFO] Links must be DIRECT link else they won't download!
 
-[08/17/2022 02:30:46] [INFO] [NConvert] Sucessfully resized texture (xxxDERDDee) to 50%!
+[08/19/2022 05:50:38] [INFO] [InputHandler] Disabled texture compression/downsizing.
 
-[08/17/2022 02:30:46] [INFO] [NConvert] Sucessfully resized texture (tonirovkaD) to 50%!
+[08/19/2022 05:50:38] [INFO] Job added!
 
-[08/17/2022 02:30:47] [INFO] [NConvert] Sucessfully resized texture (cameranr) to 50%!
+[08/19/2022 05:50:40] [INFO] [Worker] Started resConvert async task...
 
-[08/17/2022 02:30:47] [INFO] [NConvert] Sucessfully resized texture (tyre_d1z1) to 50%!
+[08/19/2022 05:50:40] [INFO] [Worker] Cleaning cache...
 
-[08/17/2022 02:30:47] [INFO] [NConvert] Sucessfully resized texture (amg-logo323dd) to 50%!
+[08/19/2022 05:50:40] [INFO] [Worker] Setting up environment...
 
-[08/17/2022 02:30:47] [INFO] [NConvert] Sucessfully resized texture (tonirovkaS) to 50%!
+[08/19/2022 05:50:40] [INFO] [Worker] Writing config helpers...
 
-[08/17/2022 02:30:48] [INFO] [NConvert] Sucessfully resized texture (GDDG2s3) to 50%!
+[08/19/2022 05:50:40] [INFO] [Worker] Created 823246495 FiveM resource directory...
 
-[08/17/2022 02:30:48] [INFO] [NConvert] Sucessfully resized texture (amg_logo1S) to 50%!
+[08/19/2022 05:50:40] [INFO] [Worker] Writing resouce manifest...
 
-[08/17/2022 02:30:51] [INFO] [NConvert] Sucessfully resized texture (mer_amggt4_18_tach_alphaSS1) to 50%!
+[08/19/2022 05:50:40] [INFO] [Worker] Checking link...OK
 
-[08/17/2022 02:30:52] [INFO] [CodeWalker] Resized texture dictionary (ytd) 2ncsgt63s.ytd.
+[08/19/2022 05:50:40] [INFO] [AsyncDownload] Downloading archive...
 
-[08/17/2022 02:30:54] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12) to 50%!
+[08/19/2022 05:50:41] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/17/2022 02:30:54] [INFO] [NConvert] Sucessfully resized texture (tonirovka) to 50%!
+[08/19/2022 05:50:41] [INFO] [SharpCompress] Decompressing...
 
-[08/17/2022 02:30:56] [INFO] [NConvert] Sucessfully resized texture (intss1s) to 50%!
+[08/19/2022 05:50:42] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.oiv
 
-[08/17/2022 02:30:57] [INFO] [NConvert] Sucessfully resized texture (pedal_022_lcao_template1) to 50%!
-
-[08/17/2022 02:30:58] [INFO] [NConvert] Sucessfully resized texture (tyre_d1z12) to 50%!
-
-[08/17/2022 02:30:58] [INFO] [NConvert] Sucessfully resized texture (xxx32j1) to 50%!
-
-[08/17/2022 02:30:58] [INFO] [NConvert] Sucessfully resized texture (32312ss) to 50%!
-
-[08/17/2022 02:30:59] [INFO] [NConvert] Sucessfully resized texture (speaker_018_oNM) to 50%!
-
-[08/17/2022 02:30:59] [INFO] [NConvert] Sucessfully resized texture (camera) to 50%!
-
-[08/17/2022 02:31:23] [INFO] [NConvert] Sucessfully resized texture (21331) to 50%!
-
-[08/17/2022 02:31:23] [INFO] [NConvert] Sucessfully resized texture (tyre_d1z123) to 50%!
-
-[08/17/2022 02:31:25] [INFO] [NConvert] Sucessfully resized texture (xxxDERDD) to 50%!
-
-[08/17/2022 02:31:26] [INFO] [NConvert] Sucessfully resized texture (pedal_022_lcao_template) to 50%!
-
-[08/17/2022 02:31:26] [INFO] [NConvert] Sucessfully resized texture (glassHLS) to 50%!
-
-[08/17/2022 02:31:26] [INFO] [NConvert] Sucessfully resized texture (GDDG2s) to 50%!
-
-[08/17/2022 02:31:27] [INFO] [NConvert] Sucessfully resized texture (232) to 50%!
-
-[08/17/2022 02:31:27] [INFO] [NConvert] Sucessfully resized texture (img_fonts32) to 50%!
-
-[08/17/2022 02:31:27] [INFO] [NConvert] Sucessfully resized texture (amg_logo1) to 50%!
-
-[08/17/2022 02:31:32] [INFO] [NConvert] Sucessfully resized texture (leather_brown2) to 50%!
-
-[08/17/2022 02:31:36] [INFO] [NConvert] Sucessfully resized texture (xxx323) to 50%!
-
-[08/17/2022 02:31:37] [INFO] [NConvert] Sucessfully resized texture (radiator1) to 50%!
-
-[08/17/2022 02:31:37] [INFO] [NConvert] Sucessfully resized texture (img_fonts32NR) to 50%!
-
-[08/17/2022 02:31:37] [INFO] [NConvert] Sucessfully resized texture (amg_carbonceramic_002_opac_template41) to 50%!
-
-[08/17/2022 02:31:39] [INFO] [NConvert] Sucessfully resized texture (m3_lights_lod0) to 50%!
-
-[08/17/2022 02:31:39] [INFO] [NConvert] Sucessfully resized texture (car_disk_d) to 50%!
-
-[08/17/2022 02:31:39] [INFO] [NConvert] Sucessfully resized texture (xxx32j1s1) to 50%!
-
-[08/17/2022 02:31:39] [INFO] [NConvert] Sucessfully resized texture (MERCEDES-BENZ) to 50%!
-
-[08/17/2022 02:31:39] [INFO] [NConvert] Sucessfully resized texture (glassHLS34) to 50%!
-
-[08/17/2022 02:31:39] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12NR12) to 50%!
-
-[08/17/2022 02:31:40] [INFO] [NConvert] Sucessfully resized texture (mer_e63amg_13_symbols_diff_template) to 50%!
-
-[08/17/2022 02:31:40] [INFO] [NConvert] Sucessfully resized texture (MERCEDES-BENZ2) to 50%!
-
-[08/17/2022 02:31:41] [INFO] [NConvert] Sucessfully resized texture (amg_logo1_SPEC) to 50%!
-
-[08/17/2022 02:31:41] [INFO] [NConvert] Sucessfully resized texture (amg_logo) to 50%!
-
-[08/17/2022 02:31:41] [INFO] [NConvert] Sucessfully resized texture (amg_logo1_NRM) to 50%!
-
-[08/17/2022 02:31:41] [INFO] [NConvert] Sucessfully resized texture (speaker_018_opDDD1) to 50%!
-
-[08/17/2022 02:31:42] [INFO] [NConvert] Sucessfully resized texture (sver12z) to 50%!
-
-[08/17/2022 02:31:44] [INFO] [NConvert] Sucessfully resized texture (xxxDERDDee) to 50%!
-
-[08/17/2022 02:31:44] [INFO] [NConvert] Sucessfully resized texture (tonirovkaD) to 50%!
-
-[08/17/2022 02:31:44] [INFO] [NConvert] Sucessfully resized texture (cameranr) to 50%!
-
-[08/17/2022 02:31:45] [INFO] [NConvert] Sucessfully resized texture (tyre_d1z1) to 50%!
-
-[08/17/2022 02:31:45] [INFO] [NConvert] Sucessfully resized texture (amg-logo323dd) to 50%!
-
-[08/17/2022 02:31:45] [INFO] [NConvert] Sucessfully resized texture (tonirovkaS) to 50%!
-
-[08/17/2022 02:31:46] [INFO] [NConvert] Sucessfully resized texture (GDDG2s3) to 50%!
-
-[08/17/2022 02:31:49] [INFO] [NConvert] Sucessfully resized texture (img_2203-panorama1) to 50%!
-
-[08/17/2022 02:31:49] [INFO] [NConvert] Sucessfully resized texture (amg_logo1S) to 50%!
-
-[08/17/2022 02:31:52] [INFO] [NConvert] Sucessfully resized texture (mer_amggt4_18_tach_alphaSS1) to 50%!
-
-[08/17/2022 02:31:54] [INFO] [CodeWalker] Resized texture dictionary (ytd) amggt63s.ytd.
-
-[08/17/2022 02:31:56] [INFO] [NConvert] Sucessfully resized texture (IMG_0457) to 50%!
-
-[08/17/2022 02:31:56] [INFO] [NConvert] Sucessfully resized texture (48474-Stickers-Mercedes-AMG-2012) to 50%!
-
-[08/17/2022 02:31:56] [INFO] [NConvert] Sucessfully resized texture (chrom_100) to 50%!
-
-[08/17/2022 02:31:57] [INFO] [NConvert] Sucessfully resized texture (fars_zadok) to 50%!
-
-[08/17/2022 02:31:58] [INFO] [NConvert] Sucessfully resized texture (AMG) to 50%!
-
-[08/17/2022 02:31:59] [INFO] [NConvert] Sucessfully resized texture (rlight_dark) to 50%!
-
-[08/17/2022 02:31:59] [INFO] [NConvert] Sucessfully resized texture (brakes_amg_blue) to 50%!
-
-[08/17/2022 02:32:00] [INFO] [NConvert] Sucessfully resized texture (frontt) to 50%!
-
-[08/17/2022 02:32:01] [INFO] [NConvert] Sucessfully resized texture (faross_opa) to 50%!
-
-[08/17/2022 02:32:02] [INFO] [NConvert] Sucessfully resized texture (mirror) to 50%!
-
-[08/17/2022 02:32:03] [INFO] [NConvert] Sucessfully resized texture (faross) to 50%!
-
-[08/17/2022 02:32:06] [INFO] [NConvert] Sucessfully resized texture (map) to 50%!
-
-[08/17/2022 02:32:06] [INFO] [NConvert] Sucessfully resized texture (silver) to 50%!
-
-[08/17/2022 02:32:09] [INFO] [NConvert] Sucessfully resized texture (carbon) to 50%!
-
-[08/17/2022 02:32:10] [INFO] [NConvert] Sucessfully resized texture (fars_zadok1) to 50%!
-
-[08/17/2022 02:32:11] [INFO] [NConvert] Sucessfully resized texture (fara) to 50%!
-
-[08/17/2022 02:32:11] [INFO] [NConvert] Sucessfully resized texture (tire) to 50%!
-
-[08/17/2022 02:32:13] [INFO] [NConvert] Sucessfully resized texture (rlight) to 50%!
-
-[08/17/2022 02:32:13] [INFO] [CodeWalker] Resized texture dictionary (ytd) benze55.ytd.
-
-[08/17/2022 02:32:14] [INFO] [NConvert] Sucessfully resized texture (faross_opa) to 50%!
-
-[08/17/2022 02:32:17] [INFO] [NConvert] Sucessfully resized texture (smod_racedetail_d) to 50%!
-
-[08/17/2022 02:32:19] [INFO] [NConvert] Sucessfully resized texture (smod_racedetail_s) to 50%!
-
-[08/17/2022 02:32:19] [INFO] [CodeWalker] Resized texture dictionary (ytd) benze55_race_interior.ytd.
-
-[08/17/2022 02:32:24] [INFO] [NConvert] Sucessfully resized texture (amg_badges) to 50%!
-
-[08/17/2022 02:32:25] [INFO] [NConvert] Sucessfully resized texture (amg_mcl_tyre_n) to 50%!
-
-[08/17/2022 02:32:25] [INFO] [NConvert] Sucessfully resized texture (amg_mcl_tyre_s) to 50%!
-
-[08/17/2022 02:32:26] [INFO] [NConvert] Sucessfully resized texture (leatherbmp) to 50%!
-
-[08/17/2022 02:32:26] [INFO] [NConvert] Sucessfully resized texture (plate_nnm) to 50%!
-
-[08/17/2022 02:32:26] [INFO] [NConvert] Sucessfully resized texture (amg_ht) to 50%!
-
-[08/17/2022 02:32:27] [INFO] [NConvert] Sucessfully resized texture (plate small 3D_nm) to 50%!
-
-[08/17/2022 02:32:29] [INFO] [NConvert] Sucessfully resized texture (amg_d_carbon_spec) to 50%!
-
-[08/17/2022 02:32:32] [INFO] [NConvert] Sucessfully resized texture (amg_badges_nm) to 50%!
-
-[08/17/2022 02:32:36] [INFO] [NConvert] Sucessfully resized texture (leatherbmpp) to 50%!
-
-[08/17/2022 02:32:40] [INFO] [NConvert] Sucessfully resized texture (amg_mcl_tyre_dirt) to 50%!
-
-[08/17/2022 02:32:40] [INFO] [NConvert] Sucessfully resized texture (amg_mcl_tyre) to 50%!
-
-[08/17/2022 02:32:40] [INFO] [NConvert] Sucessfully resized texture (m8_tailight) to 50%!
-
-[08/17/2022 02:32:42] [INFO] [NConvert] Sucessfully resized texture (amg_m8_dash) to 50%!
-
-[08/17/2022 02:32:44] [INFO] [NConvert] Sucessfully resized texture (bw_speaker_nm) to 50%!
-
-[08/17/2022 02:32:48] [INFO] [NConvert] Sucessfully resized texture (leatherbmp_nm) to 50%!
-
-[08/17/2022 02:32:49] [INFO] [NConvert] Sucessfully resized texture (plate1) to 50%!
-
-[08/17/2022 02:32:49] [INFO] [NConvert] Sucessfully resized texture (leatherbmp_perfermante) to 50%!
-
-[08/17/2022 02:32:49] [INFO] [NConvert] Sucessfully resized texture (mirror_glass) to 50%!
-
-[08/17/2022 02:32:51] [INFO] [NConvert] Sucessfully resized texture (amg_dayinf) to 50%!
-
-[08/17/2022 02:32:51] [INFO] [NConvert] Sucessfully resized texture (int_seams_m_nm) to 50%!
-
-[08/17/2022 02:32:55] [INFO] [NConvert] Sucessfully resized texture (amg_d_carbon_nm) to 50%!
-
-[08/17/2022 02:32:55] [INFO] [NConvert] Sucessfully resized texture (prior_badge) to 50%!
-
-[08/17/2022 02:32:55] [INFO] [NConvert] Sucessfully resized texture (plate2) to 50%!
-
-[08/17/2022 02:32:59] [INFO] [NConvert] Sucessfully resized texture (leatherbmp_perfermante_nm) to 50%!
-
-[08/17/2022 02:33:00] [INFO] [NConvert] Sucessfully resized texture (amg_hud2) to 50%!
-
-[08/17/2022 02:33:00] [INFO] [NConvert] Sucessfully resized texture (m8f92_sign_1) to 50%!
-
-[08/17/2022 02:33:01] [INFO] [NConvert] Sucessfully resized texture (bw_speaker_spec) to 50%!
-
-[08/17/2022 02:33:01] [INFO] [NConvert] Sucessfully resized texture (prior_badge_nm) to 50%!
-
-[08/17/2022 02:33:05] [INFO] [NConvert] Sucessfully resized texture (amg_d_carbon) to 50%!
-
-[08/17/2022 02:33:06] [INFO] [CodeWalker] Resized texture dictionary (ytd) bmwm8.ytd.
-
-[08/17/2022 02:33:07] [INFO] [NConvert] Sucessfully resized texture (InteriorDFS) to 50%!
-
-[08/17/2022 02:33:07] [INFO] [NConvert] Sucessfully resized texture (brabusybd yb) to 50%!
-
-[08/17/2022 02:33:07] [INFO] [NConvert] Sucessfully resized texture (z88888) to 50%!
-
-[08/17/2022 02:33:08] [INFO] [NConvert] Sucessfully resized texture (InteriorBMP) to 50%!
-
-[08/17/2022 02:33:09] [INFO] [NConvert] Sucessfully resized texture (salon) to 50%!
-
-[08/17/2022 02:33:10] [INFO] [NConvert] Sucessfully resized texture (z88888f) to 50%!
-
-[08/17/2022 02:33:10] [INFO] [NConvert] Sucessfully resized texture (wh95) to 50%!
-
-[08/17/2022 02:33:10] [INFO] [CodeWalker] Resized texture dictionary (ytd) brabusd30.ytd.
-
-[08/17/2022 02:33:10] [INFO] [NConvert] Sucessfully resized texture (sidewall_diff) to 50%!
-
-[08/17/2022 02:33:11] [INFO] [NConvert] Sucessfully resized texture (hachi_air_freshener) to 50%!
-
-[08/17/2022 02:33:11] [INFO] [NConvert] Sucessfully resized texture (thread_diff) to 50%!
-
-[08/17/2022 02:33:11] [INFO] [NConvert] Sucessfully resized texture (Brakes) to 50%!
-
-[08/17/2022 02:33:12] [INFO] [NConvert] Sucessfully resized texture (sidewall_nrm) to 50%!
-
-[08/17/2022 02:33:13] [INFO] [NConvert] Sucessfully resized texture (c63s_lights_1) to 50%!
-
-[08/17/2022 02:33:13] [INFO] [NConvert] Sucessfully resized texture (c63s_sidewall_front_spec) to 50%!
-
-[08/17/2022 02:33:13] [INFO] [NConvert] Sucessfully resized texture (sidewall_dirt) to 50%!
-
-[08/17/2022 02:33:14] [INFO] [NConvert] Sucessfully resized texture (thread_spec) to 50%!
-
-[08/17/2022 02:33:14] [INFO] [NConvert] Sucessfully resized texture (Luxury) to 50%!
-
-[08/17/2022 02:33:15] [INFO] [NConvert] Sucessfully resized texture (sidewall_spec) to 50%!
-
-[08/17/2022 02:33:15] [INFO] [NConvert] Sucessfully resized texture (c63s_dynamic_2) to 50%!
-
-[08/17/2022 02:33:16] [INFO] [NConvert] Sucessfully resized texture (c63s_underboot) to 50%!
-
-[08/17/2022 02:33:16] [INFO] [CodeWalker] Resized texture dictionary (ytd) c63hr.ytd.
-
-[08/17/2022 02:33:17] [INFO] [NConvert] Sucessfully resized texture (c63s_sign_6) to 50%!
-
-[08/17/2022 02:33:18] [INFO] [NConvert] Sucessfully resized texture (toyo_t1r_s3) to 50%!
-
-[08/17/2022 02:33:18] [INFO] [NConvert] Sucessfully resized texture (c63s_sign_5) to 50%!
-
-[08/17/2022 02:33:19] [INFO] [NConvert] Sucessfully resized texture (c63s_sign_3) to 50%!
-
-[08/17/2022 02:33:19] [INFO] [NConvert] Sucessfully resized texture (c63s_sign_1) to 50%!
-
-[08/17/2022 02:33:24] [INFO] [NConvert] Sucessfully resized texture (leather_spec) to 50%!
-
-[08/17/2022 02:33:24] [INFO] [NConvert] Sucessfully resized texture (c63s_sign_4) to 50%!
-
-[08/17/2022 02:33:26] [INFO] [NConvert] Sucessfully resized texture (toyo_t1r_n) to 50%!
-
-[08/17/2022 02:33:26] [INFO] [NConvert] Sucessfully resized texture (Grill speaker) to 50%!
-
-[08/17/2022 02:33:26] [INFO] [NConvert] Sucessfully resized texture (prior logo) to 50%!
-
-[08/17/2022 02:33:26] [INFO] [NConvert] Sucessfully resized texture (c63s_gauges_lite) to 50%!
-
-[08/17/2022 02:33:27] [INFO] [NConvert] Sucessfully resized texture (c63s_sign_2) to 50%!
-
-[08/17/2022 02:33:27] [INFO] [NConvert] Sucessfully resized texture (gauge) to 50%!
-
-[08/17/2022 02:33:27] [INFO] [NConvert] Sucessfully resized texture (toyo_t1r_3) to 50%!
-
-[08/17/2022 02:33:29] [INFO] [NConvert] Sucessfully resized texture (dvig) to 50%!
-
-[08/17/2022 02:33:31] [INFO] [NConvert] Sucessfully resized texture (toyo_t1r_d) to 50%!
-
-[08/17/2022 02:33:32] [INFO] [NConvert] Sucessfully resized texture (lights_s_lod0) to 50%!
-
-[08/17/2022 02:33:33] [INFO] [NConvert] Sucessfully resized texture (mercedes-amg-c63-infotainment-system) to 50%!
-
-[08/17/2022 02:33:33] [INFO] [NConvert] Sucessfully resized texture (c63s_dynamic_2) to 50%!
-
-[08/17/2022 02:33:48] [INFO] [NConvert] Sucessfully resized texture (c63s_sign_7) to 50%!
-
-[08/17/2022 02:33:51] [INFO] [NConvert] Sucessfully resized texture (Carbon_Fiber) to 50%!
-
-[08/17/2022 02:33:52] [INFO] [CodeWalker] Resized texture dictionary (ytd) c63spd.ytd.
-
-[08/17/2022 02:33:52] [INFO] [NConvert] Sucessfully resized texture (pro gard partition) to 50%!
-
-[08/17/2022 02:33:55] [INFO] [NConvert] Sucessfully resized texture (chgr_sign_1) to 50%!
-
-[08/17/2022 02:33:57] [INFO] [NConvert] Sucessfully resized texture (0001) to 50%!
-
-[08/17/2022 02:33:58] [INFO] [NConvert] Sucessfully resized texture (bottom_all_spec) to 50%!
-
-[08/17/2022 02:33:59] [INFO] [NConvert] Sucessfully resized texture (bottom_all_normal) to 50%!
-
-[08/17/2022 02:33:59] [INFO] [NConvert] Sucessfully resized texture (police_new2) to 50%!
-
-[08/17/2022 02:34:00] [INFO] [NConvert] Sucessfully resized texture (panarb) to 50%!
-
-[08/17/2022 02:34:02] [INFO] [NConvert] Sucessfully resized texture (carbon_fiber_spec) to 50%!
-
-[08/17/2022 02:34:02] [INFO] [NConvert] Sucessfully resized texture (emerglights_ion_N) to 50%!
-
-[08/17/2022 02:34:03] [INFO] [NConvert] Sucessfully resized texture (panarb_normal) to 50%!
-
-[08/17/2022 02:34:04] [INFO] [NConvert] Sucessfully resized texture (stuff) to 50%!
-
-[08/17/2022 02:34:06] [INFO] [NConvert] Sucessfully resized texture (lights_all_normal) to 50%!
-
-[08/17/2022 02:34:07] [INFO] [NConvert] Sucessfully resized texture (lights_all_spec) to 50%!
-
-[08/17/2022 02:34:08] [INFO] [NConvert] Sucessfully resized texture (dueleratnik) to 50%!
-
-[08/17/2022 02:34:09] [INFO] [NConvert] Sucessfully resized texture (duelratnik_n) to 50%!
-
-[08/17/2022 02:34:10] [INFO] [NConvert] Sucessfully resized texture (lights_all) to 50%!
-
-[08/17/2022 02:34:10] [INFO] [NConvert] Sucessfully resized texture (mph) to 50%!
-
-[08/17/2022 02:34:11] [INFO] [NConvert] Sucessfully resized texture (emerglights_ion) to 50%!
-
-[08/17/2022 02:34:13] [INFO] [NConvert] Sucessfully resized texture (carbon_fiber_normal) to 50%!
-
-[08/17/2022 02:34:14] [INFO] [NConvert] Sucessfully resized texture (emerglights_n) to 50%!
-
-[08/17/2022 02:34:14] [INFO] [NConvert] Sucessfully resized texture (Whelen Dominator Series) to 50%!
-
-[08/17/2022 02:34:15] [INFO] [NConvert] Sucessfully resized texture (emerglights) to 50%!
-
-[08/17/2022 02:34:17] [INFO] [NConvert] Sucessfully resized texture (vehicle_generic_detail2) to 50%!
-
-[08/17/2022 02:34:18] [INFO] [NConvert] Sucessfully resized texture (glasssss) to 50%!
-
-[08/17/2022 02:34:18] [INFO] [NConvert] Sucessfully resized texture (bottom_all) to 50%!
-
-[08/17/2022 02:34:21] [INFO] [NConvert] Sucessfully resized texture (carbon_fiber) to 50%!
-
-[08/17/2022 02:34:22] [INFO] [CodeWalker] Resized texture dictionary (ytd) dodgeEMS.ytd.
-
-[08/17/2022 02:34:22] [INFO] [NConvert] Sucessfully resized texture (common_bmw_logo_spec) to 50%!
-
-[08/17/2022 02:34:22] [INFO] [NConvert] Sucessfully resized texture (rs7_tire) to 50%!
-
-[08/17/2022 02:34:23] [INFO] [NConvert] Sucessfully resized texture (nodamage_lod0_spec) to 50%!
-
-[08/17/2022 02:34:23] [INFO] [NConvert] Sucessfully resized texture (common_bmw_logo) to 50%!
-
-[08/17/2022 02:34:23] [INFO] [NConvert] Sucessfully resized texture (nodamage_lod0) to 50%!
-
-[08/17/2022 02:34:24] [INFO] [NConvert] Sucessfully resized texture (common_bmw_logo_rim) to 50%!
-
-[08/17/2022 02:34:24] [INFO] [NConvert] Sucessfully resized texture (tail_bulb) to 50%!
-
-[08/17/2022 02:34:24] [INFO] [NConvert] Sucessfully resized texture (nodamage_lod0_alpha) to 50%!
-
-[08/17/2022 02:34:24] [INFO] [NConvert] Sucessfully resized texture (nodamage_lod0_brakes) to 50%!
-
-[08/17/2022 02:34:28] [INFO] [NConvert] Sucessfully resized texture (amg_d_carbon_nm) to 50%!
-
-[08/17/2022 02:34:31] [INFO] [NConvert] Sucessfully resized texture (amg_d_carbon) to 50%!
-
-[08/17/2022 02:34:32] [INFO] [CodeWalker] Resized texture dictionary (ytd) e60.ytd.
-
-[08/17/2022 02:34:35] [INFO] [NConvert] Sucessfully resized texture (lights_lod1) to 50%!
-
-[08/17/2022 02:34:39] [INFO] [NConvert] Sucessfully resized texture (main) to 50%!
-
-[08/17/2022 02:34:41] [INFO] [NConvert] Sucessfully resized texture (remap) to 50%!
-
-[08/17/2022 02:34:42] [INFO] [NConvert] Sucessfully resized texture (gauges) to 50%!
-
-[08/17/2022 02:34:42] [INFO] [NConvert] Sucessfully resized texture (nodamage22) to 50%!
-
-[08/17/2022 02:34:43] [INFO] [CodeWalker] Resized texture dictionary (ytd) fnfmits.ytd.
-
-[08/17/2022 02:34:52] [INFO] [NConvert] Sucessfully resized texture (main) to 50%!
-
-[08/17/2022 02:34:54] [INFO] [NConvert] Sucessfully resized texture (lights_lod0) to 50%!
-
-[08/17/2022 02:34:54] [INFO] [NConvert] Sucessfully resized texture (remap1) to 50%!
-
-[08/17/2022 02:34:55] [INFO] [CodeWalker] Resized texture dictionary (ytd) fnfmk4.ytd.
-
-[08/17/2022 02:34:55] [INFO] [NConvert] Sucessfully resized texture (decal_H2R2) to 50%!
-
-[08/17/2022 02:34:57] [INFO] [NConvert] Sucessfully resized texture (vehicle_gen_bikedetail_diff) to 50%!
-
-[08/17/2022 02:34:57] [INFO] [NConvert] Sucessfully resized texture (glass_500px) to 50%!
-
-[08/17/2022 02:34:58] [INFO] [NConvert] Sucessfully resized texture (decal_H2R_2) to 50%!
-
-[08/17/2022 02:34:58] [INFO] [NConvert] Sucessfully resized texture (decal_H2R_s) to 50%!
-
-[08/17/2022 02:34:59] [INFO] [NConvert] Sucessfully resized texture (mechanics) to 50%!
-
-[08/17/2022 02:34:59] [INFO] [NConvert] Sucessfully resized texture (decal_H2_2) to 50%!
-
-[08/17/2022 02:34:59] [INFO] [NConvert] Sucessfully resized texture (decal_H2_nm) to 50%!
-
-[08/17/2022 02:35:00] [INFO] [NConvert] Sucessfully resized texture (lights) to 50%!
-
-[08/17/2022 02:35:00] [INFO] [NConvert] Sucessfully resized texture (decal_H2_s) to 50%!
-
-[08/17/2022 02:35:01] [INFO] [NConvert] Sucessfully resized texture (light_nm) to 50%!
-
-[08/17/2022 02:35:03] [INFO] [NConvert] Sucessfully resized texture (vehicle_gen_bikedetail_normal) to 50%!
-
-[08/17/2022 02:35:04] [INFO] [CodeWalker] Resized texture dictionary (ytd) h2carb.ytd.
-
-[08/17/2022 02:35:04] [INFO] [NConvert] Sucessfully resized texture (bs69_speedhunters_1500px) to 50%!
-
-[08/17/2022 02:35:05] [INFO] [NConvert] Sucessfully resized texture (lpdial) to 50%!
-
-[08/17/2022 02:35:06] [INFO] [NConvert] Sucessfully resized texture (spidermanh) to 50%!
-
-[08/17/2022 02:35:06] [INFO] [CodeWalker] Resized texture dictionary (ytd) huralbnormal.ytd.
-
-[08/17/2022 02:35:07] [INFO] [NConvert] Sucessfully resized texture (700_sign_2) to 50%!
-
-[08/17/2022 02:35:07] [INFO] [NConvert] Sucessfully resized texture (tire_pirelli_huayra_diff_00) to 50%!
-
-[08/17/2022 02:35:07] [INFO] [NConvert] Sucessfully resized texture (tire_pirelli_huayra_diff_s) to 50%!
-
-[08/17/2022 02:35:08] [INFO] [NConvert] Sucessfully resized texture (700_sign_4) to 50%!
-
-[08/17/2022 02:35:08] [INFO] [NConvert] Sucessfully resized texture (Detail_Int_D) to 50%!
-
-[08/17/2022 02:35:09] [INFO] [NConvert] Sucessfully resized texture (700_sign_1) to 50%!
-
-[08/17/2022 02:35:09] [INFO] [NConvert] Sucessfully resized texture (700_sign_3) to 50%!
-
-[08/17/2022 02:35:10] [INFO] [NConvert] Sucessfully resized texture (detail_int_n) to 50%!
-
-[08/17/2022 02:35:11] [INFO] [NConvert] Sucessfully resized texture (lb_badges) to 50%!
-
-[08/17/2022 02:35:11] [INFO] [NConvert] Sucessfully resized texture (tire_pirelli_huayra_norm_00) to 50%!
-
-[08/17/2022 02:35:13] [INFO] [NConvert] Sucessfully resized texture (lamborghini_aventadorlp7004_2011_enginea_normal) to 50%!
-
-[08/17/2022 02:35:13] [INFO] [NConvert] Sucessfully resized texture (cb) to 50%!
-
-[08/17/2022 02:35:14] [INFO] [NConvert] Sucessfully resized texture (2) to 50%!
-
-[08/17/2022 02:35:19] [INFO] [NConvert] Sucessfully resized texture (7004_lights) to 50%!
-
-[08/17/2022 02:35:20] [INFO] [CodeWalker] Resized texture dictionary (ytd) lp700.ytd.
-
-[08/17/2022 02:35:21] [INFO] [NConvert] Sucessfully resized texture (micehlin_275r20) to 50%!
-
-[08/17/2022 02:35:23] [INFO] [NConvert] Sucessfully resized texture (lights03) to 50%!
-
-[08/17/2022 02:35:23] [INFO] [NConvert] Sucessfully resized texture (INT_Decals_on) to 50%!
-
-[08/17/2022 02:35:24] [INFO] [NConvert] Sucessfully resized texture (Mechanicals_D) to 50%!
-
-[08/17/2022 02:35:25] [INFO] [NConvert] Sucessfully resized texture (INT_Decals) to 50%!
-
-[08/17/2022 02:35:26] [INFO] [NConvert] Sucessfully resized texture (rear_lights_custom2) to 50%!
-
-[08/17/2022 02:35:28] [INFO] [NConvert] Sucessfully resized texture (lights_d) to 50%!
-
-[08/17/2022 02:35:29] [INFO] [NConvert] Sucessfully resized texture (INT_Decals2) to 50%!
-
-[08/17/2022 02:35:29] [INFO] [NConvert] Sucessfully resized texture (m4 symbols2) to 50%!
-
-[08/17/2022 02:35:29] [INFO] [NConvert] Sucessfully resized texture (cs_nm) to 50%!
-
-[08/17/2022 02:35:30] [INFO] [NConvert] Sucessfully resized texture (Radio) to 50%!
-
-[08/17/2022 02:35:32] [INFO] [NConvert] Sucessfully resized texture (carbon_c) to 50%!
-
-[08/17/2022 02:35:34] [INFO] [NConvert] Sucessfully resized texture (vehiclelights) to 50%!
-
-[08/17/2022 02:35:35] [INFO] [NConvert] Sucessfully resized texture (bmw-logo) to 50%!
-
-[08/17/2022 02:35:35] [INFO] [NConvert] Sucessfully resized texture (m4 symbols1) to 50%!
-
-[08/17/2022 02:35:35] [INFO] [NConvert] Sucessfully resized texture (INT_Decals_NM) to 50%!
-
-[08/17/2022 02:35:37] [INFO] [NConvert] Sucessfully resized texture (f82_nmr) to 50%!
-
-[08/17/2022 02:35:38] [INFO] [NConvert] Sucessfully resized texture (micehlin_255r20) to 50%!
-
-[08/17/2022 02:35:43] [INFO] [NConvert] Sucessfully resized texture (leather03_nm) to 50%!
-
-[08/17/2022 02:35:44] [INFO] [NConvert] Sucessfully resized texture (F82_S) to 50%!
-
-[08/17/2022 02:35:45] [INFO] [NConvert] Sucessfully resized texture (m4) to 50%!
-
-[08/17/2022 02:35:45] [INFO] [NConvert] Sucessfully resized texture (cs) to 50%!
-
-[08/17/2022 02:35:48] [INFO] [NConvert] Sucessfully resized texture (f82_D) to 50%!
-
-[08/17/2022 02:35:49] [INFO] [CodeWalker] Resized texture dictionary (ytd) m4c20.ytd.
-
-[08/17/2022 02:35:50] [INFO] [NConvert] Sucessfully resized texture (e34_t) to 50%!
-
-[08/17/2022 02:35:51] [INFO] [NConvert] Sucessfully resized texture (BMW-logo_n) to 50%!
-
-[08/17/2022 02:35:51] [INFO] [NConvert] Sucessfully resized texture (bidg_spec) to 50%!
-
-[08/17/2022 02:35:51] [INFO] [NConvert] Sucessfully resized texture (bidg_black) to 50%!
-
-[08/17/2022 02:35:55] [INFO] [NConvert] Sucessfully resized texture (lights_lod0) to 50%!
-
-[08/17/2022 02:35:55] [INFO] [NConvert] Sucessfully resized texture (M POWEEER_n) to 50%!
-
-[08/17/2022 02:35:55] [INFO] [NConvert] Sucessfully resized texture (nodamage_lod0) to 50%!
-
-[08/17/2022 02:35:57] [INFO] [NConvert] Sucessfully resized texture (bidg_nrm) to 50%!
-
-[08/17/2022 02:35:58] [INFO] [NConvert] Sucessfully resized texture (BMW-logo) to 50%!
-
-[08/17/2022 02:35:59] [INFO] [NConvert] Sucessfully resized texture (e34_br_) to 50%!
-
-[08/17/2022 02:35:59] [INFO] [NConvert] Sucessfully resized texture (bmw_m5_95_gauges_diff) to 50%!
-
-[08/17/2022 02:36:00] [INFO] [NConvert] Sucessfully resized texture (M-POWEEER) to 50%!
-
-[08/17/2022 02:36:02] [INFO] [NConvert] Sucessfully resized texture (lights_lod0i7) to 50%!
-
-[08/17/2022 02:36:04] [INFO] [NConvert] Sucessfully resized texture (bidg_dirt) to 50%!
-
-[08/17/2022 02:36:06] [INFO] [CodeWalker] Resized texture dictionary (ytd) m5e34.ytd.
-
-[08/17/2022 02:36:07] [INFO] [NConvert] Sucessfully resized texture (miche_s2) to 50%!
-
-[08/17/2022 02:36:08] [INFO] [NConvert] Sucessfully resized texture (miche_n) to 50%!
-
-[08/17/2022 02:36:11] [INFO] [NConvert] Sucessfully resized texture (MBBS2020_DIRT) to 50%!
-
-[08/17/2022 02:36:11] [INFO] [NConvert] Sucessfully resized texture (mbbs_sign_1) to 50%!
-
-[08/17/2022 02:36:11] [INFO] [NConvert] Sucessfully resized texture (miche_black2) to 50%!
-
-[08/17/2022 02:36:12] [INFO] [NConvert] Sucessfully resized texture (mbbs_sign_3) to 50%!
-
-[08/17/2022 02:36:13] [INFO] [NConvert] Sucessfully resized texture (MAGTBS_DIALS) to 50%!
-
-[08/17/2022 02:36:13] [INFO] [NConvert] Sucessfully resized texture (mbbs_sign_4) to 50%!
-
-[08/17/2022 02:36:15] [INFO] [NConvert] Sucessfully resized texture (miche_d) to 50%!
-
-[08/17/2022 02:36:15] [INFO] [NConvert] Sucessfully resized texture (mbbs_sign_2) to 50%!
-
-[08/17/2022 02:36:17] [INFO] [CodeWalker] Resized texture dictionary (ytd) mbbs20.ytd.
-
-[08/17/2022 02:36:29] [INFO] [NConvert] Sucessfully resized texture (WheelDFS) to 50%!
-
-[08/17/2022 02:36:35] [INFO] [NConvert] Sucessfully resized texture (int) to 50%!
-
-[08/17/2022 02:36:35] [INFO] [NConvert] Sucessfully resized texture (sw) to 50%!
-
-[08/17/2022 02:36:37] [INFO] [NConvert] Sucessfully resized texture (leatherB) to 50%!
-
-[08/17/2022 02:36:38] [INFO] [NConvert] Sucessfully resized texture (pakrska) to 50%!
-
-[08/17/2022 02:36:45] [INFO] [NConvert] Sucessfully resized texture (bumpB) to 50%!
-
-[08/17/2022 02:36:45] [INFO] [NConvert] Sucessfully resized texture (bumpM) to 50%!
-
-[08/17/2022 02:36:45] [INFO] [NConvert] Sucessfully resized texture (bumpA) to 50%!
-
-[08/17/2022 02:36:47] [INFO] [NConvert] Sucessfully resized texture (interiorA) to 50%!
-
-[08/17/2022 02:36:47] [INFO] [NConvert] Sucessfully resized texture (caliper) to 50%!
-
-[08/17/2022 02:36:49] [INFO] [NConvert] Sucessfully resized texture (vehiclelights) to 50%!
-
-[08/17/2022 02:36:53] [INFO] [NConvert] Sucessfully resized texture (vehicle_genericmud_car) to 50%!
-
-[08/17/2022 02:36:54] [INFO] [NConvert] Sucessfully resized texture (asd) to 50%!
-
-[08/17/2022 02:36:55] [INFO] [NConvert] Sucessfully resized texture (bumpL) to 50%!
-
-[08/17/2022 02:37:08] [INFO] [NConvert] Sucessfully resized texture (wheel_nrm) to 50%!
-
-[08/17/2022 02:37:08] [INFO] [NConvert] Sucessfully resized texture (Plonkaa) to 50%!
-
-[08/17/2022 02:37:13] [INFO] [NConvert] Sucessfully resized texture (interiorB) to 50%!
-
-[08/17/2022 02:37:15] [INFO] [NConvert] Sucessfully resized texture (interiorC) to 50%!
-
-[08/17/2022 02:37:15] [INFO] [NConvert] Sucessfully resized texture (grill) to 50%!
-
-[08/17/2022 02:37:18] [INFO] [NConvert] Sucessfully resized texture (bumpG) to 50%!
-
-[08/17/2022 02:37:19] [INFO] [CodeWalker] Resized texture dictionary (ytd) mercedesgls.ytd.
-
-[08/17/2022 02:37:28] [INFO] [NConvert] Sucessfully resized texture (mk4_sign_6) to 50%!
-
-[08/17/2022 02:37:28] [INFO] [NConvert] Sucessfully resized texture (license_plates) to 50%!
-
-[08/17/2022 02:37:31] [INFO] [NConvert] Sucessfully resized texture (LHGemut_AO) to 50%!
-
-[08/17/2022 02:37:33] [INFO] [NConvert] Sucessfully resized texture (mk4_sign_3) to 50%!
-
-[08/17/2022 02:37:33] [INFO] [NConvert] Sucessfully resized texture (sidewall_diff) to 50%!
-
-[08/17/2022 02:37:34] [INFO] [NConvert] Sucessfully resized texture (sidewall_nrm) to 50%!
-
-[08/17/2022 02:37:35] [INFO] [NConvert] Sucessfully resized texture (potolok) to 50%!
-
-[08/17/2022 02:37:38] [INFO] [NConvert] Sucessfully resized texture (mk4_sign_2) to 50%!
-
-[08/17/2022 02:37:38] [INFO] [NConvert] Sucessfully resized texture (sidewall_dirt) to 50%!
-
-[08/17/2022 02:37:55] [INFO] [NConvert] Sucessfully resized texture (thread_nrm) to 50%!
-
-[08/17/2022 02:38:05] [INFO] [NConvert] Sucessfully resized texture (thread_spec) to 50%!
-
-[08/17/2022 02:38:16] [INFO] [NConvert] Sucessfully resized texture (thread_dirt) to 50%!
-
-[08/17/2022 02:38:16] [INFO] [NConvert] Sucessfully resized texture (japanese plate) to 50%!
-
-[08/17/2022 02:38:17] [INFO] [NConvert] Sucessfully resized texture (0x4F57D2ED) to 50%!
-
-[08/17/2022 02:38:23] [INFO] [NConvert] Sucessfully resized texture (mk4_sign_5) to 50%!
-
-[08/17/2022 02:38:23] [INFO] [NConvert] Sucessfully resized texture (license_plates_n) to 50%!
-
-[08/17/2022 02:38:23] [INFO] [NConvert] Sucessfully resized texture (Rotor) to 50%!
-
-[08/17/2022 02:38:23] [INFO] [NConvert] Sucessfully resized texture (Sidewall_S) to 50%!
-
-[08/17/2022 02:38:29] [INFO] [NConvert] Sucessfully resized texture (mk4_sign_7) to 50%!
-
-[08/17/2022 02:38:30] [INFO] [NConvert] Sucessfully resized texture (mk4_sign_4) to 50%!
-
-[08/17/2022 02:38:31] [INFO] [NConvert] Sucessfully resized texture (thread) to 50%!
-
-[08/17/2022 02:38:32] [INFO] [CodeWalker] Resized texture dictionary (ytd) mk4.ytd.
-
-[08/17/2022 02:38:34] [INFO] [NConvert] Sucessfully resized texture (bodypaint_n) to 50%!
-
-[08/17/2022 02:38:35] [INFO] [NConvert] Sucessfully resized texture (stuf41) to 50%!
-
-[08/17/2022 02:38:36] [INFO] [NConvert] Sucessfully resized texture (inter11) to 50%!
-
-[08/17/2022 02:38:36] [INFO] [NConvert] Sucessfully resized texture (Cadillac_US_Presidential_State_Car_2017_flags) to 50%!
-
-[08/17/2022 02:38:36] [INFO] [NConvert] Sucessfully resized texture (body) to 50%!
-
-[08/17/2022 02:38:37] [INFO] [NConvert] Sucessfully resized texture (dash_alpha2) to 50%!
-
-[08/17/2022 02:38:38] [INFO] [NConvert] Sucessfully resized texture (leather_new_002) to 50%!
-
-[08/17/2022 02:38:39] [INFO] [NConvert] Sucessfully resized texture (taxi_ng_detail) to 50%!
-
-[08/17/2022 02:38:41] [INFO] [NConvert] Sucessfully resized texture (bodypaint) to 50%!
-
-[08/17/2022 02:38:42] [INFO] [NConvert] Sucessfully resized texture (stuf41_n) to 50%!
-
-[08/17/2022 02:38:42] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol10.ytd.
-
-[08/17/2022 02:38:42] [INFO] [NConvert] Sucessfully resized texture (cf19_lightz) to 50%!
-
-[08/17/2022 02:38:46] [INFO] [NConvert] Sucessfully resized texture (paintjob_dirt) to 50%!
-
-[08/17/2022 02:38:48] [INFO] [NConvert] Sucessfully resized texture (PTBCF19) to 50%!
-
-[08/17/2022 02:38:49] [INFO] [NConvert] Sucessfully resized texture (Anthrocon2015_n) to 50%!
-
-[08/17/2022 02:38:49] [INFO] [NConvert] Sucessfully resized texture (WG4RE_ON) to 50%!
-
-[08/17/2022 02:38:49] [INFO] [NConvert] Sucessfully resized texture (WG4RE) to 50%!
-
-[08/17/2022 02:38:50] [INFO] [NConvert] Sucessfully resized texture (Anthrocon2015) to 50%!
-
-[08/17/2022 02:38:50] [INFO] [NConvert] Sucessfully resized texture (stuff) to 50%!
-
-[08/17/2022 02:38:51] [INFO] [NConvert] Sucessfully resized texture (win_glsssz) to 50%!
-
-[08/17/2022 02:38:51] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol2+hi.ytd.
-
-[08/17/2022 02:38:52] [INFO] [NConvert] Sucessfully resized texture (vicz_sign_4) to 50%!
-
-[08/17/2022 02:38:54] [INFO] [NConvert] Sucessfully resized texture (vicz_sign_3) to 50%!
-
-[08/17/2022 02:38:54] [INFO] [NConvert] Sucessfully resized texture (win_glsssz) to 50%!
-
-[08/17/2022 02:38:57] [INFO] [NConvert] Sucessfully resized texture (vicz_sign_2) to 50%!
-
-[08/17/2022 02:38:59] [INFO] [NConvert] Sucessfully resized texture (vicz_sign_1) to 50%!
-
-[08/17/2022 02:38:59] [INFO] [NConvert] Sucessfully resized texture (vicz_sign_5) to 50%!
-
-[08/17/2022 02:39:00] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol2.ytd.
-
-[08/17/2022 02:39:00] [INFO] [NConvert] Sucessfully resized texture (Computer) to 50%!
-
-[08/17/2022 02:39:00] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol3+hi.ytd.
-
-[08/17/2022 02:39:02] [INFO] [NConvert] Sucessfully resized texture (emerglights1) to 50%!
-
-[08/17/2022 02:39:03] [INFO] [NConvert] Sucessfully resized texture (chgr_sign_2) to 50%!
-
-[08/17/2022 02:39:03] [INFO] [NConvert] Sucessfully resized texture (vehicle_generic_tyrewallblack) to 50%!
-
-[08/17/2022 02:39:05] [INFO] [NConvert] Sucessfully resized texture (police_sign_2) to 50%!
-
-[08/17/2022 02:39:07] [INFO] [NConvert] Sucessfully resized texture (chgr_sign_1) to 50%!
-
-[08/17/2022 02:39:08] [INFO] [NConvert] Sucessfully resized texture (police_sign_1) to 50%!
-
-[08/17/2022 02:39:09] [INFO] [NConvert] Sucessfully resized texture (chgr_sign_3) to 50%!
-
-[08/17/2022 02:39:10] [INFO] [NConvert] Sucessfully resized texture (emerglights2_bump) to 50%!
-
-[08/17/2022 02:39:12] [INFO] [NConvert] Sucessfully resized texture (spotlight) to 50%!
-
-[08/17/2022 02:39:13] [INFO] [NConvert] Sucessfully resized texture (police_sign_3) to 50%!
-
-[08/17/2022 02:39:15] [INFO] [NConvert] Sucessfully resized texture (chgr_sign_4) to 50%!
-
-[08/17/2022 02:39:17] [INFO] [NConvert] Sucessfully resized texture (stuff) to 50%!
-
-[08/17/2022 02:39:17] [INFO] [NConvert] Sucessfully resized texture (Computer) to 50%!
-
-[08/17/2022 02:39:19] [INFO] [NConvert] Sucessfully resized texture (vehicle_generic_tyrewall_normal) to 50%!
-
-[08/17/2022 02:39:20] [INFO] [NConvert] Sucessfully resized texture (Taurus_stuff) to 50%!
-
-[08/17/2022 02:39:21] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol3.ytd.
-
-[08/17/2022 02:39:23] [INFO] [NConvert] Sucessfully resized texture (myford2) to 50%!
-
-[08/17/2022 02:39:23] [INFO] [NConvert] Sucessfully resized texture (pro gard partition) to 50%!
-
-[08/17/2022 02:39:24] [INFO] [NConvert] Sucessfully resized texture (Tex_0016_7) to 50%!
-
-[08/17/2022 02:39:25] [INFO] [NConvert] Sucessfully resized texture (interior) to 50%!
-
-[08/17/2022 02:39:26] [INFO] [NConvert] Sucessfully resized texture (test) to 50%!
-
-[08/17/2022 02:39:27] [INFO] [NConvert] Sucessfully resized texture (dials) to 50%!
-
-[08/17/2022 02:39:28] [INFO] [NConvert] Sucessfully resized texture (storage) to 50%!
-
-[08/17/2022 02:39:28] [INFO] [NConvert] Sucessfully resized texture (RamMoto) to 50%!
-
-[08/17/2022 02:39:29] [INFO] [NConvert] Sucessfully resized texture (RamMoto_spec) to 50%!
-
-[08/17/2022 02:39:31] [INFO] [NConvert] Sucessfully resized texture (exp_sign_2) to 50%!
-
-[08/17/2022 02:39:31] [INFO] [NConvert] Sucessfully resized texture (Tex_0016_7_emis) to 50%!
-
-[08/17/2022 02:39:33] [INFO] [NConvert] Sucessfully resized texture (exp_sign_1) to 50%!
-
-[08/17/2022 02:39:33] [INFO] [NConvert] Sucessfully resized texture (dials_trans_emis) to 50%!
-
-[08/17/2022 02:39:35] [INFO] [NConvert] Sucessfully resized texture (radio) to 50%!
-
-[08/17/2022 02:39:35] [INFO] [NConvert] Sucessfully resized texture (dials_main) to 50%!
-
-[08/17/2022 02:39:35] [INFO] [NConvert] Sucessfully resized texture (dials_new_trans_emis) to 50%!
-
-[08/17/2022 02:39:37] [INFO] [NConvert] Sucessfully resized texture (exp_sign_4) to 50%!
-
-[08/17/2022 02:39:37] [INFO] [NConvert] Sucessfully resized texture (emissive) to 50%!
-
-[08/17/2022 02:39:38] [INFO] [NConvert] Sucessfully resized texture (test_n) to 50%!
-
-[08/17/2022 02:39:39] [INFO] [NConvert] Sucessfully resized texture (exp_sign_3) to 50%!
-
-[08/17/2022 02:39:39] [INFO] [NConvert] Sucessfully resized texture (dials_main_em) to 50%!
-
-[08/17/2022 02:39:40] [INFO] [NConvert] Sucessfully resized texture (emerg_ion) to 50%!
-
-[08/17/2022 02:39:42] [INFO] [NConvert] Sucessfully resized texture (emerg_ion_n) to 50%!
-
-[08/17/2022 02:39:42] [INFO] [NConvert] Sucessfully resized texture (window_template) to 50%!
-
-[08/17/2022 02:39:42] [INFO] [NConvert] Sucessfully resized texture (radio_emis) to 50%!
-
-[08/17/2022 02:39:43] [INFO] [NConvert] Sucessfully resized texture (RamMoto_n) to 50%!
-
-[08/17/2022 02:39:43] [INFO] [NConvert] Sucessfully resized texture (Ecoboost Logo) to 50%!
-
-[08/17/2022 02:39:44] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol5.ytd.
-
-[08/17/2022 02:39:47] [INFO] [NConvert] Sucessfully resized texture (myford2) to 50%!
-
-[08/17/2022 02:39:47] [INFO] [NConvert] Sucessfully resized texture (pro gard partition) to 50%!
-
-[08/17/2022 02:39:47] [INFO] [NConvert] Sucessfully resized texture (Tex_0016_7) to 50%!
-
-[08/17/2022 02:39:49] [INFO] [NConvert] Sucessfully resized texture (interior) to 50%!
-
-[08/17/2022 02:39:50] [INFO] [NConvert] Sucessfully resized texture (test) to 50%!
-
-[08/17/2022 02:39:50] [INFO] [NConvert] Sucessfully resized texture (dials) to 50%!
-
-[08/17/2022 02:39:51] [INFO] [NConvert] Sucessfully resized texture (storage) to 50%!
-
-[08/17/2022 02:39:52] [INFO] [NConvert] Sucessfully resized texture (RamMoto) to 50%!
-
-[08/17/2022 02:39:52] [INFO] [NConvert] Sucessfully resized texture (RamMoto_spec) to 50%!
-
-[08/17/2022 02:39:53] [INFO] [NConvert] Sucessfully resized texture (exp_sign_2) to 50%!
-
-[08/17/2022 02:39:53] [INFO] [NConvert] Sucessfully resized texture (Tex_0016_7_emis) to 50%!
-
-[08/17/2022 02:39:55] [INFO] [NConvert] Sucessfully resized texture (exp_sign_1) to 50%!
-
-[08/17/2022 02:39:55] [INFO] [NConvert] Sucessfully resized texture (dials_trans_emis) to 50%!
-
-[08/17/2022 02:39:57] [INFO] [NConvert] Sucessfully resized texture (radio) to 50%!
-
-[08/17/2022 02:39:57] [INFO] [NConvert] Sucessfully resized texture (dials_main) to 50%!
-
-[08/17/2022 02:39:57] [INFO] [NConvert] Sucessfully resized texture (dials_new_trans_emis) to 50%!
-
-[08/17/2022 02:39:57] [INFO] [NConvert] Sucessfully resized texture (emissive) to 50%!
-
-[08/17/2022 02:39:58] [INFO] [NConvert] Sucessfully resized texture (test_n) to 50%!
-
-[08/17/2022 02:40:00] [INFO] [NConvert] Sucessfully resized texture (exp_sign_3) to 50%!
-
-[08/17/2022 02:40:00] [INFO] [NConvert] Sucessfully resized texture (dials_main_em) to 50%!
-
-[08/17/2022 02:40:01] [INFO] [NConvert] Sucessfully resized texture (emerg_ion) to 50%!
-
-[08/17/2022 02:40:03] [INFO] [NConvert] Sucessfully resized texture (emerglights_n) to 50%!
-
-[08/17/2022 02:40:04] [INFO] [NConvert] Sucessfully resized texture (emerglights) to 50%!
-
-[08/17/2022 02:40:05] [INFO] [NConvert] Sucessfully resized texture (emerg_ion_n) to 50%!
-
-[08/17/2022 02:40:05] [INFO] [NConvert] Sucessfully resized texture (window_template) to 50%!
-
-[08/17/2022 02:40:05] [INFO] [NConvert] Sucessfully resized texture (radio_emis) to 50%!
-
-[08/17/2022 02:40:06] [INFO] [NConvert] Sucessfully resized texture (RamMoto_n) to 50%!
-
-[08/17/2022 02:40:06] [INFO] [NConvert] Sucessfully resized texture (Ecoboost Logo) to 50%!
-
-[08/17/2022 02:40:07] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol6.ytd.
-
-[08/17/2022 02:40:07] [INFO] [NConvert] Sucessfully resized texture (Tyre_D) to 50%!
-
-[08/17/2022 02:40:20] [INFO] [NConvert] Sucessfully resized texture (fond) to 50%!
-
-[08/17/2022 02:40:22] [INFO] [NConvert] Sucessfully resized texture (INT_OCC) to 50%!
-
-[08/17/2022 02:40:23] [INFO] [NConvert] Sucessfully resized texture (screen) to 50%!
-
-[08/17/2022 02:40:23] [INFO] [NConvert] Sucessfully resized texture (lights_dif) to 50%!
-
-[08/17/2022 02:40:27] [INFO] [NConvert] Sucessfully resized texture (Rim_MAP) to 50%!
-
-[08/17/2022 02:40:40] [INFO] [NConvert] Sucessfully resized texture (bleu) to 50%!
-
-[08/17/2022 02:40:40] [INFO] [NConvert] Sucessfully resized texture (int_display) to 50%!
-
-[08/17/2022 02:40:42] [INFO] [NConvert] Sucessfully resized texture (tyre_nm) to 50%!
-
-[08/17/2022 02:40:42] [INFO] [NConvert] Sucessfully resized texture (int_detail_n) to 50%!
-
-[08/17/2022 02:40:44] [INFO] [NConvert] Sucessfully resized texture (Rim_DIF) to 50%!
-
-[08/17/2022 02:40:46] [INFO] [NConvert] Sucessfully resized texture (template) to 50%!
-
-[08/17/2022 02:40:53] [INFO] [NConvert] Sucessfully resized texture (rouge) to 50%!
-
-[08/17/2022 02:40:54] [INFO] [NConvert] Sucessfully resized texture (int_detail) to 50%!
-
-[08/17/2022 02:40:54] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol718.ytd.
-
-[08/17/2022 02:40:57] [INFO] [NConvert] Sucessfully resized texture (lights_LOD0) to 50%!
-
-[08/17/2022 02:41:02] [INFO] [NConvert] Sucessfully resized texture (dirty) to 50%!
-
-[08/17/2022 02:41:04] [INFO] [NConvert] Sucessfully resized texture (F150_sign_3) to 50%!
-
-[08/17/2022 02:41:05] [INFO] [NConvert] Sucessfully resized texture (nodamagestripe_LOD0) to 50%!
-
-[08/17/2022 02:41:07] [INFO] [NConvert] Sucessfully resized texture (F150_sign_1) to 50%!
-
-[08/17/2022 02:41:08] [INFO] [NConvert] Sucessfully resized texture (F150_sign_2) to 50%!
-
-[08/17/2022 02:41:10] [INFO] [NConvert] Sucessfully resized texture (taxi_ng_detail) to 50%!
-
-[08/17/2022 02:41:10] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol9+hi.ytd.
-
-[08/17/2022 02:41:10] [INFO] [NConvert] Sucessfully resized texture (pro gard partition) to 50%!
-
-[08/17/2022 02:41:12] [INFO] [NConvert] Sucessfully resized texture (lights_LOD0) to 50%!
-
-[08/17/2022 02:41:18] [INFO] [NConvert] Sucessfully resized texture (dirty) to 50%!
-
-[08/17/2022 02:41:20] [INFO] [NConvert] Sucessfully resized texture (F150_sign_3) to 50%!
-
-[08/17/2022 02:41:20] [INFO] [NConvert] Sucessfully resized texture (nodamagestripe_LOD0) to 50%!
-
-[08/17/2022 02:41:22] [INFO] [NConvert] Sucessfully resized texture (F150_sign_1) to 50%!
-
-[08/17/2022 02:41:23] [INFO] [NConvert] Sucessfully resized texture (F150_sign_2) to 50%!
-
-[08/17/2022 02:41:25] [INFO] [NConvert] Sucessfully resized texture (taxi_ng_detail) to 50%!
-
-[08/17/2022 02:41:25] [INFO] [CodeWalker] Resized texture dictionary (ytd) pol9.ytd.
-
-[08/17/2022 02:41:26] [INFO] [NConvert] Sucessfully resized texture (mic_nrm) to 50%!
-
-[08/17/2022 02:41:26] [INFO] [NConvert] Sucessfully resized texture (mic_spec1) to 50%!
-
-[08/17/2022 02:41:27] [INFO] [NConvert] Sucessfully resized texture (impactMask) to 50%!
-
-[08/17/2022 02:41:27] [INFO] [NConvert] Sucessfully resized texture (mic_black) to 50%!
-
-[08/17/2022 02:41:28] [INFO] [NConvert] Sucessfully resized texture (compteur1) to 50%!
-
-[08/17/2022 02:41:28] [INFO] [CodeWalker] Resized texture dictionary (ytd) r820.ytd.
-
-[08/17/2022 02:41:29] [INFO] [NConvert] Sucessfully resized texture (tyre_base) to 50%!
-
-[08/17/2022 02:41:32] [INFO] [NConvert] Sucessfully resized texture (tyre_base_nm) to 50%!
-
-[08/17/2022 02:41:32] [INFO] [NConvert] Sucessfully resized texture (screwmap) to 50%!
-
-[08/17/2022 02:41:34] [INFO] [NConvert] Sucessfully resized texture (burmester) to 50%!
-
-[08/17/2022 02:41:35] [INFO] [NConvert] Sucessfully resized texture (navigation) to 50%!
-
-[08/17/2022 02:41:35] [INFO] [NConvert] Sucessfully resized texture (screws) to 50%!
-
-[08/17/2022 02:41:35] [INFO] [NConvert] Sucessfully resized texture (mer_c63amgcoupe_16_gauges_lite) to 50%!
-
-[08/17/2022 02:41:35] [INFO] [CodeWalker] Resized texture dictionary (ytd) rmodamgc63.ytd.
-
-[08/17/2022 02:41:36] [INFO] [NConvert] Sucessfully resized texture (michi) to 50%!
-
-[08/17/2022 02:41:36] [INFO] [NConvert] Sucessfully resized texture (ScrewsNm) to 50%!
-
-[08/17/2022 02:41:36] [INFO] [NConvert] Sucessfully resized texture (Screws) to 50%!
-
-[08/17/2022 02:41:37] [INFO] [CodeWalker] Resized texture dictionary (ytd) rmodbolide.ytd.
-
-[08/17/2022 02:41:37] [INFO] [NConvert] Sucessfully resized texture (tyre_base) to 50%!
-
-[08/17/2022 02:41:40] [INFO] [NConvert] Sucessfully resized texture (tyre_base_nm) to 50%!
-
-[08/17/2022 02:41:41] [INFO] [NConvert] Sucessfully resized texture (000d9f40) to 50%!
-
-[08/17/2022 02:41:41] [INFO] [NConvert] Sucessfully resized texture (caliperlogo1) to 50%!
-
-[08/17/2022 02:41:42] [INFO] [NConvert] Sucessfully resized texture (INT_Decals) to 50%!
-
-[08/17/2022 02:41:42] [INFO] [NConvert] Sucessfully resized texture (screwmap) to 50%!
-
-[08/17/2022 02:41:43] [INFO] [NConvert] Sucessfully resized texture (00215e80) to 50%!
-
-[08/17/2022 02:41:43] [INFO] [NConvert] Sucessfully resized texture (0009d420) to 50%!
-
-[08/17/2022 02:41:43] [INFO] [NConvert] Sucessfully resized texture (screws) to 50%!
-
-[08/17/2022 02:41:44] [INFO] [CodeWalker] Resized texture dictionary (ytd) rmodmustang.ytd.
-
-[08/17/2022 02:41:44] [INFO] [NConvert] Sucessfully resized texture (PZEROTIRE) to 50%!
-
-[08/17/2022 02:41:44] [INFO] [NConvert] Sucessfully resized texture (screwmap) to 50%!
-
-[08/17/2022 02:41:45] [INFO] [NConvert] Sucessfully resized texture (mansorylogoshield) to 50%!
-
-[08/17/2022 02:41:45] [INFO] [NConvert] Sucessfully resized texture (shared_car_chassis_s) to 50%!
-
-[08/17/2022 02:41:46] [INFO] [NConvert] Sucessfully resized texture (shared_car_chassis_d) to 50%!
-
-[08/17/2022 02:41:47] [INFO] [NConvert] Sucessfully resized texture (akrapovic) to 50%!
-
-[08/17/2022 02:41:47] [INFO] [NConvert] Sucessfully resized texture (shared_car_chassis_n) to 50%!
-
-[08/17/2022 02:41:47] [INFO] [NConvert] Sucessfully resized texture (mansorylogoshield2) to 50%!
-
-[08/17/2022 02:41:48] [INFO] [NConvert] Sucessfully resized texture (rovergauge) to 50%!
-
-[08/17/2022 02:41:48] [INFO] [NConvert] Sucessfully resized texture (screws) to 50%!
-
-[08/17/2022 02:41:48] [INFO] [NConvert] Sucessfully resized texture (rotiform-lutxg) to 50%!
-
-[08/17/2022 02:41:48] [INFO] [CodeWalker] Resized texture dictionary (ytd) rmodrover.ytd.
-
-[08/17/2022 02:41:49] [INFO] [NConvert] Sucessfully resized texture (PZEROTIRE) to 50%!
-
-[08/17/2022 02:41:49] [INFO] [NConvert] Sucessfully resized texture (rs6caliper) to 50%!
-
-[08/17/2022 02:41:50] [INFO] [NConvert] Sucessfully resized texture (rmodrs6_sign_2) to 50%!
-
-[08/17/2022 02:41:51] [INFO] [NConvert] Sucessfully resized texture (dirti1) to 50%!
-
-[08/17/2022 02:41:51] [INFO] [NConvert] Sucessfully resized texture (rmod) to 50%!
-
-[08/17/2022 02:41:52] [INFO] [CodeWalker] Resized texture dictionary (ytd) rmodrs6.ytd.
-
-[08/17/2022 02:41:53] [INFO] [NConvert] Sucessfully resized texture (tyre_base) to 50%!
-
-[08/17/2022 02:41:56] [INFO] [NConvert] Sucessfully resized texture (tyre_base_nm) to 50%!
-
-[08/17/2022 02:41:56] [INFO] [NConvert] Sucessfully resized texture (bmw_badge_010_diff) to 50%!
-
-[08/17/2022 02:41:58] [INFO] [NConvert] Sucessfully resized texture (navihinten) to 50%!
-
-[08/17/2022 02:41:58] [INFO] [NConvert] Sucessfully resized texture (INT_Decals2) to 50%!
-
-[08/17/2022 02:42:00] [INFO] [NConvert] Sucessfully resized texture (navi) to 50%!
-
-[08/17/2022 02:42:00] [INFO] [NConvert] Sucessfully resized texture (INT_Decals3) to 50%!
-
-[08/17/2022 02:42:02] [INFO] [NConvert] Sucessfully resized texture (burmester) to 50%!
-
-[08/17/2022 02:42:02] [INFO] [CodeWalker] Resized texture dictionary (ytd) rmodx6.ytd.
-
-[08/17/2022 02:42:07] [INFO] [NConvert] Sucessfully resized texture (leth11n) to 50%!
-
-[08/17/2022 02:42:07] [INFO] [NConvert] Sucessfully resized texture (miche_tire) to 50%!
-
-[08/17/2022 02:42:08] [INFO] [NConvert] Sucessfully resized texture (miche_tire_spec) to 50%!
-
-[08/17/2022 02:42:08] [INFO] [NConvert] Sucessfully resized texture (digitalgaugecapture) to 50%!
-
-[08/17/2022 02:42:09] [INFO] [NConvert] Sucessfully resized texture (env) to 50%!
-
-[08/17/2022 02:42:22] [INFO] [NConvert] Sucessfully resized texture (vehicle_generic_glassdirt) to 50%!
-
-[08/17/2022 02:42:23] [INFO] [NConvert] Sucessfully resized texture (light bump) to 50%!
-
-[08/17/2022 02:42:24] [INFO] [NConvert] Sucessfully resized texture (head) to 50%!
-
-[08/17/2022 02:42:24] [INFO] [NConvert] Sucessfully resized texture (platelog) to 50%!
-
-[08/17/2022 02:42:32] [INFO] [NConvert] Sucessfully resized texture (vehicle_genericmud_car) to 50%!
-
-[08/17/2022 02:42:37] [INFO] [NConvert] Sucessfully resized texture (leth11) to 50%!
-
-[08/17/2022 02:42:38] [INFO] [NConvert] Sucessfully resized texture (miche_tire_nrm) to 50%!
-
-[08/17/2022 02:42:38] [INFO] [NConvert] Sucessfully resized texture (aud_rs6_15_gauges_001_diff) to 50%!
-
-[08/17/2022 02:42:41] [INFO] [NConvert] Sucessfully resized texture (headn) to 50%!
-
-[08/17/2022 02:42:43] [INFO] [NConvert] Sucessfully resized texture (rs6+-sign_1) to 50%!
-
-[08/17/2022 02:42:43] [INFO] [CodeWalker] Resized texture dictionary (ytd) rs6+.ytd.
-
-[08/17/2022 02:42:43] [INFO] All done!
-
-[08/17/2022 02:56:34] [INFO] D:\test\
-
-[08/17/2022 02:56:34] [INFO] All done!
-
-[08/17/2022 02:56:46] [INFO] D:\Development\Go\FiveMCarsMerger\merged-cars\stream\
-
-[08/17/2022 02:56:46] [INFO] [NConvert] Sucessfully resized texture (760_text_04) to 50%!
-
-[08/17/2022 02:56:48] [INFO] [NConvert] Sucessfully resized texture (dzd) to 50%!
-
-[08/17/2022 02:56:49] [INFO] [NConvert] Sucessfully resized texture (760_text_03) to 50%!
-
-[08/17/2022 02:56:51] [INFO] [NConvert] Sucessfully resized texture (dzd-m) to 50%!
-
-[08/17/2022 02:56:52] [INFO] [NConvert] Sucessfully resized texture (Carpet_DFS) to 50%!
-
-[08/17/2022 02:56:54] [INFO] [NConvert] Sucessfully resized texture (760_text_11) to 50%!
-
-[08/17/2022 02:56:54] [INFO] [NConvert] Sucessfully resized texture (dztp) to 50%!
-
-[08/17/2022 02:56:54] [INFO] [CodeWalker] Resized texture dictionary (ytd) 17m760i.ytd.
-
-[08/17/2022 02:56:55] [INFO] [CodeWalker] No textures were resized, skipping .ytd recreation.
-
-[08/17/2022 02:56:56] [INFO] [NConvert] Sucessfully resized texture (WheelDFS) to 50%!
-
-[08/17/2022 02:56:57] [INFO] [NConvert] Sucessfully resized texture (WheelBMP) to 50%!
-
-[08/17/2022 02:56:58] [INFO] [NConvert] Sucessfully resized texture (InteriorDFS) to 50%!
-
-[08/17/2022 02:56:59] [INFO] [NConvert] Sucessfully resized texture (InteriorLightDFS) to 50%!
-
-[08/17/2022 02:56:59] [INFO] [NConvert] Sucessfully resized texture (19sclass_hud) to 50%!
-
-[08/17/2022 02:57:02] [INFO] [NConvert] Sucessfully resized texture (FabricDFS) to 50%!
-
-[08/17/2022 02:57:02] [INFO] [NConvert] Sucessfully resized texture (Mercedes_plateguard) to 50%!
-
-[08/17/2022 02:57:04] [INFO] [NConvert] Sucessfully resized texture (SpeakerBMP) to 50%!
-
-[08/17/2022 02:57:04] [INFO] [NConvert] Sucessfully resized texture (InteriorBMP) to 50%!
-
-[08/17/2022 02:57:06] [INFO] [NConvert] Sucessfully resized texture (19sclass_inv) to 50%!
-
-[08/17/2022 02:57:06] [INFO] [NConvert] Sucessfully resized texture (LogoMaybachDFS) to 50%!
-
-[08/17/2022 02:57:13] [INFO] [NConvert] Sucessfully resized texture (SpeakerDFS) to 50%!
-
-[08/17/2022 02:57:14] [INFO] [NConvert] Sucessfully resized texture (19sclass_detail) to 50%!
-
-[08/17/2022 02:57:16] [INFO] [NConvert] Sucessfully resized texture (MBWoodDFS) to 50%!
-
-[08/17/2022 02:57:19] [INFO] [NConvert] Sucessfully resized texture (CarpetBMP) to 50%!
-
-[08/17/2022 02:57:19] [INFO] [NConvert] Sucessfully resized texture (LogoMaybachBMP) to 50%!
-
-[08/17/2022 02:57:20] [INFO] [CodeWalker] Resized texture dictionary (ytd) 19sclassl.ytd.
-
-[08/17/2022 02:57:22] [INFO] [NConvert] Sucessfully resized texture (main) to 50%!
-
-[08/17/2022 02:57:22] [INFO] [NConvert] Sucessfully resized texture (remap2) to 50%!
-
-[08/17/2022 02:57:22] [INFO] [CodeWalker] Resized texture dictionary (ytd) 2f2fmk4.ytd.
-
-[08/17/2022 02:57:23] [INFO] [NConvert] Sucessfully resized texture (evo_sign2) to 50%!
-
-[08/17/2022 02:57:23] [INFO] [CodeWalker] Resized texture dictionary (ytd) 2f2fmle7.ytd.
-
-[08/17/2022 02:57:24] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12) to 50%!
-
-[08/17/2022 02:57:24] [INFO] [NConvert] Sucessfully resized texture (intss1s) to 50%!
-
-[08/17/2022 02:57:24] [INFO] [NConvert] Sucessfully resized texture (32312ss) to 50%!
-
-[08/17/2022 02:57:24] [INFO] [NConvert] Sucessfully resized texture (glassHLS) to 50%!
-
-[08/17/2022 02:57:25] [INFO] [NConvert] Sucessfully resized texture (232) to 50%!
-
-[08/17/2022 02:57:25] [INFO] [NConvert] Sucessfully resized texture (amg_logo1) to 50%!
-
-[08/17/2022 02:57:26] [INFO] [NConvert] Sucessfully resized texture (leather_brown2) to 50%!
-
-[08/17/2022 02:57:26] [INFO] [NConvert] Sucessfully resized texture (glassHLS34) to 50%!
-
-[08/17/2022 02:57:27] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12NR12) to 50%!
-
-[08/17/2022 02:57:27] [INFO] [NConvert] Sucessfully resized texture (amg_logo1_SPEC) to 50%!
-
-[08/17/2022 02:57:27] [INFO] [NConvert] Sucessfully resized texture (amg_logo) to 50%!
-
-[08/17/2022 02:57:27] [INFO] [NConvert] Sucessfully resized texture (amg_logo1_NRM) to 50%!
-
-[08/17/2022 02:57:27] [INFO] [NConvert] Sucessfully resized texture (amg-logo323dd) to 50%!
-
-[08/17/2022 02:57:27] [INFO] [NConvert] Sucessfully resized texture (amg_logo1S) to 50%!
-
-[08/17/2022 02:57:28] [INFO] [NConvert] Sucessfully resized texture (mer_amggt4_18_tach_alphaSS1) to 50%!
-
-[08/17/2022 02:57:29] [INFO] [CodeWalker] Resized texture dictionary (ytd) 2ncsgt63s.ytd.
-
-[08/17/2022 02:57:30] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12) to 50%!
-
-[08/17/2022 02:57:30] [INFO] [NConvert] Sucessfully resized texture (intss1s) to 50%!
-
-[08/17/2022 02:57:30] [INFO] [NConvert] Sucessfully resized texture (32312ss) to 50%!
-
-[08/17/2022 02:57:34] [INFO] [NConvert] Sucessfully resized texture (21331) to 50%!
-
-[08/17/2022 02:57:35] [INFO] [NConvert] Sucessfully resized texture (glassHLS) to 50%!
-
-[08/17/2022 02:57:35] [INFO] [NConvert] Sucessfully resized texture (232) to 50%!
-
-[08/17/2022 02:57:35] [INFO] [NConvert] Sucessfully resized texture (amg_logo1) to 50%!
-
-[08/17/2022 02:57:36] [INFO] [NConvert] Sucessfully resized texture (leather_brown2) to 50%!
-
-[08/17/2022 02:57:36] [INFO] [NConvert] Sucessfully resized texture (glassHLS34) to 50%!
-
-[08/17/2022 02:57:37] [INFO] [NConvert] Sucessfully resized texture (1280px-Burmester_logo12NR12) to 50%!
-
-[08/18/2022 06:34:14] [INFO] rpf2fivem
-
-[08/18/2022 06:34:14] [INFO] GTA5-Mods links must look like this: 
-
-[08/18/2022 06:34:14] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
-
-[08/18/2022 06:34:14] [INFO] Links must be DIRECT link else they won't download!
-
-[08/18/2022 06:34:56] [INFO] [InputHandler] Disabled texture compression/downsizing.
-
-[08/18/2022 06:34:59] [INFO] Job added!
-
-[08/18/2022 06:35:03] [INFO] [Worker] Started resConvert async task...
-
-[08/18/2022 06:35:03] [INFO] [Worker] Cleaning cache...
-
-[08/18/2022 06:35:03] [INFO] [Worker] Setting up environment...
-
-[08/18/2022 06:35:03] [INFO] [Worker] Writing config helpers...
-
-[08/18/2022 06:35:03] [INFO] [Worker] Created testing FiveM resource directory...
-
-[08/18/2022 06:35:04] [INFO] [Worker] Writing resouce manifest...
-
-[08/18/2022 06:35:04] [INFO] [Worker] Checking link...OK
-
-[08/18/2022 06:35:04] [INFO] [AsyncDownload] Downloading archive...
-
-[08/18/2022 06:35:05] [INFO] [AsyncDownload] Successfully fetched archive!
-
-[08/18/2022 06:35:05] [INFO] [SharpCompress] Decompressing...
-
-[08/18/2022 06:35:10] [INFO] [SharpCompress] Unpack finished!
-
-[08/18/2022 06:35:10] [INFO] [Worker] Searching for dlc.rpf...
-
-[08/18/2022 06:35:10] [INFO] [CodeWalker] Unpacking cache\unpack\spsuranoe\dlc.rpf...
-
-[08/18/2022 06:35:11] [INFO] [Worker] Removing unnessecary items from cache...
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\carcols.meta
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\carvariations.meta
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\dlctext.meta
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\handling.meta
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\vehicles.meta
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\suranoe.yft
-
-[08/18/2022 06:35:16] [INFO] [Worker] Fixing cache\rpfunpack\suranoe.yft...
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\suranoe_hi.yft
-
-[08/18/2022 06:35:16] [INFO] [Worker] Fixing cache\rpfunpack\suranoe_hi.yft...
-
-[08/18/2022 06:35:16] [INFO] [Worker] Inflating testing\cache\rpfunpack\suranoe.ytd
-
-[08/18/2022 06:35:16] [INFO] [Worker] Fixing cache\rpfunpack\suranoe.ytd...
-
-[08/18/2022 06:35:16] [INFO] [Worker] Moving resource into resources folder...
-
-[08/18/2022 06:35:16] [INFO] [Worker] Cleaning up...
-
-[08/18/2022 06:35:16] [INFO] [Worker] Finished converting vehicle testing
-
-[08/18/2022 06:35:22] [INFO] [InputHandler] Enabled texture compression/downsizing.
-
-[08/18/2022 06:35:23] [INFO] [InputHandler] Disabled texture compression/downsizing.
-
-[08/18/2022 06:35:23] [INFO] [InputHandler] Enabled texture compression/downsizing.
-
-[08/18/2022 06:35:23] [INFO] [InputHandler] Disabled texture compression/downsizing.
-
-[08/18/2022 06:35:32] [INFO] [Worker] Started resConvert async task...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Cleaning cache...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Setting up environment...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Writing config helpers...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Created testing FiveM resource directory...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Writing resouce manifest...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Checking link...OK
-
-[08/18/2022 06:35:32] [INFO] [AsyncDownload] Downloading archive...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Started resConvert async task...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Cleaning cache...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Setting up environment...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Writing config helpers...
-
-[08/18/2022 06:35:32] [INFO] [Worker] Created testing FiveM resource directory...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Started resConvert async task...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Cleaning cache...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Setting up environment...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Writing config helpers...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Created testing FiveM resource directory...
-
-[08/18/2022 06:35:33] [INFO] [AsyncDownload] Successfully fetched archive!
-
-[08/18/2022 06:35:33] [INFO] [SharpCompress] Decompressing...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Writing resouce manifest...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Checking link...OK
-
-[08/18/2022 06:35:33] [INFO] [AsyncDownload] Downloading archive...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Writing resouce manifest...
-
-[08/18/2022 06:35:33] [INFO] [Worker] Checking link...OK
-
-[08/18/2022 06:35:33] [INFO] [AsyncDownload] Downloading archive...
-
-[08/18/2022 06:35:34] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
-
-[08/18/2022 06:35:34] [INFO] [AsyncDownload] Successfully fetched archive!
-
-[08/18/2022 06:35:34] [INFO] [SharpCompress] Decompressing...
-
-[08/18/2022 06:35:34] [INFO] [InputHandler] Enabled texture compression/downsizing.
-
-[08/18/2022 06:35:34] [INFO] [InputHandler] Disabled texture compression/downsizing.
-
-[08/18/2022 06:35:36] [INFO] [InputHandler] Enabled texture compression/downsizing.
-
-[08/18/2022 06:35:36] [INFO] [InputHandler] Disabled texture compression/downsizing.
-
-[08/18/2022 06:35:37] [INFO] [SharpCompress] Unpack finished!
-
-[08/18/2022 06:35:37] [INFO] [Worker] Searching for dlc.rpf...
-
-[08/18/2022 06:35:37] [INFO] [CodeWalker] Unpacking cache\unpack\spsuranoe\dlc.rpf...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Removing unnessecary items from cache...
-
-[08/18/2022 06:35:39] [INFO] [SharpCompress] Unpack finished!
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe.yft ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe_hi.yft ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe.ytd ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\carcols.meta ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\carvariations.meta ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\dlctext.meta ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\handling.meta ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Deleting testing\cache\rpfunpack\vehicles.meta ...
-
-[08/18/2022 06:35:39] [INFO] [Worker] Searching for dlc.rpf...
-
-[08/18/2022 06:35:39] [INFO] [CodeWalker] Unpacking cache\unpack\spsuranoe\dlc.rpf...
-
-[08/18/2022 06:35:40] [INFO] [Worker] Removing unnessecary items from cache...
-
-[08/18/2022 06:35:44] [INFO] [Worker] Inflating testing\cache\rpfunpack\carcols.meta
-
-[08/18/2022 06:35:44] [ERROR] System.IO.IOException: Eine Datei kann nicht erstellt werden, wenn sie bereits vorhanden ist.
-
+[08/19/2022 05:50:42] [ERROR] System.IO.FileNotFoundException: Die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.oiv" konnte nicht gefunden werden.
+Dateiname: "D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.oiv"
    bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
    bei System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
-   bei rpf2fivem.Main.inflateFromCache(String resname, String type, Boolean isYtd, Boolean isYtf) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 482.
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 622.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 246.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 573.
 
-[08/18/2022 06:35:45] [INFO] [Worker] Inflating testing\cache\rpfunpack\carcols.meta
+[08/19/2022 05:50:57] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:35:45] [ERROR] System.IO.IOException: Eine Datei kann nicht erstellt werden, wenn sie bereits vorhanden ist.
+[08/19/2022 05:50:57] [INFO] [Worker] Cleaning cache...
 
+[08/19/2022 05:50:57] [INFO] [Worker] Setting up environment...
+
+[08/19/2022 05:50:57] [INFO] [Worker] Writing config helpers...
+
+[08/19/2022 05:50:57] [INFO] [Worker] Created 823246495 FiveM resource directory...
+
+[08/19/2022 05:50:57] [INFO] [Worker] Writing resouce manifest...
+
+[08/19/2022 05:50:57] [INFO] [Worker] Checking link...OK
+
+[08/19/2022 05:50:57] [INFO] [AsyncDownload] Downloading archive...
+
+[08/19/2022 05:50:57] [INFO] [AsyncDownload] Successfully fetched archive!
+
+[08/19/2022 05:50:57] [INFO] [SharpCompress] Decompressing...
+
+[08/19/2022 05:50:58] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.oiv
+
+[08/19/2022 05:50:58] [ERROR] System.IO.FileNotFoundException: Die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.oiv" konnte nicht gefunden werden.
+Dateiname: "D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.oiv"
    bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
    bei System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
-   bei rpf2fivem.Main.inflateFromCache(String resname, String type, Boolean isYtd, Boolean isYtf) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 482.
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 622.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 246.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 573.
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:52:10] [INFO] rpf2fivem
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:52:10] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:52:10] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:52:10] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:54:29] [INFO] Job added!
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:54:31] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:54:31] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:54:31] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:54:31] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:54:31] [INFO] [Worker] Created 297161750 FiveM resource directory...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:54:31] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:54:31] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:54:31] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:54:32] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:54:32] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:54:33] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.oiv
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:54:33] [ERROR] System.ArgumentException: File does not exist: D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.oiv
+   bei SharpCompress.Archives.AbstractArchive`2..ctor(ArchiveType type, FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive..ctor(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive.Open(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei rpf2fivem.Main.unZip(String target) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 187.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 246.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 573.
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:55:16] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:55:16] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:55:16] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:55:16] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:55:16] [INFO] [Worker] Created 297161750 FiveM resource directory...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:55:16] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:55:16] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:55:16] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:55:17] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:55:17] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:55:17] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.oiv
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:55:17] [ERROR] System.ArgumentException: File does not exist: D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.oiv
+   bei SharpCompress.Archives.AbstractArchive`2..ctor(ArchiveType type, FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive..ctor(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive.Open(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei rpf2fivem.Main.unZip(String target) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 187.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 246.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 573.
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:56:49] [INFO] rpf2fivem
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:56:49] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:56:49] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:56:49] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:56:55] [INFO] Job added!
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:56:56] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:56:56] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:56:56] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:56:56] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:56:56] [INFO] [Worker] Created 1570292347 FiveM resource directory...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:56:57] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:19] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 05:56:57] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:19] [INFO] [Worker] Checking link...OK
+[08/19/2022 05:56:57] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:19] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 05:56:57] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:56:57] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:56:58] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.oiv
 
-[08/18/2022 06:37:20] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:56:58] [ERROR] System.ArgumentException: File does not exist: D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.zip
+   bei SharpCompress.Archives.AbstractArchive`2..ctor(ArchiveType type, FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive..ctor(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive.Open(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei rpf2fivem.Main.unZip(String target) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 187.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 247.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 574.
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:58:42] [INFO] rpf2fivem
 
-[08/18/2022 06:37:20] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:58:42] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 05:58:42] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 05:58:42] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 05:58:47] [INFO] Job added!
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 05:58:48] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 05:58:48] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Cleaning cache...
+[08/19/2022 05:58:48] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Setting up environment...
+[08/19/2022 05:58:48] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing config helpers...
+[08/19/2022 05:58:48] [INFO] [Worker] Created 503615564 FiveM resource directory...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 05:58:49] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 05:58:49] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 05:58:49] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 05:58:50] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 05:58:50] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 05:58:51] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.oiv
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 05:58:51] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.zip
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 05:58:51] [ERROR] System.ArgumentException: File does not exist: D:\Development\C#\rpf2fivem-repository\bin\Release\cache\KTM 1290 Super Duke R Engine Sound.zip
+   bei SharpCompress.Archives.AbstractArchive`2..ctor(ArchiveType type, FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive..ctor(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive.Open(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei rpf2fivem.Main.unZip(String target) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 187.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 248.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 575.
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:01:52] [INFO] rpf2fivem
 
-[08/18/2022 06:37:20] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 06:01:52] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:20] [INFO] [Worker] Cleaning cache...
+[08/19/2022 06:01:52] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:20] [INFO] [Worker] Setting up environment...
+[08/19/2022 06:01:52] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing config helpers...
+[08/19/2022 06:01:56] [INFO] Job added!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 06:01:56] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:01:56] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:01:57] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:01:57] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:01:57] [INFO] [Worker] Created 1441465753 FiveM resource directory...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 06:01:57] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Cleaning cache...
+[08/19/2022 06:01:57] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:20] [INFO] [Worker] Setting up environment...
+[08/19/2022 06:01:57] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing config helpers...
+[08/19/2022 06:01:58] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 06:01:58] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:01:59] [ERROR] System.ArgumentException: File does not exist: D:\Development\C#\rpf2fivem-repository\bin\Release\KTM 1290 Super Duke R Engine Sound.zip
+   bei SharpCompress.Archives.AbstractArchive`2..ctor(ArchiveType type, FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive..ctor(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei SharpCompress.Archives.Zip.ZipArchive.Open(FileInfo fileInfo, ReaderOptions readerOptions)
+   bei rpf2fivem.Main.unZip(String target) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 187.
+   bei rpf2fivem.Main.universalCacheUnpack() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 246.
+   bei rpf2fivem.Main.<startConvertFromLink>d__35.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 573.
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:03:06] [INFO] rpf2fivem
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:03:06] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:03:06] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:03:06] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:03:10] [INFO] Job added!
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:03:11] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:03:11] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:03:11] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:03:11] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:03:11] [INFO] [Worker] Created 1373384157 FiveM resource directory...
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:03:12] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 06:03:12] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:20] [INFO] [Worker] Cleaning cache...
+[08/19/2022 06:03:12] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Setting up environment...
+[08/19/2022 06:03:12] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing config helpers...
+[08/19/2022 06:03:12] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 06:03:16] [INFO] [SharpCompress] Unpack finished!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 06:03:16] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Cleaning cache...
+[08/19/2022 06:03:16] [INFO] [CodeWalker] Unpacking cache\unpack\content\mod\ktm1290r\dlc.rpf...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Setting up environment...
+[08/19/2022 06:03:16] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing config helpers...
+[08/19/2022 06:03:21] [INFO] [Worker] Moving resource into resources folder...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 06:03:21] [INFO] [Worker] Cleaning up...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:03:21] [INFO] [Worker] Finished converting vehicle 1373384157
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:25:25] [INFO] rpf2fivem
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:25:25] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Successfully fetched archive!
+[08/19/2022 06:25:25] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:20] [INFO] [SharpCompress] Decompressing...
+[08/19/2022 06:25:25] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:25:38] [INFO] Job added!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:25:39] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:25:39] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:25:39] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:25:39] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:25:39] [INFO] [Worker] Created 1793940801 FiveM resource directory...
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:25:40] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:25:40] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:20] [INFO] [Worker] Started resConvert async task...
+[08/19/2022 06:25:40] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Cleaning cache...
+[08/19/2022 06:25:41] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Setting up environment...
+[08/19/2022 06:25:41] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing config helpers...
+[08/19/2022 06:25:44] [INFO] [SharpCompress] Unpack finished!
 
-[08/18/2022 06:37:20] [INFO] [Worker] Created testing FiveM resource directory...
+[08/19/2022 06:25:44] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:25:44] [INFO] [CodeWalker] Unpacking cache\unpack\content\mod\ktm1290r\dlc.rpf...
 
-[08/18/2022 06:37:20] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:25:44] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/18/2022 06:37:20] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:25:49] [INFO] [Worker] Moving resource into resources folder...
 
-[08/18/2022 06:37:20] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:25:49] [INFO] [Worker] Cleaning up...
 
-[08/18/2022 06:37:21] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:25:49] [INFO] [Worker] Finished converting vehicle 1793940801
 
-[08/18/2022 06:37:21] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:26:47] [INFO] rpf2fivem
 
-[08/18/2022 06:37:21] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:26:47] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:21] [INFO] [AsyncDownload] Successfully fetched archive!
+[08/19/2022 06:26:47] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:21] [INFO] [SharpCompress] Decompressing...
+[08/19/2022 06:26:47] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:21] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:26:54] [INFO] Job added!
 
-[08/18/2022 06:37:21] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:26:55] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:21] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:26:55] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:21] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:26:55] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:21] [INFO] [Worker] Writing resouce manifest...
+[08/19/2022 06:26:55] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:21] [INFO] [Worker] Checking link...OK
+[08/19/2022 06:26:55] [INFO] [Worker] Created 143098316 FiveM resource directory...
 
-[08/18/2022 06:37:21] [INFO] [AsyncDownload] Downloading archive...
+[08/19/2022 06:26:56] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:21] [ERROR] System.Net.WebException: Ausnahmefehler während einer WebClient-Anforderung. ---> System.IO.IOException: Der Prozess kann nicht auf die Datei "D:\Development\C#\rpf2fivem-repository\bin\Release\94b8a4-suranoe.rar" zugreifen, da sie von einem anderen Prozess verwendet wird.
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   bei System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
-   bei System.Net.WebClient.DownloadFileAsync(Uri address, String fileName, Object userToken)
-   --- Ende der internen Ausnahmestapelüberwachung ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<AsyncFileDownload>d__18.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 148.
---- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
-   bei System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 601.
+[08/19/2022 06:26:56] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:21] [INFO] [AsyncDownload] Successfully fetched archive!
+[08/19/2022 06:26:56] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:21] [INFO] [SharpCompress] Decompressing...
+[08/19/2022 06:26:56] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:23] [INFO] [SharpCompress] Unpack finished!
+[08/19/2022 06:26:56] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:23] [INFO] [Worker] Searching for dlc.rpf...
+[08/19/2022 06:26:57] [INFO] cache\1d2cb0-KTM%201290%20Super%20Duke%20R%20Engine%20Sound.zip
 
-[08/18/2022 06:37:23] [INFO] [CodeWalker] Unpacking cache\unpack\spsuranoe\dlc.rpf...
+[08/19/2022 06:26:57] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.zip
 
-[08/18/2022 06:37:25] [INFO] [Worker] Removing unnessecary items from cache...
+[08/19/2022 06:27:00] [INFO] [SharpCompress] Unpack finished!
 
-[08/18/2022 06:37:25] [INFO] [SharpCompress] Unpack finished!
+[08/19/2022 06:27:00] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe.yft ...
+[08/19/2022 06:27:00] [INFO] [CodeWalker] Unpacking cache\unpack\content\mod\ktm1290r\dlc.rpf...
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe_hi.yft ...
+[08/19/2022 06:27:00] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe.ytd ...
+[08/19/2022 06:27:05] [INFO] [Worker] Moving resource into resources folder...
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\carcols.meta ...
+[08/19/2022 06:27:05] [INFO] [Worker] Cleaning up...
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\carvariations.meta ...
+[08/19/2022 06:27:05] [INFO] [Worker] Finished converting vehicle 143098316
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\dlctext.meta ...
+[08/19/2022 06:29:23] [INFO] rpf2fivem
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\handling.meta ...
+[08/19/2022 06:29:23] [INFO] GTA5-Mods links must look like this: 
 
-[08/18/2022 06:37:25] [INFO] [Worker] Deleting testing\cache\rpfunpack\vehicles.meta ...
+[08/19/2022 06:29:23] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
 
-[08/18/2022 06:37:25] [INFO] [Worker] Searching for dlc.rpf...
+[08/19/2022 06:29:23] [INFO] Links must be DIRECT link else they won't download!
 
-[08/18/2022 06:37:25] [INFO] [CodeWalker] Unpacking cache\unpack\spsuranoe\dlc.rpf...
+[08/19/2022 06:29:28] [INFO] Job added!
 
-[08/18/2022 06:37:27] [INFO] [Worker] Removing unnessecary items from cache...
+[08/19/2022 06:29:29] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:27] [INFO] [SharpCompress] Unpack finished!
+[08/19/2022 06:29:29] [INFO] [Worker] Cleaning cache...
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe.yft ...
+[08/19/2022 06:29:29] [INFO] [Worker] Setting up environment...
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe_hi.yft ...
+[08/19/2022 06:29:29] [INFO] [Worker] Writing config helpers...
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\suranoe.ytd ...
+[08/19/2022 06:29:29] [INFO] [Worker] Created 1962795467 FiveM resource directory...
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\carcols.meta ...
+[08/19/2022 06:29:30] [INFO] [Worker] Writing resouce manifest...
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\carvariations.meta ...
+[08/19/2022 06:29:30] [INFO] [Worker] Checking link...OK
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\dlctext.meta ...
+[08/19/2022 06:29:30] [INFO] [AsyncDownload] Downloading archive...
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\handling.meta ...
+[08/19/2022 06:29:30] [INFO] [AsyncDownload] Successfully fetched archive!
 
-[08/18/2022 06:37:27] [INFO] [Worker] Deleting testing\cache\rpfunpack\vehicles.meta ...
+[08/19/2022 06:29:30] [INFO] [SharpCompress] Decompressing...
 
-[08/18/2022 06:37:27] [INFO] [Worker] Searching for dlc.rpf...
+[08/19/2022 06:29:31] [INFO] cache\1d2cb0-KTM%201290%20Super%20Duke%20R%20Engine%20Sound.zip
 
-[08/18/2022 06:37:27] [INFO] [CodeWalker] Unpacking cache\unpack\spsuranoe\dlc.rpf...
+[08/19/2022 06:29:31] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.zip
 
-[08/18/2022 06:37:28] [INFO] [Worker] Removing unnessecary items from cache...
+[08/19/2022 06:29:34] [INFO] [SharpCompress] Unpack finished!
 
-[08/18/2022 06:37:30] [INFO] [Worker] Inflating testing\cache\rpfunpack\carcols.meta
+[08/19/2022 06:29:34] [INFO] [Worker] Searching for dlc.rpf...
 
-[08/18/2022 06:37:30] [ERROR] System.IO.IOException: Eine Datei kann nicht erstellt werden, wenn sie bereits vorhanden ist.
+[08/19/2022 06:29:34] [INFO] [CodeWalker] Unpacking cache\unpack\content\mod\ktm1290r\dlc.rpf...
 
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
-   bei rpf2fivem.Main.inflateFromCache(String resname, String type, Boolean isYtd, Boolean isYtf) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 482.
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 622.
+[08/19/2022 06:29:34] [INFO] [Worker] Removing unnessecary items from cache...
 
-[08/18/2022 06:37:32] [INFO] [Worker] Inflating testing\cache\rpfunpack\carcols.meta
+[08/19/2022 06:29:39] [INFO] [Worker] Moving resource into resources folder...
 
-[08/18/2022 06:37:32] [ERROR] System.IO.IOException: Eine Datei kann nicht erstellt werden, wenn sie bereits vorhanden ist.
+[08/19/2022 06:29:39] [INFO] [Worker] Cleaning up...
 
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
-   bei rpf2fivem.Main.inflateFromCache(String resname, String type, Boolean isYtd, Boolean isYtf) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 482.
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 622.
+[08/19/2022 06:29:39] [INFO] [Worker] Finished converting vehicle 1962795467
 
-[08/18/2022 06:37:33] [INFO] [Worker] Inflating testing\cache\rpfunpack\carcols.meta
+[08/19/2022 06:31:55] [INFO] [Worker] Started resConvert async task...
 
-[08/18/2022 06:37:33] [ERROR] System.IO.IOException: Eine Datei kann nicht erstellt werden, wenn sie bereits vorhanden ist.
+[08/19/2022 06:31:55] [INFO] [Worker] Cleaning cache...
 
-   bei System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   bei System.IO.File.InternalMove(String sourceFileName, String destFileName, Boolean checkHost)
-   bei rpf2fivem.Main.inflateFromCache(String resname, String type, Boolean isYtd, Boolean isYtf) in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 482.
-   bei rpf2fivem.Main.<startConvertFromLink>d__36.MoveNext() in D:\Development\C#\rpf2fivem-repository\Main.cs:Zeile 622.
+[08/19/2022 06:31:55] [INFO] [Worker] Setting up environment...
+
+[08/19/2022 06:31:55] [INFO] [Worker] Writing config helpers...
+
+[08/19/2022 06:31:55] [INFO] [Worker] Created 1962795467 FiveM resource directory...
+
+[08/19/2022 06:31:56] [INFO] [Worker] Writing resouce manifest...
+
+[08/19/2022 06:31:56] [INFO] [Worker] Checking link...OK
+
+[08/19/2022 06:31:56] [INFO] [AsyncDownload] Downloading archive...
+
+[08/19/2022 06:31:57] [INFO] [AsyncDownload] Successfully fetched archive!
+
+[08/19/2022 06:31:57] [INFO] [SharpCompress] Decompressing...
+
+[08/19/2022 06:31:57] [INFO] cache\1d2cb0-KTM%201290%20Super%20Duke%20R%20Engine%20Sound.zip
+
+[08/19/2022 06:31:58] [INFO] cache\unpack\Single Player (OpenIV Addon)\KTM 1290 Super Duke R Engine Sound.zip
+
+[08/19/2022 06:32:00] [INFO] [SharpCompress] Unpack finished!
+
+[08/19/2022 06:32:00] [INFO] [Worker] Searching for dlc.rpf...
+
+[08/19/2022 06:32:00] [INFO] [CodeWalker] Unpacking cache\unpack\content\mod\ktm1290r\dlc.rpf...
+
+[08/19/2022 06:32:00] [INFO] [Worker] Removing unnessecary items from cache...
+
+[08/19/2022 06:32:05] [INFO] [Worker] Moving resource into resources folder...
+
+[08/19/2022 06:32:05] [INFO] [Worker] Cleaning up...
+
+[08/19/2022 06:32:05] [INFO] [Worker] Finished converting vehicle 1962795467
+
+[08/19/2022 06:32:31] [INFO] rpf2fivem
+
+[08/19/2022 06:32:31] [INFO] GTA5-Mods links must look like this: 
+
+[08/19/2022 06:32:31] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
+
+[08/19/2022 06:32:31] [INFO] Links must be DIRECT link else they won't download!
+
+[08/19/2022 06:33:08] [INFO] Job added!
+
+[08/19/2022 06:33:09] [INFO] [Worker] Started resConvert async task...
+
+[08/19/2022 06:33:09] [INFO] [Worker] Cleaning cache...
+
+[08/19/2022 06:33:09] [INFO] [Worker] Setting up environment...
+
+[08/19/2022 06:33:09] [INFO] [Worker] Writing config helpers...
+
+[08/19/2022 06:33:09] [INFO] [Worker] Created 945121539 FiveM resource directory...
+
+[08/19/2022 06:33:10] [INFO] [Worker] Writing resouce manifest...
+
+[08/19/2022 06:33:10] [INFO] [Worker] Checking link...OK
+
+[08/19/2022 06:33:10] [INFO] [AsyncDownload] Downloading archive...
+
+[08/19/2022 06:33:11] [INFO] [AsyncDownload] Successfully fetched archive!
+
+[08/19/2022 06:33:11] [INFO] [SharpCompress] Decompressing...
+
+[08/19/2022 06:33:12] [INFO] cache\unpack\Rmod_Customs_Lamborghini_Centenario 1.4\RmodCustoms_LamborghiniLP770.zip
+
+[08/19/2022 06:33:15] [INFO] [SharpCompress] Unpack finished!
+
+[08/19/2022 06:33:15] [INFO] [Worker] Searching for dlc.rpf...
+
+[08/19/2022 06:33:15] [INFO] [CodeWalker] Unpacking cache\unpack\content\rmodlp770\dlc.rpf...
+
+[08/19/2022 06:33:17] [INFO] [NConvert] Sucessfully resized texture (logo3) to 50%!
+
+[08/19/2022 06:33:17] [INFO] [NConvert] Sucessfully resized texture (lamborghini-centenario-logo) to 50%!
+
+[08/19/2022 06:33:18] [INFO] [NConvert] Sucessfully resized texture (Detail_Int_D) to 50%!
+
+[08/19/2022 06:33:19] [INFO] [NConvert] Sucessfully resized texture (Gauges2) to 50%!
+
+[08/19/2022 06:33:20] [INFO] [NConvert] Sucessfully resized texture (Detail_Int_N) to 50%!
+
+[08/19/2022 06:33:21] [INFO] [NConvert] Sucessfully resized texture (NewGaugesNumber2) to 50%!
+
+[08/19/2022 06:33:22] [INFO] [NConvert] Sucessfully resized texture (Tyre_D2) to 50%!
+
+[08/19/2022 06:33:22] [INFO] [NConvert] Sucessfully resized texture (logo2) to 50%!
+
+[08/19/2022 06:33:22] [INFO] [NConvert] Sucessfully resized texture (logo3_n) to 50%!
+
+[08/19/2022 06:33:22] [INFO] [CodeWalker] Resized texture dictionary (ytd) rmodlp770.ytd.
+
+[08/19/2022 06:33:23] [INFO] [Worker] Removing unnessecary items from cache...
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\carcols.meta
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\carvariations.meta
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\dlctext.meta
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\handling.meta
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\rmodlp770contentunlocks.meta
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\shop_vehicle.meta
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\vehicles.meta
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\lp770_wing.yft
+
+[08/19/2022 06:33:28] [INFO] [Worker] Fixing cache\rpfunpack\lp770_wing.yft...
+
+[08/19/2022 06:33:28] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\rmodlp770.yft
+
+[08/19/2022 06:33:28] [INFO] [Worker] Fixing cache\rpfunpack\rmodlp770.yft...
+
+[08/19/2022 06:33:29] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\rmodlp770_hi.yft
+
+[08/19/2022 06:33:29] [INFO] [Worker] Fixing cache\rpfunpack\rmodlp770_hi.yft...
+
+[08/19/2022 06:33:29] [INFO] [Worker] Inflating 945121539\cache\rpfunpack\rmodlp770.ytd
+
+[08/19/2022 06:33:29] [INFO] [Worker] Fixing cache\rpfunpack\rmodlp770.ytd...
+
+[08/19/2022 06:33:29] [INFO] [Worker] Moving resource into resources folder...
+
+[08/19/2022 06:33:29] [INFO] [Worker] Cleaning up...
+
+[08/19/2022 06:33:29] [INFO] [Worker] Finished converting vehicle 945121539
+
+[08/19/2022 06:42:38] [INFO] rpf2fivem
+
+[08/19/2022 06:42:38] [INFO] GTA5-Mods links must look like this: 
+
+[08/19/2022 06:42:38] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
+
+[08/19/2022 06:42:38] [INFO] Links must be DIRECT link else they won't download!
+
+[08/19/2022 06:42:38] [WARNING] [NConvert] It seems like you haven't installed NConvert, please follow
+
+[08/19/2022 06:42:38] [WARNING] [NConvert] the installation instructions on the GitHub Repository or the forum thread.
+
+[08/19/2022 06:42:38] [INFO] [InputHandler] Disabled texture compression/downsizing.
+
+[08/19/2022 06:42:39] [INFO] rpf2fivem
+
+[08/19/2022 06:42:39] [INFO] GTA5-Mods links must look like this: 
+
+[08/19/2022 06:42:39] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
+
+[08/19/2022 06:42:39] [INFO] Links must be DIRECT link else they won't download!
+
+[08/19/2022 06:42:39] [WARNING] [NConvert] It seems like you haven't installed NConvert, please follow
+
+[08/19/2022 06:42:39] [WARNING] [NConvert] the installation instructions on the GitHub Repository or the forum thread.
+
+[08/19/2022 06:42:39] [INFO] [InputHandler] Disabled texture compression/downsizing.
+
+[08/19/2022 06:42:40] [INFO] rpf2fivem
+
+[08/19/2022 06:42:40] [INFO] GTA5-Mods links must look like this: 
+
+[08/19/2022 06:42:40] [INFO] https://files.gta5-mods.com/uploads/XXXCARNAMEXXXX/XXXCARNAMEXXXX.zip
+
+[08/19/2022 06:42:40] [INFO] Links must be DIRECT link else they won't download!
+
+[08/19/2022 06:42:40] [WARNING] [NConvert] It seems like you haven't installed NConvert, please follow
+
+[08/19/2022 06:42:40] [WARNING] [NConvert] the installation instructions on the GitHub Repository or the forum thread.
+
+[08/19/2022 06:42:40] [INFO] [InputHandler] Disabled texture compression/downsizing.
 
